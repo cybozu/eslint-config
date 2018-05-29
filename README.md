@@ -45,7 +45,7 @@ This is a rule you should fix because the code style might not be preferable.
 Install `eslint` and `@cybozu/eslint-config` and put it into your `.eslintrc.js`
 
 ```
-% npm install eslint @cybozu/eslint-config
+% npm install --save-dev eslint @cybozu/eslint-config
 ```
 
 - `.eslintrc.js`
@@ -83,7 +83,7 @@ module.exports = {
 };
 ```
 
-### [Experimental] `@cybozu/eslint-config/react`
+### [Experimental] `@cybozu/eslint-config/presets/react`
 
 This rule set is for projects using React, which has JSX support and rules related React provided by `eslint-plugin-react` and `eslint-plugin-jsx-ally`.
 This rule set includes `@cybozu`.
@@ -96,7 +96,7 @@ module.exports = {
 
 If you use React and Flow we recommend to use `@cybozu/eslint-config/react-flowtype` instead.
 
-### [Experimental] `@cybozu/eslint-config/flowtype`
+### [Experimental] `@cybozu/eslint-config/presets/flowtype`
 
 This rule set is for projects using Flow, which has Flow support, which is using `eslint-plugin-flowtype`.
 
@@ -108,7 +108,7 @@ module.exports = {
 
 If you use React and Flow we recommend to use `@cybozu/eslint-config/react-flowtype` instead.
 
-### [Experimental] `@cybozu/eslint-config/react-flowtype`
+### [Experimental] `@cybozu/eslint-config/presets/react-flowtype`
 
 This rule set is for projects using React and Flow, which has Flow support in addition to `@cybozu/eslint-config/react`.
 
