@@ -16,6 +16,8 @@
   ],
   "scripts": {
     "lint": "eslint **/*.js",
+    "release": "npm-run-all -p lint test -s standard-version",
+    "standard-version": "standard-version --dry-run",
     "test": "mocha"
   },
   "keywords": [
@@ -26,7 +28,9 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "mocha": "^5.2.0",
-    "prettier": "^1.13.2"
+    "npm-run-all": "^4.1.3",
+    "prettier": "^1.13.2",
+    "standard-version": "^4.4.0"
   },
   "peerDependencies": {
     "eslint": "^4.19.1"
