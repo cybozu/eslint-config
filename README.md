@@ -118,6 +118,16 @@ module.exports = {
 };
 ```
 
+### [Experimental] `@cybozu/eslint-config/presets/es5`
+
+This rule set is for projects using ES5.
+
+```js
+module.exports = {
+  extends: "@cybozu/eslint-config/presets/es5"
+};
+```
+
 ## [Experimental] Prettier Support
 
 Prettier is a code formatter, which supports not only JavaScript but also other languages.
@@ -139,5 +149,6 @@ In order to this, you have to install `prettier` and choose a preset from the fo
 - `@cybozu/eslint-config/presets/prettier`
 - `@cybozu/eslint-config/presets/react-prettier`
 - `@cybouz/eslint-config/presets/react-flowtype-prettier`
+- `@cybouz/eslint-config/presets/es5-prettier`
 
 **Currently, we don't support customized Prettier config**
