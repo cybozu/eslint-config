@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.2"></a>
+## [2.0.2](https://github.com/cybozu/eslint-config/compare/v2.0.1...v2.0.2) (2018-09-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency babel-eslint to v9 ([#30](https://github.com/cybozu/eslint-config/issues/30)) ([7de8f7b](https://github.com/cybozu/eslint-config/commit/7de8f7b))
+* **deps:** update dependency eslint-plugin-import to ^2.14.0 ([#27](https://github.com/cybozu/eslint-config/issues/27)) ([7983f6a](https://github.com/cybozu/eslint-config/commit/7983f6a))
+* **deps:** update dependency eslint-plugin-react to ^7.11.1 ([#29](https://github.com/cybozu/eslint-config/issues/29)) ([208f230](https://github.com/cybozu/eslint-config/commit/208f230))
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/cybozu/eslint-config/compare/v2.0.0...v2.0.1) (2018-08-07)
 
