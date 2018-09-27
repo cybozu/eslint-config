@@ -69,4 +69,21 @@ describe("presets", () => {
       );
     });
   });
+  describe("kintone-customize-es5", () => {
+    it("should be able to use kintone-customize-es5 as well as lib/es5 and lib/kintone", () => {
+      assert.deepStrictEqual(
+        runLintWithFixtures("es5"),
+        runLintWithFixtures("es5", "presets/kintone-customize-es5.js")
+      );
+    });
+    it("should be able to use kintone-customize-es5 as well as lib/kintone", () => {
+      assert.deepStrictEqual(
+        runLintWithFixtures("kintone", "presets/kintone-customize-es5.js"),
+        {
+          "ok.js": {},
+          "error.js": { errors: ["strict", "strict"] }
+        }
+      );
+    });
+  });
 });
