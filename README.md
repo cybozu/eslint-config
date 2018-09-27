@@ -148,7 +148,7 @@ In order to this, you have to install `prettier` and choose a preset from the fo
 
 - `@cybozu/eslint-config/presets/prettier`
 - `@cybozu/eslint-config/presets/react-prettier`
-- `@cybouz/eslint-config/presets/react-flowtype-prettier`
-- `@cybouz/eslint-config/presets/es5-prettier`
+- `@cybozu/eslint-config/presets/react-flowtype-prettier`
+- `@cybozu/eslint-config/presets/es5-prettier`
 
 **Currently, we don't support customized Prettier config**
