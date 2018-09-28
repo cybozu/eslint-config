@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/cybozu/eslint-config/compare/v2.0.2...v2.1.0) (2018-09-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-flowtype to ^2.50.1 ([1853a0f](https://github.com/cybozu/eslint-config/commit/1853a0f))
+* **deps:** update eslint and prettier ([#36](https://github.com/cybozu/eslint-config/issues/36)) ([f02fb84](https://github.com/cybozu/eslint-config/commit/f02fb84))
+
+
+### Features
+
+* add new warnings(max-params, max-nested-callbacks) ([#37](https://github.com/cybozu/eslint-config/issues/37)) ([700c0a1](https://github.com/cybozu/eslint-config/commit/700c0a1))
+* add presets which are kintone-customize-es5 and kintone-customize-es5-prettier ([#39](https://github.com/cybozu/eslint-config/issues/39)) ([8b5ba1d](https://github.com/cybozu/eslint-config/commit/8b5ba1d))
+* change wrap-iife rule to any from outside ([#42](https://github.com/cybozu/eslint-config/issues/42)) ([e167872](https://github.com/cybozu/eslint-config/commit/e167872))
+
+
+
 <a name="2.0.2"></a>
 ## [2.0.2](https://github.com/cybozu/eslint-config/compare/v2.0.1...v2.0.2) (2018-09-12)
 
