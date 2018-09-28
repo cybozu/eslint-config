@@ -152,3 +152,16 @@ In order to this, you have to install `prettier` and choose a preset from the fo
 - `@cybouz/eslint-config/presets/es5-prettier`
 
 **Currently, we don't support customized Prettier config**
+
+## For kintone customize developers
+
+`@cybozu/eslint-config/preset/kintone-customize-es5` is a preset for kintone customize(plug-in) developers, which is based on `preset/es5` and add some `globals` for kintone.
+
+```js
+module.exports = {
+  extends:
+    "@cybozu/eslint-config/presets/@cybozu/eslint-config/preset/kintone-customize-es5"
+};
+```
+
+We also provide `@cybozu/eslint-config/presets/@cybozu/eslint-config/preset/kintone-customize-es5` to use it with `prettier`.
