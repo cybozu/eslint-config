@@ -20,7 +20,9 @@ describe("base", () => {
         warnings: [
           "import/no-duplicates",
           "import/no-duplicates",
-          "array-callback-return"
+          "array-callback-return",
+          "max-params",
+          "max-nested-callbacks"
         ]
       },
       "ok.js": {}
