@@ -2,7 +2,7 @@
   'use strict';
   var a = '';
   alert(a);
-}());
+})();
 
 
 function foo() {

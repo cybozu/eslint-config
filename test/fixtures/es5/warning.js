@@ -8,4 +8,4 @@
   [].map(function(v) {
     alert(v);
   });
-}());
+})();
