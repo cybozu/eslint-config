@@ -45,6 +45,31 @@ describe("presets", () => {
       );
     });
   });
+  describe("node", () => {
+    it("should be able to use node as well as lib/node", () => {
+      assert.deepStrictEqual(
+        runLintWithFixtures("node"),
+        runLintWithFixtures("node", "presets/node.js")
+      );
+    });
+  });
+  describe("kintone-customize-es5", () => {
+    it("should be able to use kintone-customize-es5 as well as lib/es5 and lib/kintone", () => {
+      assert.deepStrictEqual(
+        runLintWithFixtures("es5"),
+        runLintWithFixtures("es5", "presets/kintone-customize-es5.js")
+      );
+    });
+    it("should be able to use kintone-customize-es5 as well as lib/kintone", () => {
+      assert.deepStrictEqual(
+        runLintWithFixtures("kintone", "presets/kintone-customize-es5.js"),
+        {
+          "ok.js": {},
+          "error.js": { errors: ["strict", "strict"] }
+        }
+      );
+    });
+  });
   describe("prettier", () => {
     it("should be able to use prettier as well as lib/prettier", () => {
       assert.deepStrictEqual(
@@ -69,20 +94,11 @@ describe("presets", () => {
       );
     });
   });
-  describe("kintone-customize-es5", () => {
-    it("should be able to use kintone-customize-es5 as well as lib/es5 and lib/kintone", () => {
+  describe("node-prettier", () => {
+    it("should be able to use node-prettier as well as lib/prettier", () => {
       assert.deepStrictEqual(
-        runLintWithFixtures("es5"),
-        runLintWithFixtures("es5", "presets/kintone-customize-es5.js")
-      );
-    });
-    it("should be able to use kintone-customize-es5 as well as lib/kintone", () => {
-      assert.deepStrictEqual(
-        runLintWithFixtures("kintone", "presets/kintone-customize-es5.js"),
-        {
-          "ok.js": {},
-          "error.js": { errors: ["strict", "strict"] }
-        }
+        runLintWithFixtures("prettier"),
+        runLintWithFixtures("prettier", "presets/node-prettier.js")
       );
     });
   });
