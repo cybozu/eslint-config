@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.1"></a>
+## [2.1.1](https://github.com/cybozu/eslint-config/compare/v2.1.0...v2.1.1) (2018-09-28)
+
+
+### Bug Fixes
+
+* add `globals` into files section in package.json ([#43](https://github.com/cybozu/eslint-config/issues/43)) ([74bf183](https://github.com/cybozu/eslint-config/commit/74bf183))
+
+
+
 <a name="2.1.0"></a>
 # [2.1.0](https://github.com/cybozu/eslint-config/compare/v2.0.2...v2.1.0) (2018-09-28)
 
