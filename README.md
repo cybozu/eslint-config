@@ -118,7 +118,7 @@ module.exports = {
 };
 ```
 
-### [Experimental] `@cybozu/eslint-config/presets/es5`
+### `@cybozu/eslint-config/presets/es5`
 
 This rule set is for projects using ES5.
 
@@ -128,7 +128,7 @@ module.exports = {
 };
 ```
 
-## [Experimental] Prettier Support
+## Prettier Support
 
 Prettier is a code formatter, which supports not only JavaScript but also other languages.
 Prettier is used widely for a code formatter for JavaScript.
