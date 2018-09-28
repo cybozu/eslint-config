@@ -1,8 +1,11 @@
-var a = 1;
-var b = 2;
+(function() {
+  'use strict';
+  var a = 1;
+  var b = 2;
 
-alert(a + b);
+  alert(a + b);
 
-[].map(function(v) {
-  alert(v);
-});
+  [].map(function(v) {
+    alert(v);
+  });
+}());
