@@ -5,6 +5,63 @@ All notable changes to this project will be documented in this file. See [standa
 <a name="2.1.0"></a>
 # [2.1.0](https://github.com/cybozu/eslint-config/compare/v2.0.2...v2.1.0) (2018-09-28)
 
+## Rule Changes
+
+`wrap-iife` now accepts `inside` style.
+
+* Before
+
+```js
+// OK
+(function () {
+}());
+
+// Error
+(function () {
+})();
+```
+
+* After
+
+```js
+// OK
+(function () {
+}());
+
+// OK
+(function () {
+})();
+```
+
+### :warning: New warnings
+
+* `max-params`
+
+Warn if you pass over 8 arguments to functions.
+
+```js
+// Warning
+function foo(a, b, c, d, e, f, g, h) {}
+```
+
+* `max-nested-callbacks`
+
+Warn if you nest functions over 5 levels.
+
+```js
+// Warning
+foo(() => {
+  foo(() => {
+    foo(() => {
+      foo(() => {
+        foo(() => {
+          foo(() => {});
+        });
+      });
+    });
+  });
+});
+```
 
 ### Bug Fixes
 
