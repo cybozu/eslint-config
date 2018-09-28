@@ -159,9 +159,8 @@ In order to this, you have to install `prettier` and choose a preset from the fo
 
 ```js
 module.exports = {
-  extends:
-    "@cybozu/eslint-config/presets/@cybozu/eslint-config/preset/kintone-customize-es5"
+  extends: "@cybozu/eslint-config/presets/kintone-customize-es5"
 };
 ```
 
-We also provide `@cybozu/eslint-config/presets/@cybozu/eslint-config/preset/kintone-customize-es5` to use it with `prettier`.
+We also provide `@cybozu/eslint-config/presets/kintone-customize-es5-prettier` to use it with `prettier`.
