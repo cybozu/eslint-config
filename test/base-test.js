@@ -12,7 +12,9 @@ describe("base", () => {
           "no-var",
           "no-redeclare",
           "getter-return",
-          "no-self-assign"
+          "no-self-assign",
+          "require-atomic-updates",
+          "no-async-promise-executor"
         ],
         warnings: ["no-useless-return"]
       },

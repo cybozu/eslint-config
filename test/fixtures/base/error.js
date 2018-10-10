@@ -8,3 +8,7 @@ const obj = {
 };
 
 obj.a = obj.a;
+
+(async () => {
+  obj.a += await new Promise(async (r) => r(10));
+})();
