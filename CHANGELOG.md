@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/cybozu/eslint-config/compare/v2.2.1...v3.0.0) (2018-10-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-flowtype to ^2.50.3 ([71080aa](https://github.com/cybozu/eslint-config/commit/71080aa))
+* **deps:** update dependency eslint-plugin-jsx-a11y to v6.1.2 ([318d7f8](https://github.com/cybozu/eslint-config/commit/318d7f8))
+* **deps:** update dependency eslint-plugin-prettier to v3 ([#48](https://github.com/cybozu/eslint-config/issues/48)) ([2643dcf](https://github.com/cybozu/eslint-config/commit/2643dcf))
+
+
+### Features
+
+* add require-atomic-updates and no-async-promise-executor ([#50](https://github.com/cybozu/eslint-config/issues/50)) ([5704b67](https://github.com/cybozu/eslint-config/commit/5704b67))
+
+
+### BREAKING CHANGES
+
+* this adds new errors for Async Functions
+    * [require-atomic-updates](https://eslint.org/docs/rules/require-atomic-updates)
+    * [no-async-promise-executor](https://eslint.org/docs/rules/no-async-promise-executor)
+* update minimum required pretter version to 1.13.0
+
+
+
 <a name="2.2.1"></a>
 ## [2.2.1](https://github.com/cybozu/eslint-config/compare/v2.2.0...v2.2.1) (2018-09-28)
 
