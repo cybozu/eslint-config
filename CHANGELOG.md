@@ -23,6 +23,7 @@ All notable changes to this project will be documented in this file. See [standa
 * this adds new errors for Async Functions
     * [require-atomic-updates](https://eslint.org/docs/rules/require-atomic-updates)
     * [no-async-promise-executor](https://eslint.org/docs/rules/no-async-promise-executor)
+* update minimum required ESLint version to 5.3.0
 * update minimum required pretter version to 1.13.0
 
 
