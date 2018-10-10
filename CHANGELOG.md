@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.1"></a>
+## [3.0.1](https://github.com/cybozu/eslint-config/compare/v3.0.0...v3.0.1) (2018-10-10)
+
+
+### Bug Fixes
+
+* eslint peerDeps version should be 5.3.0 ([#51](https://github.com/cybozu/eslint-config/issues/51)) ([4486c7d](https://github.com/cybozu/eslint-config/commit/4486c7d))
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/cybozu/eslint-config/compare/v2.2.1...v3.0.0) (2018-10-10)
 
