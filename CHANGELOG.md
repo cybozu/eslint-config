@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.2"></a>
+## [3.0.2](https://github.com/cybozu/eslint-config/compare/v2.2.1...v3.0.2) (2018-11-20)
+
+
+### Bug Fixes
+
+* eslint peerDeps version should be 5.3.0 ([#51](https://github.com/cybozu/eslint-config/issues/51)) ([4486c7d](https://github.com/cybozu/eslint-config/commit/4486c7d))
+* **deps:** update dependency eslint-plugin-flowtype to ^3.2.0 ([#56](https://github.com/cybozu/eslint-config/issues/56)) ([f6665a6](https://github.com/cybozu/eslint-config/commit/f6665a6))
+* **deps:** update dependency eslint-plugin-node to v8 ([#57](https://github.com/cybozu/eslint-config/issues/57)) ([cb53826](https://github.com/cybozu/eslint-config/commit/cb53826))
+
+
+
 <a name="3.0.1"></a>
 ## [3.0.1](https://github.com/cybozu/eslint-config/compare/v3.0.0...v3.0.1) (2018-10-10)
 
