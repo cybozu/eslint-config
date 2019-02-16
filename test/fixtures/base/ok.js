@@ -7,3 +7,9 @@ async function hoge() {
   return result;
 }
 hoge();
+
+const $ = {
+  Deferred: function() {}
+};
+
+$.Deferred();
