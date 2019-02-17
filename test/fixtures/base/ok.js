@@ -1,3 +1,5 @@
+/* eslint-env jquery */
+
 const foos = [''];
 foos.map((foo) => foo + foo);
 
@@ -8,8 +10,5 @@ async function hoge() {
 }
 hoge();
 
-const $ = {
-  Deferred: function() {}
-};
-
 $.Deferred();
+jQuery.Deferred();
