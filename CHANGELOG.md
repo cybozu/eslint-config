@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [3.1.0](https://github.com/cybozu/eslint-config/compare/v3.0.3...v3.1.0) (2019-03-26)
+
+
+### Bug Fixes
+
+* **deps:** Fix `release` script ([9f12835](https://github.com/cybozu/eslint-config/commit/9f12835))
+* **deps:** update dependency eslint-config-prettier to ^4.1.0 ([#84](https://github.com/cybozu/eslint-config/issues/84)) ([e9d3e4a](https://github.com/cybozu/eslint-config/commit/e9d3e4a))
+* **deps:** update dependency eslint-config-prettier to v4 ([#74](https://github.com/cybozu/eslint-config/issues/74)) ([54d49d3](https://github.com/cybozu/eslint-config/commit/54d49d3))
+* **deps:** update dependency eslint-plugin-flowtype to ^3.2.1 ([222513f](https://github.com/cybozu/eslint-config/commit/222513f))
+* **deps:** update dependency eslint-plugin-flowtype to ^3.4.2 ([05422fe](https://github.com/cybozu/eslint-config/commit/05422fe))
+* **deps:** update dependency eslint-plugin-node to ^8.0.1 ([304f646](https://github.com/cybozu/eslint-config/commit/304f646))
+* **deps:** update eslint and prettier ([#77](https://github.com/cybozu/eslint-config/issues/77)) ([4ed4703](https://github.com/cybozu/eslint-config/commit/4ed4703))
+
+
+### Features
+
+* allow jQuery Deferred for new-cap ([#80](https://github.com/cybozu/eslint-config/issues/80)) ([f434323](https://github.com/cybozu/eslint-config/commit/f434323))
+
+
+
 <a name="3.0.3"></a>
 ## [3.0.3](https://github.com/cybozu/eslint-config/compare/v3.0.2...v3.0.3) (2018-12-26)
 
