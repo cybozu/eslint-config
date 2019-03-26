@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "lint": "eslint **/*.js",
-    "release": "npm-run-all -p lint test -s standard-version",
+    "release": "npm-run-all -p lint test && standard-version",
     "release:dryrun": "standard-version --dry-run",
     "test": "mocha"
   },
