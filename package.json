@@ -31,10 +31,12 @@
     "mocha": "^6.0.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.16.4",
-    "standard-version": "^5.0.2"
+    "standard-version": "^5.0.2",
+    "typescript": "^3.3.4000"
   },
   "peerDependencies": {
-    "eslint": "^5.3.0"
+    "eslint": "^5.3.0",
+    "typescript": "^3.3.3333"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^1.5.0",
