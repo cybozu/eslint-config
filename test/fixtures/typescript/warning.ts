@@ -1,5 +1,7 @@
 class Baz {
-  constructor() {}
+  constructor() {
+    // this is constructor
+  }
 }
 
 const concat = (a: string, b: string): string => a + b!;

@@ -3,10 +3,11 @@ type Foo = {
 };
 
 const sum = (a: number, b: number): number => a + b;
-console.log(sum(10, 20));
+sum(10, 20);
 
 interface BarInterface {
   name: string;
+  getName: () => string;
 }
 
 class Bar {
@@ -14,7 +15,11 @@ class Bar {
   constructor(name: string) {
     this.name = name;
   }
+
+  getName(): string {
+    return this.name;
+  }
 }
 
-const bar: BarInterface = new Bar("bar");
-console.log(bar);
+const bar: BarInterface = new Bar('bar');
+bar.getName();

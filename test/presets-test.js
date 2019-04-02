@@ -134,4 +134,12 @@ describe("presets", () => {
       );
     });
   });
+  describe("typescript", () => {
+    it("should be able to use typescript as well as lib/typescript", () => {
+      assert.deepStrictEqual(
+        runLintWithFixtures("typescript"),
+        runLintWithFixtures("typescript", "presets/typescript.js")
+      );
+    });
+  });
 });

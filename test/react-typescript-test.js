@@ -15,7 +15,6 @@ describe("react-typescript", () => {
       },
       "warning.tsx": {
         warnings: [
-          "no-useless-constructor",
           "@typescript-eslint/no-useless-constructor",
           "@typescript-eslint/no-unnecessary-type-assertion"
         ]
