@@ -2,7 +2,7 @@ const assert = require("assert");
 const runLintWithFixtures = require("./lib/runLintWithFixtures");
 
 describe("react-typescript", () => {
-  xit("should get expected errors and warninigs", () => {
+  it("should get expected errors and warninigs", () => {
     // We use react presets in order to support ES2017 syntax
     const result = runLintWithFixtures(
       "react-typescript",
@@ -10,8 +10,16 @@ describe("react-typescript", () => {
     );
     assert.deepStrictEqual(result, {
       "ok.tsx": {},
-      "error.tsx": {},
-      "warning.tsx": {}
+      "error.tsx": {
+        errors: ["@typescript-eslint/array-type"]
+      },
+      "warning.tsx": {
+        warnings: [
+          "no-useless-constructor",
+          "@typescript-eslint/no-useless-constructor",
+          "@typescript-eslint/no-unnecessary-type-assertion"
+        ]
+      }
     });
   });
 });
