@@ -83,13 +83,23 @@ module.exports = {
 };
 ```
 
-### `@cybozu/eslint-config/node`
+### `@cybozu/eslint-config/presets/node`
 
 This rule set is for projects running on a Node environment.
 
 ```js
 module.exports = {
   extends: "@cybozu/eslint-config/presets/node"
+};
+```
+
+### `@cybozu/eslint-config/presets/typescript`
+
+This rule set is for TypeScript projects.
+
+```js
+module.exports = {
+  extends: "@cybozu/eslint-config/presets/typescript"
 };
 ```
 
@@ -105,6 +115,17 @@ module.exports = {
 ```
 
 If you use React and Flow we recommend to use `@cybozu/eslint-config/react-flowtype` instead.
+
+### [Experimental] `@cybozu/eslint-config/presets/react-typescript`
+
+This rule set is for TypeScript projects using React, which has JSX support and rules related React provided by `eslint-plugin-react` and `eslint-plugin-jsx-ally`.
+This rule set includes `@cybozu`.
+
+```js
+module.exports = {
+  extends: "@cybozu/eslint-config/presets/react-typescript"
+};
+```
 
 ### [Experimental] `@cybozu/eslint-config/presets/flowtype`
 
@@ -158,6 +179,9 @@ In order to this, you have to install `prettier` and choose a preset from the fo
 
 - `@cybozu/eslint-config/presets/prettier`
 - `@cybozu/eslint-config/presets/node-prettier`
+- `@cybozu/eslint-config/presets/node-typescript-prettier`
+- `@cybozu/eslint-config/presets/typescript-prettier`
+- `@cybozu/eslint-config/presets/react-typescript-prettier`
 - `@cybozu/eslint-config/presets/react-prettier`
 - `@cybozu/eslint-config/presets/react-flowtype-prettier`
 - `@cybozu/eslint-config/presets/es5-prettier`
