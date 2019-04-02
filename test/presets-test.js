@@ -102,4 +102,12 @@ describe("presets", () => {
       );
     });
   });
+  describe("node-typescript-prettier", () => {
+    it("should be able to use node-typescript-prettier as well as lib/prettier", () => {
+      assert.deepStrictEqual(
+        runLintWithFixtures("prettier"),
+        runLintWithFixtures("prettier", "presets/node-typescript-prettier.js")
+      );
+    });
+  });
 });
