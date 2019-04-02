@@ -13,7 +13,7 @@ const runLintWithFixtures = (type, configFile = `lib/${type}.js`) => {
     configFile: path.resolve(process.cwd(), configFile),
     ignore: false,
     useEslintrc: false,
-    extensions: [".js", ".jsx"]
+    extensions: [".js", ".jsx", ".ts", ".tsx"]
   });
   const targetDir = path.resolve(__dirname, "..", "fixtures", type);
   const lintResult = cli.executeOnFiles([targetDir]);

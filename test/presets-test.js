@@ -102,4 +102,44 @@ describe("presets", () => {
       );
     });
   });
+  describe("node-typescript-prettier", () => {
+    it("should be able to use node-typescript-prettier as well as lib/prettier", () => {
+      assert.deepStrictEqual(
+        runLintWithFixtures("prettier"),
+        runLintWithFixtures("prettier", "presets/node-typescript-prettier.js")
+      );
+    });
+  });
+  describe("react-typescript-prettier", () => {
+    it("should be able to use react-typescript-prettier as well as lib/prettier", () => {
+      assert.deepStrictEqual(
+        runLintWithFixtures("prettier"),
+        runLintWithFixtures("prettier", "presets/react-typescript-prettier.js")
+      );
+    });
+  });
+  describe("react-typescript", () => {
+    it("should be able to use react-typescript as well as presets/typescript", () => {
+      assert.deepStrictEqual(
+        runLintWithFixtures("typescript", "presets/typescript.js"),
+        runLintWithFixtures("typescript", "presets/react-typescript.js")
+      );
+    });
+  });
+  describe("typescript-prettier", () => {
+    it("should be able to use typescript-prettier as well as lib/prettier", () => {
+      assert.deepStrictEqual(
+        runLintWithFixtures("prettier"),
+        runLintWithFixtures("prettier", "presets/typescript-prettier.js")
+      );
+    });
+  });
+  describe("typescript", () => {
+    it("should be able to use typescript as well as lib/typescript", () => {
+      assert.deepStrictEqual(
+        runLintWithFixtures("typescript"),
+        runLintWithFixtures("typescript", "presets/typescript.js")
+      );
+    });
+  });
 });
