@@ -73,91 +73,21 @@ module.exports = {
 
 ## Support rule set
 
-### `@cybozu`
-
-This rule set is a basic rules for Cybozu, which supports ES2017 and parse your sources as Modules.
-
-```js
-module.exports = {
-  extends: "@cybozu"
-};
-```
-
-### `@cybozu/eslint-config/presets/node`
-
-This rule set is for projects running on a Node environment.
-
-```js
-module.exports = {
-  extends: "@cybozu/eslint-config/presets/node"
-};
-```
-
-### `@cybozu/eslint-config/presets/typescript`
-
-This rule set is for TypeScript projects.
-
-```js
-module.exports = {
-  extends: "@cybozu/eslint-config/presets/typescript"
-};
-```
-
-### [Experimental] `@cybozu/eslint-config/presets/react`
-
-This rule set is for projects using React, which has JSX support and rules related React provided by `eslint-plugin-react` and `eslint-plugin-jsx-ally`.
-This rule set includes `@cybozu`.
-
-```js
-module.exports = {
-  extends: "@cybozu/eslint-config/presets/react"
-};
-```
-
-If you use React and Flow we recommend to use `@cybozu/eslint-config/react-flowtype` instead.
-
-### [Experimental] `@cybozu/eslint-config/presets/react-typescript`
-
-This rule set is for TypeScript projects using React, which has JSX support and rules related React provided by `eslint-plugin-react` and `eslint-plugin-jsx-ally`.
-This rule set includes `@cybozu`.
-
-```js
-module.exports = {
-  extends: "@cybozu/eslint-config/presets/react-typescript"
-};
-```
-
-### [Experimental] `@cybozu/eslint-config/presets/flowtype`
-
-This rule set is for projects using Flow, which has Flow support, which is using `eslint-plugin-flowtype`.
-
-```js
-module.exports = {
-  extends: "@cybozu/eslint-config/presets/flowtype"
-};
-```
-
-If you use React and Flow we recommend to use `@cybozu/eslint-config/react-flowtype` instead.
-
-### [Experimental] `@cybozu/eslint-config/presets/react-flowtype`
-
-This rule set is for projects using React and Flow, which has Flow support in addition to `@cybozu/eslint-config/react`.
-
-```js
-module.exports = {
-  extends: "@cybozu/eslint-config/presets/react-flowtype"
-};
-```
-
-### `@cybozu/eslint-config/presets/es5`
-
-This rule set is for projects using ES5.
-
-```js
-module.exports = {
-  extends: "@cybozu/eslint-config/presets/es5"
-};
-```
+- `@cybozu`
+  - This is included in the all following presets
+- `@cybozu/eslint-config/presets/node`
+  - Including `eslint-plugin-node`
+- `@cybozu/eslint-config/presets/typescript`
+  - Including `@typescript-eslint/eslint-plugin`
+- `@cybozu/eslint-config/presets/react`
+  - Including `eslint-plugin-react` and `eslint-plugin-jsx-ally`
+- `@cybozu/eslint-config/presets/react-typescript`
+  - Including `@cybozu/eslint-config/presets/typescript` and `@cybozu/eslint-config/presets/react`
+- `@cybozu/eslint-config/presets/flowtype`
+  - Including `eslint-plugin-flowtype`
+- `@cybozu/eslint-config/presets/react-flowtype`
+  - Including `@cybozu/eslint-config/presets/react` and `eslint-plugin-flowtype`
+- `@cybozu/eslint-config/presets/es5`
 
 ## Prettier Support
 
@@ -167,7 +97,6 @@ Prettier is used widely for a code formatter for JavaScript.
 It's an opinionated tool but with Prettier, we don't have to discuss code styles in code review.
 (No more bikeshed)
 
-`@cybozu/eslint-config` has presets to support Prettier as an experimental.
 The presets disable all rules conflicting with Prettier and treat the difference as errors.
 You can fix the errors by `--fix` option so you don't have to fix the errors manually.
 
@@ -199,3 +128,4 @@ module.exports = {
 ```
 
 We also provide `@cybozu/eslint-config/presets/kintone-customize-es5-prettier` to use it with `prettier`.
+
