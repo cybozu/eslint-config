@@ -118,4 +118,12 @@ describe("presets", () => {
       );
     });
   });
+  describe("react-typescript", () => {
+    it("should be able to use react-typescript as well as presets/typescript", () => {
+      assert.deepStrictEqual(
+        runLintWithFixtures("typescript", "presets/typescript.js"),
+        runLintWithFixtures("typescript", "presets/react-typescript.js")
+      );
+    });
+  });
 });
