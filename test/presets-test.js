@@ -110,4 +110,12 @@ describe("presets", () => {
       );
     });
   });
+  describe("react-typescript-prettier", () => {
+    it("should be able to use react-typescript-prettier as well as lib/prettier", () => {
+      assert.deepStrictEqual(
+        runLintWithFixtures("prettier"),
+        runLintWithFixtures("prettier", "presets/react-typescript-prettier.js")
+      );
+    });
+  });
 });
