@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [3.2.0](https://github.com/cybozu/eslint-config/compare/v3.1.0...v3.2.0) (2019-04-03)
+
+
+### Features
+
+* Support TypeScript ([#93](https://github.com/cybozu/eslint-config/issues/93)) ([8b7012f](https://github.com/cybozu/eslint-config/commit/8b7012f)) 🎉🎉🎉
+
+
+
 # [3.1.0](https://github.com/cybozu/eslint-config/compare/v3.0.3...v3.1.0) (2019-03-26)
 
 
