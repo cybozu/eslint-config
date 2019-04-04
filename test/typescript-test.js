@@ -11,10 +11,7 @@ describe("typescript", () => {
         errors: ["@typescript-eslint/array-type"]
       },
       "warning.ts": {
-        warnings: [
-          "@typescript-eslint/no-useless-constructor",
-          "@typescript-eslint/no-unnecessary-type-assertion"
-        ]
+        warnings: ["@typescript-eslint/no-useless-constructor"]
       }
     });
   });
