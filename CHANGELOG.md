@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.1](https://github.com/cybozu/eslint-config/compare/v3.2.0...v3.2.1) (2019-04-04)
+
+
+### Bug Fixes
+
+* **perf:** typescript: disable rules required type infomation ([#98](https://github.com/cybozu/eslint-config/issues/98)) ([dccce73](https://github.com/cybozu/eslint-config/commit/dccce73))
+
+
+
 # [3.2.0](https://github.com/cybozu/eslint-config/compare/v3.1.0...v3.2.0) (2019-04-03)
 
 
