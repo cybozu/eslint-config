@@ -80,7 +80,7 @@ module.exports = {
 - `@cybozu/eslint-config/presets/typescript`
   - Including `@typescript-eslint/eslint-plugin`
 - `@cybozu/eslint-config/presets/react`
-  - Including `eslint-plugin-react` and `eslint-plugin-jsx-ally`
+  - Including `eslint-plugin-react`, `eslint-plugin-jsx-ally` and `eslint-plugin-react-hooks`
 - `@cybozu/eslint-config/presets/react-typescript`
   - Including `@cybozu/eslint-config/presets/typescript` and `@cybozu/eslint-config/presets/react`
 - `@cybozu/eslint-config/presets/flowtype`
@@ -128,4 +128,3 @@ module.exports = {
 ```
 
 We also provide `@cybozu/eslint-config/presets/kintone-customize-es5-prettier` to use it with `prettier`.
-
