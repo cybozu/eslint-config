@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [4.0.0](https://github.com/cybozu/eslint-config/compare/v3.2.1...v4.0.0) (2019-04-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @typescript-eslint/eslint-plugin to ^1.6.0 ([#100](https://github.com/cybozu/eslint-config/issues/100)) ([14f0cfa](https://github.com/cybozu/eslint-config/commit/14f0cfa))
+* **deps:** update dependency eslint-plugin-flowtype to ^3.6.0 ([#101](https://github.com/cybozu/eslint-config/issues/101)) ([8e21b43](https://github.com/cybozu/eslint-config/commit/8e21b43))
+
+
+### Features
+
+* **eslint-plugin-react:** enable react/jsx-props-no-multi-spaces as a warning ([4f42a62](https://github.com/cybozu/eslint-config/commit/4f42a62))
+* enable eslint-plugin-react-hooks ([aaf3d1d](https://github.com/cybozu/eslint-config/commit/aaf3d1d))
+* **react:** add jsx-a11y rules as warning ([d12a242](https://github.com/cybozu/eslint-config/commit/d12a242))
+
+
+### BREAKING CHANGES
+
+* This introduce new errors about React Hooks
+
+
+
 ## [3.2.1](https://github.com/cybozu/eslint-config/compare/v3.2.0...v3.2.1) (2019-04-04)
 
 
