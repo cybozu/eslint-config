@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.1](https://github.com/cybozu/eslint-config/compare/v4.0.0...v4.0.1) (2019-04-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-flowtype to ^3.6.1 ([c5205e6](https://github.com/cybozu/eslint-config/commit/c5205e6))
+* **deps:** update eslint and prettier ([#110](https://github.com/cybozu/eslint-config/issues/110)) ([35f70ca](https://github.com/cybozu/eslint-config/commit/35f70ca))
+
+
+
 # [4.0.0](https://github.com/cybozu/eslint-config/compare/v3.2.1...v4.0.0) (2019-04-10)
 
 
