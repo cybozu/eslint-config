@@ -1,5 +1,10 @@
+// prettier-ignore
 require('./unknown');
 
 (async () => {
-  await new Promise(r => r);
+  try {
+    await new Promise(r => r);
+  } catch {
+    console.log(1);
+  }
 })();
