@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [5.0.0](https://github.com/cybozu/eslint-config/compare/v4.0.1...v5.0.0) (2019-06-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @typescript-eslint/eslint-plugin to ^1.9.0 ([#114](https://github.com/cybozu/eslint-config/issues/114)) ([d400cab](https://github.com/cybozu/eslint-config/commit/d400cab))
+* **deps:** update dependency eslint-plugin-import to ^2.17.3 ([1fa3fc9](https://github.com/cybozu/eslint-config/commit/1fa3fc9))
+
+
+### Continuous Integration
+
+* drop Node v6 and add Node v12 as supporting versions ([#130](https://github.com/cybozu/eslint-config/issues/130)) ([453956c](https://github.com/cybozu/eslint-config/commit/453956c))
+
+
+### BREAKING CHANGES
+
+* drop Node v6 support
+
+
+
 ## [4.0.1](https://github.com/cybozu/eslint-config/compare/v4.0.0...v4.0.1) (2019-04-23)
 
 
