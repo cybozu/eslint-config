@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.1](https://github.com/cybozu/eslint-config/compare/v5.0.0...v5.0.1) (2019-06-14)
+
+
+### Bug Fixes
+
+* add @typescript-eslint/parser into the dependencies ([#132](https://github.com/cybozu/eslint-config/issues/132)) ([a1ab6df](https://github.com/cybozu/eslint-config/commit/a1ab6df))
+
+
+
 # [5.0.0](https://github.com/cybozu/eslint-config/compare/v4.0.1...v5.0.0) (2019-06-11)
 
 
