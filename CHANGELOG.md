@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [5.1.0](https://github.com/cybozu/eslint-config/compare/v5.0.1...v5.1.0) (2019-06-18)
+
+
+### Features
+
+* **react-typescript:** disable prop-types ([#134](https://github.com/cybozu/eslint-config/issues/134)) ([0ee3b18](https://github.com/cybozu/eslint-config/commit/0ee3b18))
+
+
+
 ## [5.0.1](https://github.com/cybozu/eslint-config/compare/v5.0.0...v5.0.1) (2019-06-14)
 
 
