@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.1.1](https://github.com/cybozu/eslint-config/compare/v5.1.0...v5.1.1) (2019-06-25)
+
+
+### Bug Fixes
+
+* **deps:** update eslint and prettier ([#116](https://github.com/cybozu/eslint-config/issues/116)) ([6c43e4c](https://github.com/cybozu/eslint-config/commit/6c43e4c))
+
+
+
 # [5.1.0](https://github.com/cybozu/eslint-config/compare/v5.0.1...v5.1.0) (2019-06-18)
 
 
