@@ -1,6 +1,19 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [5.2.0](https://github.com/cybozu/eslint-config/compare/v5.1.1...v5.2.0) (2019-07-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-jsx-a11y to v6.2.3 ([392ec2f](https://github.com/cybozu/eslint-config/commit/392ec2f))
+* **deps:** update dependency eslint-plugin-react-hooks to ^1.6.1 ([fddd5ed](https://github.com/cybozu/eslint-config/commit/fddd5ed))
+* **deps:** update eslint and prettier ([26a65df](https://github.com/cybozu/eslint-config/commit/26a65df))
+* **deps:** update eslint and prettier ([1a4a1ff](https://github.com/cybozu/eslint-config/commit/1a4a1ff))
+* **deps:** update typescript-eslint monorepo to ^1.11.0 ([b08cbf4](https://github.com/cybozu/eslint-config/commit/b08cbf4))
+
+
 
 ## [5.1.1](https://github.com/cybozu/eslint-config/compare/v5.1.0...v5.1.1) (2019-06-25)
 
