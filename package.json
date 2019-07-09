@@ -40,8 +40,8 @@
     "typescript": "^3.3.3333"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.9.0",
-    "@typescript-eslint/parser": "^1.10.2",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
     "babel-eslint": "^9.0.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-flowtype": "^3.10.5",
