@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://github.com/cybozu/eslint-config/compare/v5.2.0...v6.0.0) (2019-07-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency babel-eslint to v10 ([df83204](https://github.com/cybozu/eslint-config/commit/df83204))
+* **deps:** update eslint and prettier ([98f7275](https://github.com/cybozu/eslint-config/commit/98f7275))
+* **deps:** update typescript-eslint monorepo to ^1.12.0 ([#145](https://github.com/cybozu/eslint-config/issues/145)) ([c2558d6](https://github.com/cybozu/eslint-config/commit/c2558d6))
+
+
+### Features
+
+* drop eslint v5 ([4fe6e10](https://github.com/cybozu/eslint-config/commit/4fe6e10))
+
+
+### BREAKING CHANGES
+
+* dropping eslint v5,eslint v6 only supporting
+
+
+
 ## [5.2.0](https://github.com/cybozu/eslint-config/compare/v5.1.1...v5.2.0) (2019-07-09)
 
 
