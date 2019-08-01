@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.2](https://github.com/cybozu/eslint-config/compare/v6.0.1...v6.0.2) (2019-08-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-flowtype to ^3.12.2 ([1ac7ec6](https://github.com/cybozu/eslint-config/commit/1ac7ec6))
+* **deps:** update dependency eslint-plugin-react to ^7.14.3 ([08a1879](https://github.com/cybozu/eslint-config/commit/08a1879))
+
+
+
 ### [6.0.1](https://github.com/cybozu/eslint-config/compare/v6.0.0...v6.0.1) (2019-07-23)
 
 
