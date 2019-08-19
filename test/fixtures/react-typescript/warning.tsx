@@ -9,7 +9,9 @@ class Foo extends React.Component<Props> {
     super(props);
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    // noop
+  }
 
   concat(a: string, b: string): string {
     return a + b!;
