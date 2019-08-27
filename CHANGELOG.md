@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.0.0](https://github.com/cybozu/eslint-config/compare/v6.0.2...v7.0.0) (2019-08-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* This adds some rules enabled by plugin:@typescript-eslint/recommended
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-flowtype to ^3.13.0 ([#161](https://github.com/cybozu/eslint-config/issues/161)) ([f224d87](https://github.com/cybozu/eslint-config/commit/f224d87))
+* **deps:** update dependency eslint-plugin-flowtype to v4 ([27d70f5](https://github.com/cybozu/eslint-config/commit/27d70f5))
+* **deps:** update dependency eslint-plugin-react-hooks to ^1.7.0 ([#164](https://github.com/cybozu/eslint-config/issues/164)) ([c3db34b](https://github.com/cybozu/eslint-config/commit/c3db34b))
+* **deps:** update dependency eslint-plugin-react-hooks to v2 ([#171](https://github.com/cybozu/eslint-config/issues/171)) ([64dfa3a](https://github.com/cybozu/eslint-config/commit/64dfa3a))
+
+
+### deps
+
+* update [@typescript-eslint](https://github.com/typescript-eslint) to v2 ([#169](https://github.com/cybozu/eslint-config/issues/169)) ([301ac74](https://github.com/cybozu/eslint-config/commit/301ac74))
+
 ### [6.0.2](https://github.com/cybozu/eslint-config/compare/v6.0.1...v6.0.2) (2019-08-01)
 
 
