@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.1.0](https://github.com/cybozu/eslint-config/compare/v7.0.0...v7.1.0) (2019-09-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency babel-eslint to ^10.0.3 ([#174](https://github.com/cybozu/eslint-config/issues/174)) ([7ded5ec](https://github.com/cybozu/eslint-config/commit/7ded5ec))
+* **deps:** update dependency eslint-plugin-node to ^9.2.0 ([#176](https://github.com/cybozu/eslint-config/issues/176)) ([fab715c](https://github.com/cybozu/eslint-config/commit/fab715c))
+* **deps:** update dependency eslint-plugin-prettier to ^3.1.1 ([a066e5c](https://github.com/cybozu/eslint-config/commit/a066e5c))
+* **deps:** update eslint and prettier ([#180](https://github.com/cybozu/eslint-config/issues/180)) ([e2b5ba0](https://github.com/cybozu/eslint-config/commit/e2b5ba0))
+* **deps:** update typescript-eslint monorepo to ^2.1.0 ([#179](https://github.com/cybozu/eslint-config/issues/179)) ([5a59f86](https://github.com/cybozu/eslint-config/commit/5a59f86))
+
+
+### Features
+
+* **typescript:** disable typescript-eslint/ban-ts-ignore ([#185](https://github.com/cybozu/eslint-config/issues/185)) ([d2c0549](https://github.com/cybozu/eslint-config/commit/d2c0549))
+
 ## [7.0.0](https://github.com/cybozu/eslint-config/compare/v6.0.2...v7.0.0) (2019-08-27)
 
 
