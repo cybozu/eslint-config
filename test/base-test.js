@@ -13,8 +13,11 @@ describe("base", () => {
           "no-redeclare",
           "getter-return",
           "no-self-assign",
+          "no-import-assign",
           "require-atomic-updates",
-          "no-async-promise-executor"
+          "no-async-promise-executor",
+          "default-param-last",
+          "prefer-regex-literals"
         ],
         warnings: ["no-useless-return"]
       },
