@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.1.0](https://github.com/cybozu/eslint-config/compare/v8.0.0...v8.1.0) (2019-11-22)
+
+
+### Features
+
+* support es2019 syntax ([387631a](https://github.com/cybozu/eslint-config/commit/387631a30c64eabd52e985d59d0ef6a8e9514542))
+
 ## [8.0.0](https://github.com/cybozu/eslint-config/compare/v7.1.0...v8.0.0) (2019-10-23)
 
 
