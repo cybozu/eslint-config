@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.1.0](https://github.com/cybozu/eslint-config/compare/v8.0.0...v8.1.0) (2019-11-22)
+
+
+### Features
+
+* support es2019 syntax ([387631a](https://github.com/cybozu/eslint-config/commit/387631a30c64eabd52e985d59d0ef6a8e9514542))
+
+## [8.0.0](https://github.com/cybozu/eslint-config/compare/v7.1.0...v8.0.0) (2019-10-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* enable no-import-assign, default-param-last, prefer-regex-literals rules
+* drop support for ESLint less than v6.4.0
+
+### deps
+
+* update ESLint version to v6.4.0 ([be1001a](https://github.com/cybozu/eslint-config/commit/be1001a))
+
+
+### Features
+
+* enable new rules(no-import-assign, default-param-last, prefer-regex-literals) ([351b73b](https://github.com/cybozu/eslint-config/commit/351b73b))
+
 ## [7.1.0](https://github.com/cybozu/eslint-config/compare/v7.0.0...v7.1.0) (2019-09-24)
 
 
