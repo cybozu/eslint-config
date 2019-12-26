@@ -18,7 +18,6 @@ const runLintWithFixtures = (type, configFile = `lib/${type}.js`) => {
   const targetDir = path.resolve(__dirname, "..", "fixtures", type);
   const lintResult = cli.executeOnFiles([targetDir]);
   // console.log(JSON.stringify(lintResult, null, 2));
-
   return lintResult.results.reduce((results, { filePath, messages }) => {
     // strip path
     const fileName = filePath.replace(`${targetDir}/`, "");
