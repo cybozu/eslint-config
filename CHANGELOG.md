@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.0.1](https://github.com/cybozu/eslint-config/compare/v9.0.0...v9.0.1) (2019-12-27)
+
+
+### Bug Fixes
+
+* fail node/no-missing-import rule on TS files ([#215](https://github.com/cybozu/eslint-config/issues/215)) ([cac1f84](https://github.com/cybozu/eslint-config/commit/cac1f84e60783a4df0fc191b8412ad0126d08b81))
+
 ## [9.0.0](https://github.com/cybozu/eslint-config/compare/v8.1.0...v9.0.0) (2019-12-24)
 
 
