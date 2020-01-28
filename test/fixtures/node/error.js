@@ -5,6 +5,6 @@ require('./unknown');
   try {
     await new Promise(r => r);
   } catch {
-    console.log(1);
+    console.log(1n);
   }
 })();
