@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.0.0](https://github.com/cybozu/eslint-config/compare/v9.0.1...v10.0.0) (2020-01-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop node 8 support
+
+### Bug Fixes
+
+* use detect option for React version ([#196](https://github.com/cybozu/eslint-config/issues/196)) ([ea6dcdf](https://github.com/cybozu/eslint-config/commit/ea6dcdfa90d2155dc928a8f364463ff3d4ca0982))
+* **deps:** update dependency eslint-config-prettier to ^6.9.0 ([1f35fcf](https://github.com/cybozu/eslint-config/commit/1f35fcf2b7dca6998cc658d0a5f0f2bfe8151a91))
+* **deps:** update dependency eslint-plugin-flowtype to ^4.5.3 ([b4ba709](https://github.com/cybozu/eslint-config/commit/b4ba709cfa85b5c257ffab580e9d4237e0db5766))
+* **deps:** update dependency eslint-plugin-node to v11 ([#218](https://github.com/cybozu/eslint-config/issues/218)) ([5db1c04](https://github.com/cybozu/eslint-config/commit/5db1c04768474597a93689a4b2541a7c6f0b4f1e))
+* **deps:** update eslint and prettier ([#225](https://github.com/cybozu/eslint-config/issues/225)) ([fe32491](https://github.com/cybozu/eslint-config/commit/fe32491b02d6e6446738a307cda11536784a785a))
+* **deps:** update typescript-eslint monorepo to ^2.13.0 ([#182](https://github.com/cybozu/eslint-config/issues/182)) ([aecd4ed](https://github.com/cybozu/eslint-config/commit/aecd4ed3918a75df6dc5ba98a1e189c91f48ca99))
+* **deps:** update typescript-eslint monorepo to ^2.14.0 ([1f0803d](https://github.com/cybozu/eslint-config/commit/1f0803dcfa83d70c0e693f6d49d1757aeeff5106))
+* **deps:** update typescript-eslint monorepo to ^2.16.0 ([58b288f](https://github.com/cybozu/eslint-config/commit/58b288f26ee8233361dc3b1e16c8829ad5e2ed43))
+
+
+* drop node 8 support ([3421fb4](https://github.com/cybozu/eslint-config/commit/3421fb43dcc73adca93a730ef7e5341adcbe4ae2))
+
 ### [9.0.1](https://github.com/cybozu/eslint-config/compare/v9.0.0...v9.0.1) (2019-12-27)
 
 
