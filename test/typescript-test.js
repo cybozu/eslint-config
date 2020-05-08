@@ -8,11 +8,11 @@ describe("typescript", () => {
     assert.deepStrictEqual(result, {
       "ok.ts": {},
       "error.ts": {
-        errors: ["@typescript-eslint/array-type"]
+        errors: ["@typescript-eslint/array-type"],
       },
       "warning.ts": {
-        warnings: ["@typescript-eslint/no-useless-constructor"]
-      }
+        warnings: ["@typescript-eslint/no-useless-constructor"],
+      },
     });
   });
 });

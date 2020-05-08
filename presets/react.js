@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["../lib/base.js", "../lib/react.js"]
+  extends: ["../lib/base.js", "../lib/react.js"],
 };

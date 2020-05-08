@@ -6,9 +6,9 @@ describe("kintone", () => {
     const result = runLintWithFixtures("globals-kintone", "globals/kintone.js");
     assert.deepStrictEqual(result, {
       "error.js": {
-        errors: ["no-undef"]
+        errors: ["no-undef"],
       },
-      "ok.js": {}
+      "ok.js": {},
     });
   });
 });

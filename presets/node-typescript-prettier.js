@@ -5,6 +5,6 @@ module.exports = {
     "../lib/typescript.js",
     "../lib/node-typescript.js",
     "../lib/prettier.js",
-    "../lib/prettier-typescript.js"
-  ]
+    "../lib/prettier-typescript.js",
+  ],
 };

@@ -13,7 +13,7 @@ describe("presets", () => {
   describe("react", () => {
     it("should be able to use react as well as lib/base and lib/react", () => {
       assert.deepStrictEqual(runLintWithFixtures("react", "presets/react.js"), {
-        "ok.jsx": {}
+        "ok.jsx": {},
       });
       assert.deepStrictEqual(
         runLintWithFixtures("base"),
@@ -65,7 +65,7 @@ describe("presets", () => {
         runLintWithFixtures("kintone", "presets/kintone-customize-es5.js"),
         {
           "ok.js": {},
-          "error.js": { errors: ["strict", "strict"] }
+          "error.js": { errors: ["strict", "strict"] },
         }
       );
     });

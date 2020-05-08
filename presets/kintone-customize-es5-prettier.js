@@ -3,6 +3,6 @@ module.exports = {
     "../lib/es5.js",
     "../lib/kintone.js",
     "../globals/kintone.js",
-    "../lib/prettier.js"
-  ]
+    "../lib/prettier.js",
+  ],
 };

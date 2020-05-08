@@ -3,6 +3,6 @@ module.exports = {
     "../lib/base.js",
     "../lib/typescript.js",
     "../lib/prettier.js",
-    "../lib/prettier-typescript.js"
-  ]
+    "../lib/prettier-typescript.js",
+  ],
 };

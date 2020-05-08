@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["../lib/es5.js", "../lib/kintone.js", "../globals/kintone.js"]
+  extends: ["../lib/es5.js", "../lib/kintone.js", "../globals/kintone.js"],
 };

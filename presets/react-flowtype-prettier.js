@@ -5,6 +5,6 @@ module.exports = {
     "../lib/flowtype.js",
     "../lib/prettier.js",
     "../lib/prettier-react.js",
-    "../lib/prettier-flowtype.js"
-  ]
+    "../lib/prettier-flowtype.js",
+  ],
 };
