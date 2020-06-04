@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [10.0.4](https://github.com/cybozu/eslint-config/compare/v10.0.3...v10.0.4) (2020-06-04)
+
+
+### Bug Fixes
+
+* **deps:** update eslint and prettier (minor) ([#253](https://github.com/cybozu/eslint-config/issues/253)) ([be47bfd](https://github.com/cybozu/eslint-config/commit/be47bfdda9beec476c8bec3f92084b2980579664))
+* **deps:** update typescript-eslint monorepo to ^2.34.0 (minor) ([#268](https://github.com/cybozu/eslint-config/issues/268)) ([d686270](https://github.com/cybozu/eslint-config/commit/d68627061e0abd1b6a729b56f1fe3bfc34e1fdd8))
+
 ### [10.0.3](https://github.com/cybozu/eslint-config/compare/v10.0.2...v10.0.3) (2020-04-28)
 
 
