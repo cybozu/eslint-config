@@ -8,8 +8,6 @@ describe("base", () => {
       "error.js": {
         errors: [
           "no-var",
-          "no-var",
-          "no-redeclare",
           "no-unused-vars",
           "getter-return",
           "no-self-assign",
