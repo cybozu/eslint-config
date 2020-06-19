@@ -2,9 +2,9 @@ const assert = require("assert");
 const runLintWithFixtures = require("./lib/runLintWithFixtures");
 
 describe("typescript", () => {
-  it("should get expected errors and warninigs", () => {
+  it("should get expected errors and warninigs", async () => {
     // We use react presets in order to support ES2017 syntax
-    const result = runLintWithFixtures("typescript");
+    const result = await runLintWithFixtures("typescript");
     assert.deepStrictEqual(result, {
       "ok.ts": {},
       "error.ts": {

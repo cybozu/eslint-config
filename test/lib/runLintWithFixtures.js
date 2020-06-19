@@ -1,6 +1,6 @@
 "use strict";
 
-const CLIEngine = require("eslint").CLIEngine;
+const { ESLint } = require("eslint");
 const path = require("path");
 
 /**
@@ -8,17 +8,17 @@ const path = require("path");
  * @param type lint type, which is in lib directory
  * @returns {Object} lint results {[fileName]: {errors: [ruleNames], warnings: [ruleNames]}}
  */
-const runLintWithFixtures = (type, configFile = `lib/${type}.js`) => {
-  const cli = new CLIEngine({
-    configFile: path.resolve(process.cwd(), configFile),
+const runLintWithFixtures = async (type, configFile = `lib/${type}.js`) => {
+  const eslint = new ESLint({
+    overrideConfigFile: path.resolve(process.cwd(), configFile),
     ignore: false,
     useEslintrc: false,
     extensions: [".js", ".jsx", ".ts", ".tsx"]
   });
   const targetDir = path.resolve(__dirname, "..", "fixtures", type);
-  const lintResult = cli.executeOnFiles([targetDir]);
+  const lintResult = await eslint.lintFiles([targetDir]);
   // console.log(JSON.stringify(lintResult, null, 2));
-  return lintResult.results.reduce((results, { filePath, messages }) => {
+  return lintResult.reduce((results, { filePath, messages }) => {
     // strip path
     const fileName = filePath.replace(`${targetDir}/`, "");
     return Object.assign(results, {

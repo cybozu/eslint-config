@@ -1,7 +1,6 @@
 import mod from './mod';
 
 var foo = {};
-var foo = {};
 const obj = {
   a: 'a',
   get b() {

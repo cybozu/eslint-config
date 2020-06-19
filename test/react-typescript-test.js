@@ -2,9 +2,9 @@ const assert = require("assert");
 const runLintWithFixtures = require("./lib/runLintWithFixtures");
 
 describe("react-typescript", () => {
-  it("should get expected errors and warninigs", () => {
+  it("should get expected errors and warninigs", async () => {
     // We use react presets in order to support ES2017 syntax
-    const result = runLintWithFixtures(
+    const result = await runLintWithFixtures(
       "react-typescript",
       "presets/react-typescript.js"
     );
