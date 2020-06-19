@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.0.0](https://github.com/cybozu/eslint-config/compare/v10.0.4...v11.0.0) (2020-06-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* Support minimum ESLint version is v7.
+
+* test: use ESLint class instead of CLIEngine
+
+* deps: update typescript-eslint version to v3
+
+* deps: update eslint-plugin-flowtype version to v5
+
+* deps: update eslint plugins for react
+* eslint-plugin-react-hooks reports new errors
+
+* fix: review newly added rules in typescript-eslint
+* enable new rules in typescript-eslint/recommended
+
+* deps: update all plugin versions to laest
+
+* test: fix failed tests
+
+* test: fix failed tests
+
+* deps: update eslint-plugin-jsx-a11y to v6.3.0
+
+* Support ESLint v7 (#272) ([398512d](https://github.com/cybozu/eslint-config/commit/398512df0ed8a315fa361e4a3a7cb48124f60067)), closes [#272](https://github.com/cybozu/eslint-config/issues/272)
+
 ### [10.0.4](https://github.com/cybozu/eslint-config/compare/v10.0.3...v10.0.4) (2020-06-04)
 
 
