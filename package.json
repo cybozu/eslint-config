@@ -34,7 +34,7 @@
     "prettier": "^1.19.1",
     "react": "^16.13.1",
     "standard-version": "^8.0.2",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.7"
   },
   "peerDependencies": {
     "eslint": "^7.0.0",
