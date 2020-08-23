@@ -1,7 +1,8 @@
 # @cybozu/eslint-config
 
 [![npm version](https://badge.fury.io/js/%40cybozu%2Feslint-config.svg)](https://badge.fury.io/js/%40cybozu%2Feslint-config)
-[![CircleCI](https://circleci.com/gh/cybozu/eslint-config.svg?style=shield)](https://circleci.com/gh/cybozu/eslint-config)
+[![](https://github.com/cybozu/eslint-config/workflows/test/badge.svg)](https://github.com/cybozu/eslint-config/actions?workflow=test)
+[![](https://github.com/cybozu/eslint-config/workflows/lint/badge.svg)](https://github.com/cybozu/eslint-config/actions?workflow=lint)
 
 A ESLint rule set for Cybozu.
 
