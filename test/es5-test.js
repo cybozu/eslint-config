@@ -6,12 +6,12 @@ describe("es5", () => {
     const result = await runLintWithFixtures("es5");
     assert.deepStrictEqual(result, {
       "error.js": {
-        errors: ["no-unused-vars"]
+        errors: ["no-unused-vars"],
       },
       "warning.js": {
-        warnings: ["array-callback-return"]
+        warnings: ["array-callback-return"],
       },
-      "ok.js": {}
+      "ok.js": {},
     });
   });
 });

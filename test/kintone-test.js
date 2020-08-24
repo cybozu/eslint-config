@@ -6,9 +6,9 @@ describe("kintone", () => {
     const result = await runLintWithFixtures("kintone");
     assert.deepStrictEqual(result, {
       "error.js": {
-        errors: ["strict", "strict"]
+        errors: ["strict", "strict"],
       },
-      "ok.js": {}
+      "ok.js": {},
     });
   });
 });

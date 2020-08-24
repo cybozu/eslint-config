@@ -15,9 +15,9 @@ describe("base", () => {
           "require-atomic-updates",
           "no-async-promise-executor",
           "default-param-last",
-          "prefer-regex-literals"
+          "prefer-regex-literals",
         ],
-        warnings: ["no-useless-return"]
+        warnings: ["no-useless-return"],
       },
       "warning.js": {
         warnings: [
@@ -25,10 +25,10 @@ describe("base", () => {
           "import/no-duplicates",
           "array-callback-return",
           "max-params",
-          "max-nested-callbacks"
-        ]
+          "max-nested-callbacks",
+        ],
       },
-      "ok.js": {}
+      "ok.js": {},
     });
   });
 });

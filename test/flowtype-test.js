@@ -8,11 +8,11 @@ describe("flowtype", () => {
     assert.deepStrictEqual(result, {
       "ok.js": {},
       "error.js": {
-        errors: ["flowtype/type-id-match"]
+        errors: ["flowtype/type-id-match"],
       },
       "warning.js": {
-        warnings: ["flowtype/semi"]
-      }
+        warnings: ["flowtype/semi"],
+      },
     });
   });
 });

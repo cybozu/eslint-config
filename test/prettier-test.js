@@ -7,8 +7,8 @@ describe("prettier", () => {
     assert.deepStrictEqual(result, {
       "ok.js": {},
       "error.js": {
-        errors: ["prettier/prettier"]
-      }
+        errors: ["prettier/prettier"],
+      },
     });
   });
 });

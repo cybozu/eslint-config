@@ -15,7 +15,7 @@ describe("presets", () => {
       assert.deepStrictEqual(
         await runLintWithFixtures("react", "presets/react.js"),
         {
-          "ok.jsx": {}
+          "ok.jsx": {},
         }
       );
       assert.deepStrictEqual(
@@ -71,7 +71,7 @@ describe("presets", () => {
         ),
         {
           "ok.js": {},
-          "error.js": { errors: ["strict", "strict"] }
+          "error.js": { errors: ["strict", "strict"] },
         }
       );
     });

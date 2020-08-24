@@ -6,7 +6,7 @@ describe("react", () => {
     // We use react presets in order to support ES2017 syntax
     const result = await runLintWithFixtures("react", "presets/react.js");
     assert.deepStrictEqual(result, {
-      "ok.jsx": {}
+      "ok.jsx": {},
     });
   });
 });

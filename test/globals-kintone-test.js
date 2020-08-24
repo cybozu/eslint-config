@@ -9,9 +9,9 @@ describe("kintone", () => {
     );
     assert.deepStrictEqual(result, {
       "error.js": {
-        errors: ["no-undef"]
+        errors: ["no-undef"],
       },
-      "ok.js": {}
+      "ok.js": {},
     });
   });
 });
