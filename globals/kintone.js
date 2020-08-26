@@ -13,6 +13,6 @@ module.exports = {
     Chart: false,
     DOMPurify: false,
     Spinner: false,
-    UltraDate: false
-  }
+    UltraDate: false,
+  },
 };

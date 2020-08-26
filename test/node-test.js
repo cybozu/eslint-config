@@ -8,10 +8,10 @@ describe("node", () => {
       "error.js": {
         errors: [
           "node/no-missing-require",
-          "node/no-unsupported-features/es-syntax"
-        ]
+          "node/no-unsupported-features/es-syntax",
+        ],
       },
-      "ok.js": {}
+      "ok.js": {},
     });
   });
 });

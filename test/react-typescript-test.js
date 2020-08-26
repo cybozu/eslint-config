@@ -11,11 +11,11 @@ describe("react-typescript", () => {
     assert.deepStrictEqual(result, {
       "ok.tsx": {},
       "error.tsx": {
-        errors: ["@typescript-eslint/array-type"]
+        errors: ["@typescript-eslint/array-type"],
       },
       "warning.tsx": {
-        warnings: ["@typescript-eslint/no-useless-constructor"]
-      }
+        warnings: ["@typescript-eslint/no-useless-constructor"],
+      },
     });
   });
 });
