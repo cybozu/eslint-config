@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [11.0.1](https://github.com/cybozu/eslint-config/compare/v11.0.0...v11.0.1) (2020-10-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-import to ^2.22.1 ([2c69d5d](https://github.com/cybozu/eslint-config/commit/2c69d5d74fc7498e4b79e8fa3510ded853f0dd59))
+* **deps:** update dependency eslint-plugin-jsx-a11y to ^6.3.1 ([98eabc5](https://github.com/cybozu/eslint-config/commit/98eabc5d9c0bd6ad1111a7b99638df31f8210582))
+* **deps:** update dependency eslint-plugin-react to ^7.20.4 ([872ef7a](https://github.com/cybozu/eslint-config/commit/872ef7a698a22a69259cd1166ec58fdb263df86d))
+* **deps:** update dependency eslint-plugin-react to ^7.20.5 ([a003cf8](https://github.com/cybozu/eslint-config/commit/a003cf82a260672aeea3c1f6882568462f6269f8))
+* **deps:** update dependency eslint-plugin-react to ^7.20.6 ([e6aabf5](https://github.com/cybozu/eslint-config/commit/e6aabf5959b41721d6d08086ab0c93a1854ce746))
+* **deps:** update dependency eslint-plugin-react to ^7.21.3 ([df87ce5](https://github.com/cybozu/eslint-config/commit/df87ce5a38fb25d5c12bfa98a7f3d48277b1a95e))
+* **deps:** update dependency eslint-plugin-react to ^7.21.4 ([3d100fc](https://github.com/cybozu/eslint-config/commit/3d100fc8037e3ad09061170451d1dcf23031f7b6))
+* **deps:** update dependency eslint-plugin-react-hooks to ^4.0.6 ([a70eda1](https://github.com/cybozu/eslint-config/commit/a70eda113a9501eee79ca3ce14cd93e9d609155f))
+* **deps:** update dependency eslint-plugin-react-hooks to ^4.0.7 ([2f5f0f9](https://github.com/cybozu/eslint-config/commit/2f5f0f9b59159327e0bba3cea04f1b776dfbc14e))
+* **deps:** update dependency eslint-plugin-react-hooks to ^4.0.8 ([a2dc7e1](https://github.com/cybozu/eslint-config/commit/a2dc7e1fa0c8b25eeb3fa4f508c6de1efa885273))
+* **deps:** update dependency eslint-plugin-react-hooks to ^4.1.2 ([3e016fa](https://github.com/cybozu/eslint-config/commit/3e016fa64879995f6432879989f91124a4ff5889))
+* **deps:** update dependency typescript to v4 ([#320](https://github.com/cybozu/eslint-config/issues/320)) ([b3c394a](https://github.com/cybozu/eslint-config/commit/b3c394a6aa8d2ca1097a3bc87e092f8ce51fc064))
+* **deps:** update eslint and prettier ([88493c5](https://github.com/cybozu/eslint-config/commit/88493c585441b3d0ba7cb739667420c9ed0ddb2e))
+* **deps:** update typescript-eslint monorepo to ^3.3.0 ([#288](https://github.com/cybozu/eslint-config/issues/288)) ([be8f4d2](https://github.com/cybozu/eslint-config/commit/be8f4d275566b418aaa277b9834671c8acb57095))
+* **deps:** update typescript-eslint monorepo to ^3.4.0 ([#291](https://github.com/cybozu/eslint-config/issues/291)) ([7fc5525](https://github.com/cybozu/eslint-config/commit/7fc5525769caa60c5de8b7c858e796f202fd8bf8))
+* **deps:** update typescript-eslint monorepo to ^3.8.0 ([#295](https://github.com/cybozu/eslint-config/issues/295)) ([66668c3](https://github.com/cybozu/eslint-config/commit/66668c3f00e6370e04f79619400fa84aab6738ec))
+* **deps:** update typescript-eslint monorepo to ^3.9.0 ([#315](https://github.com/cybozu/eslint-config/issues/315)) ([0481d12](https://github.com/cybozu/eslint-config/commit/0481d12e2e9564e796a178b5cdac062038d1818b))
+* **deps:** update typescript-eslint monorepo to ^3.9.1 ([9f80d62](https://github.com/cybozu/eslint-config/commit/9f80d6290f04a4c18f81819ab57808175c6268b1))
+* **deps:** update typescript-eslint monorepo to v4 ([#333](https://github.com/cybozu/eslint-config/issues/333)) ([8c0e4c1](https://github.com/cybozu/eslint-config/commit/8c0e4c1b49eb32592020834897b3afa9dc7478c7))
+
 ## [11.0.0](https://github.com/cybozu/eslint-config/compare/v10.0.4...v11.0.0) (2020-06-19)
 
 
