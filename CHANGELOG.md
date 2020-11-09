@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [11.0.2](https://github.com/cybozu/eslint-config/compare/v11.0.1...v11.0.2) (2020-11-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-config-prettier to ^6.13.0 ([#346](https://github.com/cybozu/eslint-config/issues/346)) ([0a34dfc](https://github.com/cybozu/eslint-config/commit/0a34dfc70483f9cdc27c67984913e1ccd79ca471))
+* **deps:** update dependency eslint-plugin-react to ^7.21.5 ([6132349](https://github.com/cybozu/eslint-config/commit/613234918e61c23ae1b48d5aaa34c8b77b09dea1))
+* **deps:** update typescript-eslint monorepo to ^4.6.0 ([6fb31d8](https://github.com/cybozu/eslint-config/commit/6fb31d89de55525453a32478a87c3d796c272bbd))
+* **deps:** update typescript-eslint monorepo to ^4.6.0 (minor) ([2f7a500](https://github.com/cybozu/eslint-config/commit/2f7a500c1f23df7cb5ead01c906b39a27fd89a26))
+* **deps:** update typescript-eslint monorepo to ^4.6.1 ([9bb4f9a](https://github.com/cybozu/eslint-config/commit/9bb4f9a0ca12a37a7a6dbd4731d750378bf85dc3))
+
 ### [11.0.1](https://github.com/cybozu/eslint-config/compare/v11.0.0...v11.0.1) (2020-10-14)
 
 
