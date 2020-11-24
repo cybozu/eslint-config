@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [11.0.3](https://github.com/cybozu/eslint-config/compare/v11.0.2...v11.0.3) (2020-11-24)
+
+
+### Bug Fixes
+
+* **deps:** update typescript-eslint monorepo to ^4.8.1 ([#361](https://github.com/cybozu/eslint-config/issues/361)) ([cf5c94a](https://github.com/cybozu/eslint-config/commit/cf5c94aafeceb8445cbe22291fd226aea147789a))
+
 ### [11.0.2](https://github.com/cybozu/eslint-config/compare/v11.0.1...v11.0.2) (2020-11-09)
 
 
