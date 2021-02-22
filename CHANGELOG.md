@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [12.0.0](https://github.com/cybozu/eslint-config/compare/v11.0.4...v12.0.0) (2021-02-22)
 
+### ⚠ BREAKING CHANGES
+
+* **deps:** all prettier presets are now included all prettier configs
+This might change your code format
+* fix: all configs of eslint-config-prettier have been merged
 
 ### Bug Fixes
 
