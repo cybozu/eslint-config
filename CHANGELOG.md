@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.0.0](https://github.com/cybozu/eslint-config/compare/v11.0.4...v12.0.0) (2021-02-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-config-prettier to v8 ([#395](https://github.com/cybozu/eslint-config/issues/395)) ([46a5806](https://github.com/cybozu/eslint-config/commit/46a5806b13a775915bb5ef27105569336dc922f0))
+* **deps:** update dependency eslint-plugin-flowtype to ^5.2.1 ([4c753c0](https://github.com/cybozu/eslint-config/commit/4c753c085a18bed968dba6c1154281ce300ec773))
+* **deps:** update dependency eslint-plugin-flowtype to ^5.2.2 ([2aec5c8](https://github.com/cybozu/eslint-config/commit/2aec5c8d323325dd02526625823f5128dff343b4))
+* **deps:** update typescript-eslint monorepo to ^4.15.1 ([4561a28](https://github.com/cybozu/eslint-config/commit/4561a28fc11a1194ce7f17b67429c5429058d236))
+
 ### [11.0.4](https://github.com/cybozu/eslint-config/compare/v11.0.3...v11.0.4) (2021-02-10)
 
 
