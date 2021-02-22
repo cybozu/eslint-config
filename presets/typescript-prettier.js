@@ -1,8 +1,3 @@
 module.exports = {
-  extends: [
-    "../lib/base.js",
-    "../lib/typescript.js",
-    "../lib/prettier.js",
-    "../lib/prettier-typescript.js",
-  ],
+  extends: ["../lib/base.js", "../lib/typescript.js", "../lib/prettier.js"],
 };
