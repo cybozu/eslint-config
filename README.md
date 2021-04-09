@@ -85,10 +85,6 @@ module.exports = {
   - ⚠️ A11y rules are being defined as warnings, which is an experimental so we might change the rules in later
 - `@cybozu/eslint-config/presets/react-typescript`
   - Including `@cybozu/eslint-config/presets/typescript` and `@cybozu/eslint-config/presets/react`
-- `@cybozu/eslint-config/presets/flowtype`
-  - Including `eslint-plugin-flowtype`
-- `@cybozu/eslint-config/presets/react-flowtype`
-  - Including `@cybozu/eslint-config/presets/react` and `eslint-plugin-flowtype`
 - `@cybozu/eslint-config/presets/es5`
 
 ## Prettier Support
@@ -114,7 +110,6 @@ In order to this, you have to install `prettier` and choose a preset from the fo
 - `@cybozu/eslint-config/presets/typescript-prettier`
 - `@cybozu/eslint-config/presets/react-typescript-prettier`
 - `@cybozu/eslint-config/presets/react-prettier`
-- `@cybozu/eslint-config/presets/react-flowtype-prettier`
 - `@cybozu/eslint-config/presets/es5-prettier`
 
 **Currently, we don't support customized Prettier config**
