@@ -24,30 +24,6 @@ describe("presets", () => {
       );
     });
   });
-  describe("flowtype", () => {
-    it("should be able to use flowtype as well as lib/base and lib/flowtype", async () => {
-      assert.deepStrictEqual(
-        await runLintWithFixtures("flowtype"),
-        await runLintWithFixtures("flowtype", "presets/flowtype.js")
-      );
-      assert.deepStrictEqual(
-        await runLintWithFixtures("base"),
-        await runLintWithFixtures("base", "presets/flowtype.js")
-      );
-    });
-  });
-  describe("react-flowtype", () => {
-    it("should be able to use react-flowtype as well as lib/react and lib/flowtype", async () => {
-      assert.deepStrictEqual(
-        await runLintWithFixtures("react", "presets/react.js"),
-        await runLintWithFixtures("react", "presets/react-flowtype.js")
-      );
-      assert.deepStrictEqual(
-        await runLintWithFixtures("flowtype"),
-        await runLintWithFixtures("flowtype", "presets/react-flowtype.js")
-      );
-    });
-  });
   describe("node", () => {
     it("should be able to use node as well as lib/node", async () => {
       assert.deepStrictEqual(
@@ -89,17 +65,6 @@ describe("presets", () => {
       assert.deepStrictEqual(
         await runLintWithFixtures("prettier"),
         await runLintWithFixtures("prettier", "presets/react-prettier.js")
-      );
-    });
-  });
-  describe("react-flowtype-prettier", () => {
-    it("should be able to use react-flowtype-prettier as well as lib/prettier", async () => {
-      assert.deepStrictEqual(
-        await runLintWithFixtures("prettier"),
-        await runLintWithFixtures(
-          "prettier",
-          "presets/react-flowtype-prettier.js"
-        )
       );
     });
   });

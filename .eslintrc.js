@@ -1,8 +1,8 @@
 module.exports = {
   root: true,
-  extends: "./presets/react-flowtype-prettier.js",
+  extends: "./presets/react-typescript-prettier.js",
   env: {
     node: true,
-    mocha: true
-  }
+    mocha: true,
+  },
 };
