@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.0.0](https://github.com/cybozu/eslint-config/compare/v12.0.2...v13.0.0) (2021-04-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop flowytpe support. remove `@cybozu/eslint-config/presets/flowtype`,`@cybozu/eslint-config/presets/flowtype`, and `@cybozu/eslint-config/presets/react-flowtype-prettier`
+* enable a11y rules of eslint-plugin-jsx-a11y
+
+### Features
+
+* drop flowtype support ([#412](https://github.com/cybozu/eslint-config/issues/412)) ([37b0f90](https://github.com/cybozu/eslint-config/commit/37b0f907abf8afc790f7906bf5405e16808ef257))
+* redefine a11y rules of jsx-a11y strictly [#415](https://github.com/cybozu/eslint-config/issues/415) ([ebaa62c](https://github.com/cybozu/eslint-config/commit/ebaa62c88ceb8d0a2f212421e7ff073321d6dde5))
+
+
+### Bug Fixes
+
+* **deps:** update typescript-eslint monorepo to ^4.22.0 ([#414](https://github.com/cybozu/eslint-config/issues/414)) ([09862c3](https://github.com/cybozu/eslint-config/commit/09862c3aad5994679c37104a30602909c693a480))
+
 ### [12.0.2](https://github.com/cybozu/eslint-config/compare/v12.0.1...v12.0.2) (2021-04-09)
 
 
