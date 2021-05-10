@@ -1,6 +1,7 @@
 // prettier-ignore
 require('./unknown');
 
+
 (async () => {
   try {
     await new Promise(r => r);
@@ -8,3 +9,5 @@ require('./unknown');
     console.log(1n);
   }
 })();
+
+exports = {};

@@ -6,10 +6,7 @@ describe("node", () => {
     const result = await runLintWithFixtures("node");
     assert.deepStrictEqual(result, {
       "error.js": {
-        errors: [
-          "node/no-missing-require",
-          "node/no-unsupported-features/es-syntax",
-        ],
+        errors: ["node/no-missing-require", "node/no-exports-assign"],
       },
       "ok.js": {},
     });
