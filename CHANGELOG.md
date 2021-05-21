@@ -9,14 +9,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 * drop support Node v10 because of the EOL
 
-* Update node version on github action
-
-* chore: drop support Node v10 because of the EOL
-
-* fix: failling test by updating the engine version
-
-Co-authored-by: Toru Kobayashi <koba0004@gmail.com>
-
 ### Bug Fixes
 
 * **deps:** update dependency eslint-plugin-import to ^2.23.2 ([#428](https://github.com/cybozu/eslint-config/issues/428)) ([cd3c5ad](https://github.com/cybozu/eslint-config/commit/cd3c5ad3854239c3bf3ba91d220268c87fd5a1d1))
