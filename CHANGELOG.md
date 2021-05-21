@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [14.0.0](https://github.com/cybozu/eslint-config/compare/v13.0.0...v14.0.0) (2021-05-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support Node v10 because of the EOL
+
+* Update node version on github action
+
+* chore: drop support Node v10 because of the EOL
+
+* fix: failling test by updating the engine version
+
+Co-authored-by: Toru Kobayashi <koba0004@gmail.com>
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-import to ^2.23.2 ([#428](https://github.com/cybozu/eslint-config/issues/428)) ([cd3c5ad](https://github.com/cybozu/eslint-config/commit/cd3c5ad3854239c3bf3ba91d220268c87fd5a1d1))
+* **deps:** update typescript-eslint monorepo to ^4.22.1 ([127129f](https://github.com/cybozu/eslint-config/commit/127129f9f041beddee56d5f1080e7a4c013e6070))
+* **deps:** update typescript-eslint monorepo to ^4.23.0 ([#427](https://github.com/cybozu/eslint-config/issues/427)) ([00fa1e4](https://github.com/cybozu/eslint-config/commit/00fa1e42787d35bdb3bb8f2b25671500264d03d0))
+* **deps:** update typescript-eslint monorepo to ^4.24.0 ([#429](https://github.com/cybozu/eslint-config/issues/429)) ([69832ef](https://github.com/cybozu/eslint-config/commit/69832ef664a0bf3ce99df7a1ee64d4975ec6823c))
+
+
+* drop Node v10 support because of EOL ([#425](https://github.com/cybozu/eslint-config/issues/425)) ([9f49b36](https://github.com/cybozu/eslint-config/commit/9f49b3626a005e7d88451fa81155784f7764f142))
+
 ## [13.0.0](https://github.com/cybozu/eslint-config/compare/v12.0.2...v13.0.0) (2021-04-28)
 
 
