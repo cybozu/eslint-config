@@ -82,7 +82,6 @@ module.exports = {
   - Including `@typescript-eslint/eslint-plugin`
 - `@cybozu/eslint-config/presets/react`
   - Including `eslint-plugin-react`, `eslint-plugin-jsx-ally` and `eslint-plugin-react-hooks`
-  - ⚠️ A11y rules are being defined as warnings, which is an experimental so we might change the rules in later
 - `@cybozu/eslint-config/presets/react-typescript`
   - Including `@cybozu/eslint-config/presets/typescript` and `@cybozu/eslint-config/presets/react`
 - `@cybozu/eslint-config/presets/es5`
