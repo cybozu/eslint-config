@@ -88,16 +88,15 @@ module.exports = {
 
 ## Prettier Support
 
-Prettier is a code formatter, which supports not only JavaScript but also other languages.
-Prettier is used widely for a code formatter for JavaScript.
+Prettier is a code formatter, which supports not only JavaScript but also many languages.
+Prettier is used widely as code formatter for JavaScript.
 
-It's an opinionated tool but with Prettier, we don't have to discuss code styles in code review.
-(No more bikeshed)
+It's opinionated but we don't have to discuss about code styles with Prettier because it's the rule (No more bikeshed).
 
-The presets disable all rules conflicting with Prettier and treat the difference as errors.
+The following presets disable all rules that conflict with Prettier and treat the differences between Prettier's code format as errors.
 You can fix the errors by `--fix` option so you don't have to fix the errors manually.
 
-In order to this, you have to install `prettier` and choose a preset from the followings.
+To use the presets, you have to install `prettier`. We only support Prettier v2 or later versions.
 
 ```
 % npm install --save-dev prettier
