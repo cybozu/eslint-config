@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0](https://github.com/cybozu/eslint-config/compare/v14.0.3...v15.0.0) (2021-10-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop Prettier v1 support
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-prettier to v4 ([#479](https://github.com/cybozu/eslint-config/issues/479)) ([87941fd](https://github.com/cybozu/eslint-config/commit/87941fdd300dccbaa24c21d0e4adb875c0b0c7a4))
+* **deps:** update dependency eslint-plugin-react to ^7.25.2 ([3fb766b](https://github.com/cybozu/eslint-config/commit/3fb766b119da6c5f9b848175f480d59545f7bd16))
+* **deps:** update dependency eslint-plugin-react to ^7.25.3 ([f6a44f4](https://github.com/cybozu/eslint-config/commit/f6a44f42a9a3040e3ff09c950f16206f7db1ea55))
+* **deps:** update dependency eslint-plugin-react to ^7.26.0 ([#490](https://github.com/cybozu/eslint-config/issues/490)) ([fd2cf12](https://github.com/cybozu/eslint-config/commit/fd2cf1219ba9965c4ff136ae66c82cc150caa8f8))
+* **deps:** update dependency eslint-plugin-react to ^7.26.1 ([92a21a4](https://github.com/cybozu/eslint-config/commit/92a21a456881c9cb7cec482c1b7109d1277c639b))
+* **deps:** update eslint and prettier ([#477](https://github.com/cybozu/eslint-config/issues/477)) ([2b15a8c](https://github.com/cybozu/eslint-config/commit/2b15a8c0ec726033ce350f7f27449a38acd198bd))
+* **deps:** update typescript-eslint monorepo to ^4.31.0 ([#478](https://github.com/cybozu/eslint-config/issues/478)) ([4d3a5e9](https://github.com/cybozu/eslint-config/commit/4d3a5e9c8f3e4c7a2fff4a289eb75a792d3d8092))
+* **deps:** update typescript-eslint monorepo to ^4.31.1 ([c7e1098](https://github.com/cybozu/eslint-config/commit/c7e109832a9669216a4fab5755ec5156130342fc))
+* **deps:** update typescript-eslint monorepo to ^4.31.2 ([f2d7150](https://github.com/cybozu/eslint-config/commit/f2d7150bf70a86c7561e9f4a8a8dc8e1c4cffe23))
+
+
+* drop Prettier v1 support ([#481](https://github.com/cybozu/eslint-config/issues/481)) ([92abff0](https://github.com/cybozu/eslint-config/commit/92abff06bb30d9672ece4d3c6927471c691f469a))
+
 ### [14.0.3](https://github.com/cybozu/eslint-config/compare/v14.0.2...v14.0.3) (2021-09-01)
 
 
