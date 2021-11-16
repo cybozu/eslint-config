@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.0.0](https://github.com/cybozu/eslint-config/compare/v15.0.0...v16.0.0) (2021-11-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* this might introduce new errors that added to the recommended rules of `eslint` and `@typescript-eslint`.
+
+### Features
+
+* **deps:** update typescript-eslint monorepo to v5 (major) ([#502](https://github.com/cybozu/eslint-config/issues/502)) ([5969946](https://github.com/cybozu/eslint-config/commit/5969946f997f771a4d251c12770efa354fb13a46))
+* support ESLint v8 ([#522](https://github.com/cybozu/eslint-config/issues/522)) ([7f2a786](https://github.com/cybozu/eslint-config/commit/7f2a7862f37159f750f975a3f5cd43f9a0634741)), closes [#501](https://github.com/cybozu/eslint-config/issues/501) [#501](https://github.com/cybozu/eslint-config/issues/501)
+    * :warning: `eslint-plugin-node` hasn't supported ESLint v8 yet, so it might not work well with node presets.
+* use latest as ecmaVersion in parserOptions ([#509](https://github.com/cybozu/eslint-config/issues/509)) ([4016bf4](https://github.com/cybozu/eslint-config/commit/4016bf4f299867cd13cf4c53c9b4732446b16588))
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint to v8 ([#501](https://github.com/cybozu/eslint-config/issues/501)) ([db1a7d0](https://github.com/cybozu/eslint-config/commit/db1a7d0ac84999953998b8aff518d6cdb269220c))
+* **deps:** update dependency eslint-plugin-import to ^2.25.2 ([#504](https://github.com/cybozu/eslint-config/issues/504)) ([5f181b2](https://github.com/cybozu/eslint-config/commit/5f181b2c3c49af5d65de65b6729ca14aa89cb539))
+* **deps:** update dependency eslint-plugin-import to ^2.25.3 ([7d90d22](https://github.com/cybozu/eslint-config/commit/7d90d22cb4ce081af34c0844c498fde0a628edfc))
+* **deps:** update eslint and prettier ([#518](https://github.com/cybozu/eslint-config/issues/518)) ([53b777a](https://github.com/cybozu/eslint-config/commit/53b777a55d4de3f5e84a8a5ea3fca53f358e8d28))
+* **deps:** update typescript-eslint monorepo to ^4.32.0 ([#495](https://github.com/cybozu/eslint-config/issues/495)) ([d06278d](https://github.com/cybozu/eslint-config/commit/d06278ddec3732646ac8822e3d80e20a720ec767))
+* **deps:** update typescript-eslint monorepo to ^4.33.0 ([#500](https://github.com/cybozu/eslint-config/issues/500)) ([c23edf7](https://github.com/cybozu/eslint-config/commit/c23edf74b1b175fe4cae7e4968f3771549914cab))
+* **deps:** update typescript-eslint monorepo to ^5.1.0 ([#512](https://github.com/cybozu/eslint-config/issues/512)) ([494481c](https://github.com/cybozu/eslint-config/commit/494481c4771761fc3c201cfd70a1dcb82e6af0ea))
+* **deps:** update typescript-eslint monorepo to ^5.3.1 ([#515](https://github.com/cybozu/eslint-config/issues/515)) ([eb10c1b](https://github.com/cybozu/eslint-config/commit/eb10c1b3394e0df954eab76a15b6daed32244529))
+* **deps:** update typescript-eslint monorepo to ^5.4.0 ([#520](https://github.com/cybozu/eslint-config/issues/520)) ([97edd68](https://github.com/cybozu/eslint-config/commit/97edd6814133cf373bff9cdd6411a4764d7e05fa))
+
 ## [15.0.0](https://github.com/cybozu/eslint-config/compare/v14.0.3...v15.0.0) (2021-10-01)
 
 
