@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [16.0.1](https://github.com/cybozu/eslint-config/compare/v16.0.0...v16.0.1) (2021-12-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-react to ^7.27.1 ([dc9d0ee](https://github.com/cybozu/eslint-config/commit/dc9d0eeee5718e93cb2fec2c6ff86587c4440609))
+* **deps:** update typescript-eslint monorepo to ^5.5.0 ([#528](https://github.com/cybozu/eslint-config/issues/528)) ([e106e3f](https://github.com/cybozu/eslint-config/commit/e106e3fa07ac4e0fb264327aae54fa58cb474da3))
+
 ## [16.0.0](https://github.com/cybozu/eslint-config/compare/v15.0.0...v16.0.0) (2021-11-16)
 
 
