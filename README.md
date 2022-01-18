@@ -118,7 +118,7 @@ To use the presets, you have to install `prettier`. We only support Prettier v2 
 
 `@cybozu/eslint-config` is intented to be used with the [New JSX Transform](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html). If you want to use the Classic JSX Transform (`React.createElement`), please enable the `react/jsx-uses-react` rule on your own.
 
-```json
+```js
 rules: {
   "react/jsx-uses-react": "error"
 }
