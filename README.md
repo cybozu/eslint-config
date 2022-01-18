@@ -112,6 +112,18 @@ To use the presets, you have to install `prettier`. We only support Prettier v2 
 
 **Currently, we don't support customized Prettier config**
 
+## React Support
+
+### ⚠️ Classic JSX Syntax
+
+`@cybozu/eslint-config` is intented to be used with the [New JSX Transform](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html). If you want to use the Classic JSX Transform (`React.createElement`), please enable the `react/jsx-uses-react` rule on your own.
+
+```js
+rules: {
+  "react/jsx-uses-react": "error"
+}
+```
+
 ## For kintone customize developers
 
 `@cybozu/eslint-config/preset/kintone-customize-es5` is a preset for kintone customize(plug-in) developers, which is based on `preset/es5` and add some `globals` for kintone.
