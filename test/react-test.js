@@ -7,6 +7,9 @@ describe("react", () => {
     const result = await runLintWithFixtures("react", "presets/react.js");
     assert.deepStrictEqual(result, {
       "ok.jsx": {},
+      "warning.jsx": {
+        warnings: ["react/jsx-no-useless-fragment", "react/jsx-indent"],
+      },
     });
   });
 });
