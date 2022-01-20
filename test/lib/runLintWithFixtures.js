@@ -13,7 +13,7 @@ const runLintWithFixtures = async (type, configFile = `lib/${type}.js`) => {
     overrideConfigFile: path.resolve(process.cwd(), configFile),
     ignore: false,
     useEslintrc: false,
-    extensions: [".js", ".jsx", ".ts", ".tsx"]
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
   });
   const targetDir = path.resolve(__dirname, "..", "fixtures", type);
   const lintResult = await eslint.lintFiles([targetDir]);
@@ -43,7 +43,7 @@ const runLintWithFixtures = async (type, configFile = `lib/${type}.js`) => {
             throw new Error(`Got an unknown severity: ${severity}(${ruleId})`);
         }
         return resultPerFile;
-      }, {})
+      }, {}),
     });
   }, {});
 };
