@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.0.0](https://github.com/cybozu/eslint-config/compare/v16.0.1...v17.0.0) (2022-01-21)
+
+
+### ⚠ BREAKING CHANGES
+
+#### Enable new `jsx-a11y` rules 
+
+We have enabled some rules of `jsx-a11y`. Please see [#540](https://github.com/cybozu/eslint-config/issues/540) for more details.
+#### Support New JSX Transformer
+
+We have supported New JSX Transformer :tada:. If you use Classic JSX Transformer, you would see many `react/jsx-uses-react` errors. Please turn off the rule on your own when you still use the Classic JSX Transformer.
+
+You can see the details about the New JSX Transformer.
+https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
+### Features
+
+* enable `react/jsx-no-useless-fragment` and `@typescript-eslint/no-non-null-assertion` warnings ([#541](https://github.com/cybozu/eslint-config/issues/541)) ([5dd5077](https://github.com/cybozu/eslint-config/commit/5dd5077c9676930e185465de1a1b9332bddc8552))
+* React 17 support  ([#538](https://github.com/cybozu/eslint-config/issues/538)) ([dffb83d](https://github.com/cybozu/eslint-config/commit/dffb83da7128135be753c02d19a40a967a08cf92))
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-import to ^2.25.4 ([bde075b](https://github.com/cybozu/eslint-config/commit/bde075b2443de075af626a99e3129a6768f828c3))
+* enable some jsx-a11y rules ([#540](https://github.com/cybozu/eslint-config/issues/540)) ([fd9bc03](https://github.com/cybozu/eslint-config/commit/fd9bc036acc1aaebecb03151096b3ff3d5f8a795))
+
 ### [16.0.1](https://github.com/cybozu/eslint-config/compare/v16.0.0...v16.0.1) (2021-12-01)
 
 
