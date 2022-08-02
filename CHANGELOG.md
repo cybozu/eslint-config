@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [17.0.3](https://github.com/cybozu/eslint-config/compare/v17.0.1...v17.0.3) (2022-08-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-jsx-a11y to ^6.6.1 ([bfd6f0d](https://github.com/cybozu/eslint-config/commit/bfd6f0d767d1f134b3c53449d492b7d7c89784c6))
+* **deps:** update typescript-eslint monorepo to ^5.20.0 ([#556](https://github.com/cybozu/eslint-config/issues/556)) ([86cf26c](https://github.com/cybozu/eslint-config/commit/86cf26cd60982aa541aba44489af7afae206d2a7))
+* **deps:** update typescript-eslint monorepo to ^5.30.0 ([#568](https://github.com/cybozu/eslint-config/issues/568)) ([7bf5f8d](https://github.com/cybozu/eslint-config/commit/7bf5f8de8d7443de1b5026d84b137747bcbbf47e))
+* **deps:** update typescript-eslint monorepo to ^5.30.3 ([c2e596d](https://github.com/cybozu/eslint-config/commit/c2e596d3c7f6b22404daf0c5c98dce0273412e37))
+* **deps:** update typescript-eslint monorepo to ^5.30.4 ([5b050e0](https://github.com/cybozu/eslint-config/commit/5b050e0d790bdd657cacd2f10a13db835a572114))
+* **deps:** update typescript-eslint monorepo to ^5.30.5 ([a903db4](https://github.com/cybozu/eslint-config/commit/a903db419abd742118eced24f1e52454391d4c26))
+* **deps:** update typescript-eslint monorepo to ^5.30.6 ([31abb19](https://github.com/cybozu/eslint-config/commit/31abb1901b550ae26f9fa2436803322924868eb0))
+* **deps:** update typescript-eslint monorepo to ^5.30.7 ([8f80691](https://github.com/cybozu/eslint-config/commit/8f8069199d101ad8b8378bfcd5eb19387281313e))
+* **deps:** update typescript-eslint monorepo to ^5.32.0 ([#593](https://github.com/cybozu/eslint-config/issues/593)) ([9698c49](https://github.com/cybozu/eslint-config/commit/9698c49e2270b663c13bab48cc0b8cd9dd0e5934))
+
 ### [17.0.2](https://github.com/cybozu/eslint-config/compare/v17.0.1...v17.0.2) (2022-07-01)
 
 ### Update deps
