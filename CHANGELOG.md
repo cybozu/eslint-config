@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.0.0](https://github.com/cybozu/eslint-config/compare/v17.0.3...v18.0.0) (2022-11-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* Node v12 is no longer supported
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-react to ^7.31.10 ([740eeaf](https://github.com/cybozu/eslint-config/commit/740eeafa52dd6c534b29e93a826cf5474c8e1c50))
+* **deps:** update dependency eslint-plugin-react to ^7.31.2 ([1568fcf](https://github.com/cybozu/eslint-config/commit/1568fcf0682843f2c83b2efb776f1e8e59be366c))
+* **deps:** update dependency eslint-plugin-react to ^7.31.5 ([e5820f2](https://github.com/cybozu/eslint-config/commit/e5820f297eb7c8ef2688b855b5e18ce2a0c858ee))
+* **deps:** update dependency eslint-plugin-react to ^7.31.6 ([0ef9f32](https://github.com/cybozu/eslint-config/commit/0ef9f323894637ec7050eae8cf9af94f33c6f5b8))
+* **deps:** update dependency eslint-plugin-react to ^7.31.7 ([7a1bc57](https://github.com/cybozu/eslint-config/commit/7a1bc57e3836e8478bea4dadbdb835d70a211490))
+* **deps:** update dependency eslint-plugin-react to ^7.31.8 ([b3cdbd4](https://github.com/cybozu/eslint-config/commit/b3cdbd41abe43ca142ad20eeaa0ec4cfe968e2d8))
+* **deps:** update dependency eslint-plugin-react to ^7.31.9 ([c413476](https://github.com/cybozu/eslint-config/commit/c4134762d0ddc87cacac1b3fd81e48d8f7bbe0c2))
+* **deps:** update typescript-eslint monorepo to ^5.35.1 ([#597](https://github.com/cybozu/eslint-config/issues/597)) ([575dc09](https://github.com/cybozu/eslint-config/commit/575dc0906be079a133695aa49496f2c3e767f119))
+* **deps:** update typescript-eslint monorepo to ^5.42.0 ([#600](https://github.com/cybozu/eslint-config/issues/600)) ([8dc1198](https://github.com/cybozu/eslint-config/commit/8dc11983fa36c5833a5fd90e6bdb14aed1a73f4a))
+
+
+* drop Node v12 support, and add v18 support ([#621](https://github.com/cybozu/eslint-config/issues/621)) ([c065e68](https://github.com/cybozu/eslint-config/commit/c065e685f9a0a759ebe4a8c29cbfa1ba1e629c1d))
+
 ### [17.0.3](https://github.com/cybozu/eslint-config/compare/v17.0.1...v17.0.3) (2022-08-02)
 
 
