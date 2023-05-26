@@ -11,7 +11,10 @@ describe("react-typescript", () => {
     assert.deepStrictEqual(result, {
       "ok.tsx": {},
       "error.tsx": {
-        errors: ["@typescript-eslint/array-type"],
+        errors: [
+          "@typescript-eslint/array-type",
+          "@typescript-eslint/no-shadow",
+        ],
       },
       "warning.tsx": {
         warnings: [
