@@ -8,7 +8,10 @@ describe("typescript", () => {
     assert.deepStrictEqual(result, {
       "ok.ts": {},
       "error.ts": {
-        errors: ["@typescript-eslint/array-type"],
+        errors: [
+          "@typescript-eslint/array-type",
+          "@typescript-eslint/no-shadow",
+        ],
       },
       "warning.ts": {
         warnings: [
