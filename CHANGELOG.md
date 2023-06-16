@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [20.0.1](https://github.com/cybozu/eslint-config/compare/v19.0.0...v20.0.1) (2023-06-16)
+
+
+### Bug Fixes
+
+* **deps:** update typescript-eslint monorepo to ^5.59.11 ([b8c5d31](https://github.com/cybozu/eslint-config/commit/b8c5d312e8e9e0e4ce226ec3fd59acd64288ce2a))
+* **deps:** update typescript-eslint monorepo to ^5.59.2 ([16418a3](https://github.com/cybozu/eslint-config/commit/16418a3654169a43c6b33760ac48292cc84bdbe8))
+* **deps:** update typescript-eslint monorepo to ^5.59.5 ([8e3a098](https://github.com/cybozu/eslint-config/commit/8e3a09858e3e3a1de2c6180dc940b233f86eb182))
+* **deps:** update typescript-eslint monorepo to ^5.59.7 ([1c0bee2](https://github.com/cybozu/eslint-config/commit/1c0bee2af7e2aec8581c12010f58d4b471a5bf28))
+* **deps:** update typescript-eslint monorepo to ^5.59.8 ([0ba9f40](https://github.com/cybozu/eslint-config/commit/0ba9f4066964f1c6b4af22b66a5758cdd49e7f92))
+* **deps:** update typescript-eslint monorepo to ^5.59.9 ([d76138a](https://github.com/cybozu/eslint-config/commit/d76138acfc280e97d302bb9a9891d766f272fa54))
+* false positive of no-shadow rule for TypeScript ([#666](https://github.com/cybozu/eslint-config/issues/666)) ([619bd74](https://github.com/cybozu/eslint-config/commit/619bd74bbb21c9ac7d87430fe1e0351ed69eb71b))
+
 ## [20.0.0](https://github.com/cybozu/eslint-config/compare/v19.0.0...v20.0.0) (2023-05-10)
 
 ### ⚠ BREAKING CHANGES
