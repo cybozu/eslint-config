@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [21.0.0](https://github.com/cybozu/eslint-config/compare/v20.0.1...v21.0.0) (2023-07-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* Drop Prettier v2 support
+
+* update prettier and eslint-config-prettier ([#687](https://github.com/cybozu/eslint-config/issues/687)) ([de15262](https://github.com/cybozu/eslint-config/commit/de15262aba1c4162ca2aeac4f452bab4939cc31f))
+
 ### [20.0.1](https://github.com/cybozu/eslint-config/compare/v19.0.0...v20.0.1) (2023-06-16)
 
 
