@@ -6,7 +6,7 @@ describe("react-typescript", () => {
     // We use react presets in order to support ES2017 syntax
     const result = await runLintWithFixtures(
       "react-typescript",
-      "presets/react-typescript.js"
+      "presets/react-typescript.js",
     );
     assert.deepStrictEqual(result, {
       "ok.tsx": {},
