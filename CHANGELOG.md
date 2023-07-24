@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [22.0.0](https://github.com/cybozu/eslint-config/compare/v21.0.0...v22.0.0) (2023-07-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** drop old typescript version (<4.2.4)
+
+### Bug Fixes
+
+* **deps:** update typescript-eslint monorepo to v6 (major) ([#681](https://github.com/cybozu/eslint-config/issues/681)) ([4f2e116](https://github.com/cybozu/eslint-config/commit/4f2e1164a5947a91a7483e6838a099ce851b098f))
+
 ## [21.0.0](https://github.com/cybozu/eslint-config/compare/v20.0.1...v21.0.0) (2023-07-19)
 
 
