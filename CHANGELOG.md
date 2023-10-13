@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [22.0.2](https://github.com/cybozu/eslint-config/compare/v22.0.1...v22.0.2) (2023-10-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-prettier to ^5.0.1 ([66070a4](https://github.com/cybozu/eslint-config/commit/66070a47aab370b66c055890f3995bc7ce968f1a))
+* **deps:** update typescript-eslint monorepo to ^6.7.5 ([#700](https://github.com/cybozu/eslint-config/issues/700)) ([b508b61](https://github.com/cybozu/eslint-config/commit/b508b61e3acdbeae19a07fde075c6d98213bc7aa))
+
 ### [22.0.1](https://github.com/cybozu/eslint-config/compare/v22.0.0...v22.0.1) (2023-08-30)
 
 
