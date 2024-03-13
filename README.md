@@ -126,12 +126,24 @@ rules: {
 
 ## For kintone customize developers
 
-`@cybozu/eslint-config/preset/kintone-customize-es5` is a preset for kintone customize(plug-in) developers, which is based on `preset/es5` and add some `globals` for kintone.
+We also provide presets for kintone customize/plug-in developers, which include some `globals` for kintone.
+
+### Usage
 
 ```js
+// .eslintrc.js
 module.exports = {
-  extends: "@cybozu/eslint-config/presets/kintone-customize-es5"
+  extends: "@cybozu/eslint-config/presets/kintone-customize"
 };
 ```
 
-We also provide `@cybozu/eslint-config/presets/kintone-customize-es5-prettier` to use it with `prettier`.
+### Presets
+
+- `@cybozu/eslint-config/preset/kintone-customize`
+  - Preset for kintone customize/plugin-in development
+- `@cybozu/eslint-config/preset/kintone-customize-prettier`
+  - Preset for kintone customize/plugin-in development including `prettier` config
+- `@cybozu/eslint-config/preset/kintone-customize-es5`
+  - Preset for kintone customize/plugin-in development in ES5
+- `@cybozu/eslint-config/preset/kintone-customize-es5-prettier`
+  - Preset for kintone customize/plugin-in development in ES5 including `prettier` config
