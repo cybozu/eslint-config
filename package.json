@@ -1,7 +1,7 @@
 {
   "name": "@cybozu/eslint-config",
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "repository": "cybozu/eslint-config",
   "homepage": "https://github.com/cybozu/eslint-config",
@@ -37,8 +37,8 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "eslint": "^7.0.0 || ^8.0.0",
-    "typescript": ">=4.2.4 || ^5.0.0"
+    "eslint": ">=8.56.0",
+    "typescript": ">=4.7.5 || ^5.0.0"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^7.4.0",
