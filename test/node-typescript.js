@@ -11,7 +11,7 @@ describe("node-typescript", () => {
       "ok.ts": {},
       "sum.ts": {},
       "error.ts": {
-        errors: ["node/no-missing-import"],
+        errors: ["n/no-missing-import"],
       },
     });
   });
