@@ -76,7 +76,7 @@ module.exports = {
 
 - `@cybozu`
   - This is included in the all following presets
-- `@cybozu/eslint-config/presets/n`
+- `@cybozu/eslint-config/presets/node`
   - Including `eslint-plugin-n`
 - `@cybozu/eslint-config/presets/typescript`
   - Including `@typescript-eslint/eslint-plugin`
