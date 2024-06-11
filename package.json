@@ -13,6 +13,7 @@
     "lib",
     "globals",
     "presets",
+    "flat",
     "index.js"
   ],
   "scripts": {
