@@ -2,7 +2,7 @@ const assert = require("assert");
 const base = require("../../flat/lib/base");
 const runLintWithFixturesFlat = require("../lib/runLintWithFixturesFlat");
 
-describe("base", () => {
+describe("flat base", () => {
   it("should get expected errors and warnings with base flat config", async () => {
     const result = await runLintWithFixturesFlat("base", base());
 
