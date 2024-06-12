@@ -13,10 +13,8 @@ module.exports = function base() {
         import: importPlugin,
       },
       languageOptions: {
-        parserOptions: {
-          ecmaVersion: "latest",
-          sourceType: "module",
-        },
+        ecmaVersion: "latest",
+        sourceType: "module",
         globals: {
           ...globals.browser,
           ...globals.es6,
