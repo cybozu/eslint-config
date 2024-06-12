@@ -10,8 +10,9 @@ const hooksPlugin = require("eslint-plugin-react-hooks");
  */
 module.exports = function react(files) {
   return [
-    reactRecommended,
-    reactJsxRuntime,
+    // Explicitly use the same eslint-plugin-react in each configuration object.
+    { ...reactRecommended, plugins: { react: reactPlugin } },
+    { ...reactJsxRuntime, plugins: { react: reactPlugin } },
     {
       files,
       plugins: {
