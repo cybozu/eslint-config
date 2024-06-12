@@ -1,4 +1,5 @@
-/* eslint-env jquery */
+// Globals defined by jQuery
+/* global $, jQuery */
 
 const foos = [''];
 foos.map((foo) => foo + foo);
