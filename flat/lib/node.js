@@ -6,7 +6,7 @@ const nodePlugin = require("eslint-plugin-n");
  */
 module.exports = function node(overrides) {
   return [
-    nodePlugin.configs["flat/recommended-script"],
+    nodePlugin.configs["flat/recommended"],
     {
       files: overrides?.files,
       settings: {
