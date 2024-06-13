@@ -8,9 +8,10 @@ const baseRules = base()[1].rules;
 delete baseRules["import/no-duplicates"];
 
 /**
+ * @param {{ overrideGlobals?: import("eslint").ESLint.Globals}}
  * @return { import("eslint").Linter.FlatConfig[] }
  */
-module.exports = function es5() {
+module.exports = function es5(overrides) {
   return [
     eslint.configs.recommended,
     {
@@ -20,6 +21,7 @@ module.exports = function es5() {
         globals: {
           ...globals.browser,
           ...globals.commonjs,
+          ...overrides?.overrideGlobals,
         },
       },
       rules: Object.assign({}, baseRules, {

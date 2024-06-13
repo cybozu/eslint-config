@@ -5,16 +5,24 @@ const reactJsxRuntime = require("eslint-plugin-react/configs/jsx-runtime");
 const hooksPlugin = require("eslint-plugin-react-hooks");
 
 /**
- * @param {{ files?:string[] }}
+ * @param {{ files?:string[] }|undefined}
  * @return { import("eslint").Linter.FlatConfig[] }
  */
-module.exports = function react({ files }) {
+module.exports = function react(overrides) {
   return [
     // Explicitly use the same eslint-plugin-react in each configuration object.
-    { ...reactRecommended, files, plugins: { react: reactPlugin } },
-    { ...reactJsxRuntime, files, plugins: { react: reactPlugin } },
     {
-      files,
+      ...reactRecommended,
+      files: overrides.files,
+      plugins: { react: reactPlugin },
+    },
+    {
+      ...reactJsxRuntime,
+      files: overrides.files,
+      plugins: { react: reactPlugin },
+    },
+    {
+      files: overrides.files,
       plugins: {
         react: reactPlugin,
         "react-hooks": hooksPlugin,
