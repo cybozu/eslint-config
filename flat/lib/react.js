@@ -13,12 +13,10 @@ module.exports = function react(overrides) {
     // Explicitly use the same eslint-plugin-react in each configuration object.
     {
       ...reactRecommended,
-      files: overrides.files,
       plugins: { react: reactPlugin },
     },
     {
       ...reactJsxRuntime,
-      files: overrides.files,
       plugins: { react: reactPlugin },
     },
     {
