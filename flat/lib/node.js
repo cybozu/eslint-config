@@ -1,10 +1,10 @@
 const nodePlugin = require("eslint-plugin-n");
 
 /**
- * @param { string[] } files
+ * @param { {files?:string[]} }
  * @return { import("eslint").Linter.FlatConfig[] }
  */
-module.exports = function node(files) {
+module.exports = function node({ files }) {
   return [
     { ...nodePlugin.configs["flat/recommended-script"], files },
     {

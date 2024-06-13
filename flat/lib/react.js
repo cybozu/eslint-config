@@ -5,10 +5,10 @@ const reactJsxRuntime = require("eslint-plugin-react/configs/jsx-runtime");
 const hooksPlugin = require("eslint-plugin-react-hooks");
 
 /**
- * @param { string[] } files
+ * @param {{ files?:string[] }}
  * @return { import("eslint").Linter.FlatConfig[] }
  */
-module.exports = function react(files) {
+module.exports = function react({ files }) {
   return [
     // Explicitly use the same eslint-plugin-react in each configuration object.
     { ...reactRecommended, files, plugins: { react: reactPlugin } },

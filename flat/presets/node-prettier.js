@@ -7,6 +7,6 @@ const prettier = require("../lib/prettier.js");
  */
 module.exports = [
   ...base(),
-  ...node(["**/*.{js,cjs,mjs,ts,tsx,jsx,mts,cts}"]),
+  ...node({ files: ["**/*.{js,cjs,mjs,ts,tsx,jsx,mts,cts}"] }),
   ...prettier(),
 ];
