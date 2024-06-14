@@ -39,17 +39,19 @@ This is a rule you should fix because the code style might not be preferable.
 
 1.  We update major version if the changes might cause new errors.
 1.  We update minor version if the changes might cause new warnings.
-1.  We update patch version if the changes don't cause any new errors and warings.
+1.  We update patch version if the changes don't cause any new errors and warnings.
 
 ## How to use
 
-Install `eslint` and `@cybozu/eslint-config` and put it into your `.eslintrc.js`
+Install `eslint` and `@cybozu/eslint-config`
 
 ```
 % npm install --save-dev eslint @cybozu/eslint-config
 ```
 
-- `.eslintrc.js`
+### `.eslintrc.js`
+
+Put it into your `.eslintrc.js`
 
 ```js
 module.exports = {
@@ -63,13 +65,35 @@ We think it's important to have consistency in your entire codebase.**
 
 ```js
 module.exports = {
-  extends: "@cybozu",
+  extends: "@cybozu/eslint-config/presets/react-typescript-prettier",
   rules: {
     // default
     // 'indent': ['warn', 2, { "SwitchCase": 1 }],
     indent: ["warn", 4, { SwitchCase: 0 }]
   }
 };
+```
+
+### `eslint.config.js` (Flat Config)
+
+> [!NOTE]
+> Flat Config support is experimental. The applicable rules and scope may have changed.
+
+Put it into your `.eslint.config.js`
+
+```js
+const config = require("@cybozu/eslint-config/flat/presets/react-typescript-prettier")
+
+module.exports = [
+  ...config,
+  {
+    rules: {
+      // default
+      // 'indent': ['warn', 2, { "SwitchCase": 1 }],
+      indent: ["warn", 4, { SwitchCase: 0 }]
+    }
+  },
+]
 ```
 
 ## Support rule set
