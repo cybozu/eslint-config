@@ -43,13 +43,15 @@ This is a rule you should fix because the code style might not be preferable.
 
 ## How to use
 
-Install `eslint` and `@cybozu/eslint-config` and put it into your `.eslintrc.js`
+Install `eslint` and `@cybozu/eslint-config`
 
 ```
 % npm install --save-dev eslint @cybozu/eslint-config
 ```
 
-- `.eslintrc.js`
+### `.eslintrc.js`
+
+Put it into your `.eslintrc.js`
 
 ```js
 module.exports = {
@@ -63,13 +65,35 @@ We think it's important to have consistency in your entire codebase.**
 
 ```js
 module.exports = {
-  extends: "@cybozu",
+  extends: "@cybozu/eslint-config/presets/react-typescript-prettier",
   rules: {
     // default
     // 'indent': ['warn', 2, { "SwitchCase": 1 }],
     indent: ["warn", 4, { SwitchCase: 0 }]
   }
 };
+```
+
+### `eslint.config.js` (Flat Config)
+
+> [!NOTE]
+> Flat Config support is experimental. The applicable rules and scope may have changed.
+
+Put it into your `.eslint.config.js`
+
+```js
+const config = require("@cybozu/eslint-config/flat/presets/react-typescript-prettier")
+
+module.exports = [
+  ...config,
+  {
+    rules: {
+      // default
+      // 'indent': ['warn', 2, { "SwitchCase": 1 }],
+      indent: ["warn", 4, { SwitchCase: 0 }]
+    }
+  },
+]
 ```
 
 ## Support rule set
