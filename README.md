@@ -39,7 +39,7 @@ This is a rule you should fix because the code style might not be preferable.
 
 1.  We update major version if the changes might cause new errors.
 1.  We update minor version if the changes might cause new warnings.
-1.  We update patch version if the changes don't cause any new errors and warings.
+1.  We update patch version if the changes don't cause any new errors and warnings.
 
 ## How to use
 
