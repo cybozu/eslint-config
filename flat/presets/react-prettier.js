@@ -5,4 +5,9 @@ const prettier = require("../lib/prettier.js");
 /**
  * @type { import("eslint").Linter.FlatConfig[] }
  */
-module.exports = [...base(), ...react({ files: ["**/*.jsx"] }), ...prettier()];
+module.exports = [
+  { files: ["**/*.{js,mjs,cjs,jsx}"] },
+  ...base(),
+  ...react(),
+  ...prettier(),
+];

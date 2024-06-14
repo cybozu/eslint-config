@@ -17,7 +17,7 @@ module.exports = function base() {
         sourceType: "module",
         globals: {
           ...globals.browser,
-          ...globals.es6,
+          ...globals.es2015,
           ...globals.commonjs,
         },
       },

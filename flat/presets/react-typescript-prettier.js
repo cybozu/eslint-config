@@ -8,9 +8,10 @@ const prettier = require("../lib/prettier.js");
  * @type { import("eslint").Linter.FlatConfig[] }
  */
 module.exports = [
+  { files: ["**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx}"] },
   ...base(),
-  ...react({ files: ["**/*.{jsx,tsx}"] }),
+  ...react(),
   ...reactTypescript(),
-  ...typescript({ files: ["**/*.{ts,cts,mts,tsx}"] }),
+  ...typescript(),
   ...prettier(),
 ];

@@ -1,7 +1,6 @@
 const nodePlugin = require("eslint-plugin-n");
 
 /**
- * @param {{ files?:string[] }|undefined}
  * @return { import("eslint").Linter.FlatConfig[] }
  */
 module.exports = function nodeTypescript() {

@@ -8,7 +8,7 @@ const baseRules = base()[1].rules;
 delete baseRules["import/no-duplicates"];
 
 /**
- * @param {{ overrideGlobals?: import("eslint").ESLint.Globals}}
+ * @param {{ overrideGlobals?: import("eslint").ESLint.Globals} | undefined} overrides
  * @return { import("eslint").Linter.FlatConfig[] }
  */
 module.exports = function es5(overrides) {

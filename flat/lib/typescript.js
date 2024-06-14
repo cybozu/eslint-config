@@ -2,15 +2,13 @@ const globals = require("globals");
 const tseslint = require("typescript-eslint");
 
 /**
- * @param {{ files?:string[] }|undefined}
  * @return { import("eslint").Linter.FlatConfig[] }
  */
-module.exports = function typescript(overrides) {
+module.exports = function typescript() {
   return [
     ...tseslint.configs.recommended,
     ...tseslint.configs.stylistic,
     {
-      files: overrides?.files,
       plugins: {
         "@typescript-eslint": tseslint.plugin,
       },

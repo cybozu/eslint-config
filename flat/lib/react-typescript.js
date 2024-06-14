@@ -1,10 +1,9 @@
 const reactPlugin = require("eslint-plugin-react");
 
 /**
- * @param {{ files?:string[] }|undefined}
  * @return { import("eslint").Linter.FlatConfig[] }
  */
-module.exports = function reactTypescript(override) {
+module.exports = function reactTypescript() {
   return [
     {
       languageOptions: {

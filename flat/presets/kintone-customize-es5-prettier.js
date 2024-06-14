@@ -6,4 +6,9 @@ const kintoneGlobals = require("../globals/kintone.js");
 /**
  * @type { import("eslint").Linter.FlatConfig[] }
  */
-module.exports = [...es5(kintoneGlobals), ...kintone(), ...prettier()];
+module.exports = [
+  { files: ["**/*.{js,cjs,mjs,jsx}"] },
+  ...es5(kintoneGlobals),
+  ...kintone(),
+  ...prettier(),
+];

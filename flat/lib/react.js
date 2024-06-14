@@ -5,10 +5,9 @@ const reactJsxRuntime = require("eslint-plugin-react/configs/jsx-runtime");
 const hooksPlugin = require("eslint-plugin-react-hooks");
 
 /**
- * @param {{ files?:string[] }|undefined}
  * @return { import("eslint").Linter.FlatConfig[] }
  */
-module.exports = function react(overrides) {
+module.exports = function react() {
   return [
     // Explicitly use the same eslint-plugin-react in each configuration object.
     {
@@ -20,7 +19,6 @@ module.exports = function react(overrides) {
       plugins: { react: reactPlugin },
     },
     {
-      files: overrides.files,
       plugins: {
         react: reactPlugin,
         "react-hooks": hooksPlugin,
