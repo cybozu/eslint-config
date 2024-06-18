@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [24.0.0-alpha.0](https://github.com/cybozu/eslint-config/compare/v23.0.0...v24.0.0-alpha.0) (2024-06-18)
+
+
+### Features
+
+* add flat config presets ([#779](https://github.com/cybozu/eslint-config/pull/779/files))
+* **deps:** add typescript-eslint ([f1f4820](https://github.com/cybozu/eslint-config/commit/f1f4820e823117e498b0a693a00cd42a0511557e))
+* **deps:** update eslint-plugin-react-hooks to canary ([26baaca](https://github.com/cybozu/eslint-config/commit/26baaca1a6e0dbbfd5601c5e6cad18f021a3d561))
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-react to ^7.34.2 ([2a674b9](https://github.com/cybozu/eslint-config/commit/2a674b9205598a69054c4d8ef5863d107aea19a4))
+* **deps:** update dependency eslint-plugin-react-hooks to ^4.6.1 ([d534cbc](https://github.com/cybozu/eslint-config/commit/d534cbc68ccff4890669813aa49afcfbe7f90e53))
+* **deps:** update dependency eslint-plugin-react-hooks to ^4.6.2 ([8f26036](https://github.com/cybozu/eslint-config/commit/8f26036d31161d389d69e7f1e219f434a55ba208))
+* **deps:** update dependency eslint-plugin-react-hooks to ^5.1.0-rc-fb9a90fa48-20240614 ([0dd37d0](https://github.com/cybozu/eslint-config/commit/0dd37d0e6f4eea9c820fad8ed377a054691cb3fa))
+* **deps:** update typescript-eslint monorepo to ^7.13.0 ([434b70a](https://github.com/cybozu/eslint-config/commit/434b70a8d5da2be6adfe3870b08d6a1e4ed6cfac))
+* **deps:** update typescript-eslint monorepo to ^7.13.1 ([3faf612](https://github.com/cybozu/eslint-config/commit/3faf612ea464aaf11790213b00ed34f51cea7a4f))
+* **deps:** Use `eslint-plugin-n` instead of `eslint-plugin-node` ([#743](https://github.com/cybozu/eslint-config/issues/743)) ([29e3d4e](https://github.com/cybozu/eslint-config/commit/29e3d4e7b3c87fa3d99e4fcebe2058cfb5c7b07a))
+* Explicitly use the same eslint-plugin-react in each configuration object. ([8069f56](https://github.com/cybozu/eslint-config/commit/8069f5694440c3afc27f9b43495fc67ef0dd925e))
+* test command ([b8c13a7](https://github.com/cybozu/eslint-config/commit/b8c13a75f208cfd0565d69dcbc35afb513781f88))
+
 ## [23.0.0](https://github.com/cybozu/eslint-config/compare/v22.0.2...v23.0.0) (2024-03-27)
 
 
@@ -64,7 +86,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### ⚠ BREAKING CHANGES
 
-* add react/no-unstable-nested-components rule as error ([#665](https://github.com/cybozu/eslint-config/issues/665/)) 
+* add react/no-unstable-nested-components rule as error ([#665](https://github.com/cybozu/eslint-config/issues/665/))
 
 ### Bug Fixes
 
@@ -173,7 +195,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### ⚠ BREAKING CHANGES
 
-#### Enable new `jsx-a11y` rules 
+#### Enable new `jsx-a11y` rules
 
 We have enabled some rules of `jsx-a11y`. Please see [#540](https://github.com/cybozu/eslint-config/issues/540) for more details.
 #### Support New JSX Transformer
