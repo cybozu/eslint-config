@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [24.0.0-alpha.1](https://github.com/cybozu/eslint-config/compare/v24.0.0-alpha.0...v24.0.0-alpha.1) (2024-06-19)
+
+
+### Bug Fixes
+
+* **deps:** add dependency `globals` ([#784](https://github.com/cybozu/eslint-config/issues/784)) ([675af6e](https://github.com/cybozu/eslint-config/commit/675af6e1a824c14787c4e45b21e1250510d9c60b))
+
 ## [24.0.0-alpha.0](https://github.com/cybozu/eslint-config/compare/v23.0.0...v24.0.0-alpha.0) (2024-06-18)
 
 
