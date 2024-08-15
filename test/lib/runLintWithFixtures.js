@@ -1,6 +1,6 @@
 "use strict";
 
-const { ESLint } = require("eslint");
+const { loadESLint } = require("eslint");
 const path = require("path");
 
 /**
@@ -9,6 +9,7 @@ const path = require("path");
  * @returns {Object} lint results {[fileName]: {errors: [ruleNames], warnings: [ruleNames]}}
  */
 const runLintWithFixtures = async (type, configFile = `lib/${type}.js`) => {
+  const ESLint = await loadESLint({ useFlatConfig: false });
   const eslint = new ESLint({
     overrideConfigFile: path.resolve(process.cwd(), configFile),
     ignore: false,
