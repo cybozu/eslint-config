@@ -1,5 +1,5 @@
 const globals = require("globals");
-const importPlugin = require("eslint-plugin-import");
+const importPlugin = require("eslint-plugin-import-x");
 const eslint = require("@eslint/js");
 
 /**
