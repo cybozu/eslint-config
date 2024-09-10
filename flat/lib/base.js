@@ -10,7 +10,7 @@ module.exports = function base() {
     eslint.configs.recommended,
     {
       plugins: {
-        import: importPlugin,
+        "import-x": importPlugin,
       },
       languageOptions: {
         ecmaVersion: "latest",
@@ -278,8 +278,8 @@ module.exports = function base() {
         "template-tag-spacing": "warn",
         "unicode-bom": "warn",
 
-        // eslint-plugin-import
-        "import/no-duplicates": "warn",
+        // eslint-plugin-import-x
+        "import-x/no-duplicates": "warn",
 
         // =====
         // None

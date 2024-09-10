@@ -5,7 +5,7 @@ const eslint = require("@eslint/js");
 const baseRules = base()[1].rules;
 
 // This rule can be parsed with ES5
-delete baseRules["import/no-duplicates"];
+delete baseRules["import-x/no-duplicates"];
 
 /**
  * @param {{ overrideGlobals?: import("eslint").ESLint.Globals} | undefined} overrides

@@ -23,8 +23,8 @@ describe("flat base", () => {
       },
       "warning.js": {
         warnings: [
-          "import/no-duplicates",
-          "import/no-duplicates",
+          "import-x/no-duplicates",
+          "import-x/no-duplicates",
           "array-callback-return",
           "max-params",
           "max-nested-callbacks",
