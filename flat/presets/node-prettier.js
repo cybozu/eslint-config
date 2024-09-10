@@ -3,7 +3,7 @@ const node = require("../lib/node.js");
 const prettier = require("../lib/prettier.js");
 
 /**
- * @type { import("eslint").Linter.FlatConfig[] }
+ * @type { import("eslint").Linter.Config[] }
  */
 module.exports = [
   { files: ["**/*.{js,cjs,mjs,ts,tsx,jsx,mts,cts}"] },

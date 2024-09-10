@@ -4,7 +4,7 @@ const prettier = require("../lib/prettier.js");
 const kintoneGlobals = require("../globals/kintone.js");
 
 /**
- * @type { import("eslint").Linter.FlatConfig[] }
+ * @type { import("eslint").Linter.Config[] }
  */
 module.exports = [
   { files: ["**/*.{js,cjs,mjs,jsx}"] },

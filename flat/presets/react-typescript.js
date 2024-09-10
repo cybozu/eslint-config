@@ -4,7 +4,7 @@ const typescript = require("../lib/typescript.js");
 const reactTypescript = require("../lib/react-typescript.js");
 
 /**
- * @type { import("eslint").Linter.FlatConfig[] }
+ * @type { import("eslint").Linter.Config[] }
  */
 module.exports = [
   { files: ["**/*.{js,cjs,mjs,ts,cts,mts,tsx,jsx}"] },
