@@ -3,7 +3,6 @@ const reactPlugin = require("eslint-plugin-react");
 const reactRecommended = require("eslint-plugin-react/configs/recommended");
 const reactJsxRuntime = require("eslint-plugin-react/configs/jsx-runtime");
 const hooksPlugin = require("eslint-plugin-react-hooks");
-const { fixupPluginRules } = require("@eslint/compat");
 
 /**
  * @return { import("eslint").Linter.FlatConfig[] }
@@ -23,7 +22,7 @@ module.exports = function react() {
       plugins: {
         react: reactPlugin,
         "react-hooks": hooksPlugin,
-        "jsx-a11y": fixupPluginRules(jsxA11yPlugin),
+        "jsx-a11y": jsxA11yPlugin,
       },
       languageOptions: {
         parserOptions: {
