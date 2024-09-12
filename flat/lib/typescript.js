@@ -1,4 +1,3 @@
-const globals = require("globals");
 const tseslint = require("typescript-eslint");
 const stylisticTs = require("@stylistic/eslint-plugin-ts");
 
@@ -30,7 +29,7 @@ module.exports = function typescript() {
         "no-useless-constructor": "off",
         "@typescript-eslint/no-useless-constructor": "warn",
         "@typescript-eslint/unified-signatures": "warn",
-        // "@stylistic/ts/indent": ["warn", 2, { SwitchCase: 1 }],
+        "@stylistic/ts/indent": ["warn", 2, { SwitchCase: 1 }],
 
         "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/explicit-member-accessibility": "off",
