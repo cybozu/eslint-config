@@ -42,8 +42,8 @@
     "typescript": ">=4.7.5 || ^5.0.0"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.13.1",
-    "@typescript-eslint/parser": "^7.13.1",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
@@ -52,6 +52,6 @@
     "eslint-plugin-react": "^7.34.4",
     "eslint-plugin-react-hooks": "^5.1.0-rc-fb9a90fa48-20240614",
     "globals": "^15.6.0",
-    "typescript-eslint": "^7.13.1"
+    "typescript-eslint": "^8.7.0"
   }
 }
