@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [24.0.0-beta.0](https://github.com/cybozu/eslint-config/compare/v24.0.0-alpha.1...v24.0.0-beta.0) (2024-09-24)
+
+
+### Features
+
+* Add support for ESLint 9 ([#797](https://github.com/cybozu/eslint-config/issues/797)) ([06d5058](https://github.com/cybozu/eslint-config/commit/06d5058f118520811fb4ed26cbf3183c92b49533))
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-react to ^7.34.3 ([c33f6bb](https://github.com/cybozu/eslint-config/commit/c33f6bb82d970842eb3aa93da294c3c9c9d6d2a1))
+* **deps:** update dependency eslint-plugin-react to ^7.34.4 ([aa74d12](https://github.com/cybozu/eslint-config/commit/aa74d123a41eda9bb678eb7c8c7e228ffa35f78b))
+
 ## [24.0.0-alpha.1](https://github.com/cybozu/eslint-config/compare/v24.0.0-alpha.0...v24.0.0-alpha.1) (2024-06-19)
 
 
