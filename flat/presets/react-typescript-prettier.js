@@ -5,7 +5,7 @@ const reactTypescript = require("../lib/react-typescript.js");
 const prettier = require("../lib/prettier.js");
 
 /**
- * @type { import("eslint").Linter.FlatConfig[] }
+ * @type { import("eslint").Linter.Config[] }
  */
 module.exports = [
   { files: ["**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx}"] },

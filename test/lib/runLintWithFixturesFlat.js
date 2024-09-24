@@ -1,18 +1,16 @@
 "use strict";
 
-const { loadESLint } = require("eslint");
+const { ESLint } = require("eslint");
 const path = require("path");
 
 /**
  * Run ESlint and return the result per files
  * @param type lint type, which is in lib directory
- * @param configObject { import("eslint").Linter.FlatConfig[] }
+ * @param configObject { import("eslint").Linter.Config[] }
  * @returns {Object} lint results {[fileName]: {errors: [ruleNames], warnings: [ruleNames]}}
  */
 const runLintWithFixturesFlat = async (type, configObject) => {
-  const FlatESLint = await loadESLint({ useFlatConfig: true });
-
-  const eslint = new FlatESLint({
+  const eslint = new ESLint({
     overrideConfigFile: true,
     overrideConfig: configObject,
     ignore: false,
