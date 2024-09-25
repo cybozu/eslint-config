@@ -52,7 +52,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.36.1",
     "eslint-plugin-react-hooks": "^5.1.0-rc-fb9a90fa48-20240614",
-    "globals": "^15.6.0",
+    "globals": "^15.9.0",
     "typescript-eslint": "^8.1.0"
   }
 }
