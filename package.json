@@ -42,7 +42,7 @@
     "typescript": ">=4.7.5 || ^5.0.0"
   },
   "dependencies": {
-    "@stylistic/eslint-plugin-ts": "^2.6.5",
+    "@stylistic/eslint-plugin-ts": "^2.8.0",
     "@typescript-eslint/eslint-plugin": "^8.1.0",
     "@typescript-eslint/parser": "^8.1.0",
     "eslint-config-prettier": "^9.1.0",
