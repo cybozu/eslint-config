@@ -79,7 +79,7 @@ module.exports = {
 > [!NOTE]
 > Flat Config support is experimental. The applicable rules and scope may have changed.
 
-Put it into your `.eslint.config.js`
+Put it into your `eslint.config.js`
 
 ```js
 const config = require("@cybozu/eslint-config/flat/presets/react-typescript-prettier")
