@@ -55,6 +55,25 @@ describe("presets", () => {
       );
     });
   });
+  describe("kintone-customize", () => {
+    it("should be able to use kintone-customize as well as lib/base", async () => {
+      assert.deepStrictEqual(
+        await runLintWithFixtures("base"),
+        await runLintWithFixtures("base", "presets/kintone-customize.js"),
+      );
+    });
+  });
+  describe("kintone-customize-prettier", () => {
+    it("should be able to use kintone-customize-prettier as well as lib/prettier", async () => {
+      assert.deepStrictEqual(
+        await runLintWithFixtures("prettier"),
+        await runLintWithFixtures(
+          "prettier",
+          "presets/kintone-customize-prettier.js",
+        ),
+      );
+    });
+  });
   describe("prettier", () => {
     it("should be able to use prettier as well as lib/prettier", async () => {
       assert.deepStrictEqual(
