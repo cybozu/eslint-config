@@ -8,7 +8,7 @@ const prettier = require("../lib/prettier.js");
  */
 module.exports = [
   { files: ["**/*.{js,cjs,mjs,jsx}"] },
-  ...es5(kintoneGlobals),
+  ...es5({ overrideGlobals: kintoneGlobals }),
   ...kintoneEs5(),
   ...prettier(),
 ];

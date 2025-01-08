@@ -1,8 +1,7 @@
 const base = require("./base");
 const globals = require("globals");
 const eslint = require("@eslint/js");
-
-const baseRules = base()[1].rules;
+const baseRules = base()[2].rules;
 
 // This rule can be parsed with ES5
 delete baseRules["import-x/no-duplicates"];

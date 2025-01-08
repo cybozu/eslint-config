@@ -1,6 +1,3 @@
-// Globals defined by jQuery
-/* global $, jQuery */
-
 const foos = [''];
 foos.map((foo) => foo + foo);
 
@@ -10,6 +7,3 @@ async function hoge() {
   return {...result};
 }
 hoge();
-
-$.Deferred();
-jQuery.Deferred();

@@ -5,4 +5,8 @@ const kintoneGlobals = require("../globals/kintone.js");
 /**
  * @type { import("eslint").Linter.Config[] }
  */
-module.exports = [...es5(kintoneGlobals), ...kintoneEs5()];
+module.exports = [
+  { files: ["**/*.{js,cjs,mjs,jsx}"] },
+  ...es5({ overrideGlobals: kintoneGlobals }),
+  ...kintoneEs5(),
+];
