@@ -8,12 +8,15 @@ module.exports = function kintone() {
   return [
     {
       languageOptions: {
-        ecmaVersion: "latest",
+        ecmaVersion: 5,
         sourceType: "script",
         globals: {
           ...globals.browser,
           ...kintoneGlobals,
         },
+      },
+      rules: {
+        strict: ["error", "function"],
       },
     },
   ];
