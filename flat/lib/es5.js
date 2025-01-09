@@ -1,6 +1,7 @@
 const base = require("./base");
 const globals = require("globals");
 const eslint = require("@eslint/js");
+
 const baseRules = base()[2].rules;
 
 // This rule can be parsed with ES5
