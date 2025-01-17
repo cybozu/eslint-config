@@ -4,7 +4,7 @@ const kintoneGlobals = require("../globals/kintone");
 /**
  * @return { import("eslint").Linter.FlatConfig[] }
  */
-module.exports = function kintone() {
+module.exports = function kintoneEs5() {
   return [
     {
       languageOptions: {
