@@ -3,23 +3,28 @@ const importPlugin = require("eslint-plugin-import-x");
 const eslint = require("@eslint/js");
 
 /**
+ * @param {{ overrideGlobals?: import("eslint").ESLint.Globals} | undefined} overrides
  * @return { import("eslint").Linter.FlatConfig[] }
  */
-module.exports = function base() {
+module.exports = function base(overrides) {
   return [
+    {
+      languageOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        globals: overrides?.overrideGlobals
+          ? overrides.overrideGlobals
+          : {
+              ...globals.browser,
+              ...globals.es2024,
+              ...globals.commonjs,
+            },
+      },
+    },
     eslint.configs.recommended,
     {
       plugins: {
         "import-x": importPlugin,
-      },
-      languageOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
-        globals: {
-          ...globals.browser,
-          ...globals.es2015,
-          ...globals.commonjs,
-        },
       },
       rules: {
         // =======

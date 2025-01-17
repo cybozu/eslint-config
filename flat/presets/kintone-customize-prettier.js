@@ -1,8 +1,11 @@
-const base = require("../lib/base.js");
 const kintone = require("../lib/kintone.js");
 const prettier = require("../lib/prettier.js");
 
 /**
  * @type { import("eslint").Linter.Config[] }
  */
-module.exports = [...kintone(), ...base(), ...prettier()];
+module.exports = [
+  { files: ["**/*.{js,cjs,mjs,ts,mts,cts,jsx,tsx}"] },
+  ...kintone(),
+  ...prettier(),
+];
