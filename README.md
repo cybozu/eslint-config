@@ -170,10 +170,14 @@ module.exports = {
 ### Presets
 
 - `@cybozu/eslint-config/preset/kintone-customize`
+  - or `@cybozu/eslint-config/flat/presets/kintone-customize` for Flat Config
   - Preset for kintone customize/plugin-in development
 - `@cybozu/eslint-config/preset/kintone-customize-prettier`
+  - or `@cybozu/eslint-config/flat/presets/kintone-customize-prettier` for Flat Config
   - Preset for kintone customize/plugin-in development including `prettier` config
 - `@cybozu/eslint-config/preset/kintone-customize-es5`
+  - or `@cybozu/eslint-config/flat/presets/kintone-customize-es5` for Flat Config
   - Preset for kintone customize/plugin-in development in ES5
 - `@cybozu/eslint-config/preset/kintone-customize-es5-prettier`
+  - or `@cybozu/eslint-config/flat/presets/kintone-customize-es5-prettier` for Flat Config
   - Preset for kintone customize/plugin-in development in ES5 including `prettier` config
