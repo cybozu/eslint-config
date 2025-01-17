@@ -99,16 +99,22 @@ module.exports = [
 ## Support rule set
 
 - `@cybozu`
+  - or `@cybozu/eslint-config/flat/presets/base` for Flat Config
   - This is included in the all following presets
 - `@cybozu/eslint-config/presets/node`
+  - or `@cybozu/eslint-config/flat/presets/node` for Flat Config
   - Including `eslint-plugin-n`
 - `@cybozu/eslint-config/presets/typescript`
+  - or `@cybozu/eslint-config/flat/presets/typescript` for Flat Config
   - Including `@typescript-eslint/eslint-plugin`
 - `@cybozu/eslint-config/presets/react`
+  - or `@cybozu/eslint-config/flat/presets/react` for Flat Config
   - Including `eslint-plugin-react`, `eslint-plugin-jsx-ally` and `eslint-plugin-react-hooks`
 - `@cybozu/eslint-config/presets/react-typescript`
+  - or `@cybozu/eslint-config/flat/presets/react-typescript` for Flat Config
   - Including `@cybozu/eslint-config/presets/typescript` and `@cybozu/eslint-config/presets/react`
 - `@cybozu/eslint-config/presets/es5`
+  - or `@cybozu/eslint-config/flat/presets/es5` for Flat Config
 
 ## Prettier Support
 
@@ -164,10 +170,14 @@ module.exports = {
 ### Presets
 
 - `@cybozu/eslint-config/preset/kintone-customize`
+  - or `@cybozu/eslint-config/flat/presets/kintone-customize` for Flat Config
   - Preset for kintone customize/plugin-in development
 - `@cybozu/eslint-config/preset/kintone-customize-prettier`
+  - or `@cybozu/eslint-config/flat/presets/kintone-customize-prettier` for Flat Config
   - Preset for kintone customize/plugin-in development including `prettier` config
 - `@cybozu/eslint-config/preset/kintone-customize-es5`
+  - or `@cybozu/eslint-config/flat/presets/kintone-customize-es5` for Flat Config
   - Preset for kintone customize/plugin-in development in ES5
 - `@cybozu/eslint-config/preset/kintone-customize-es5-prettier`
+  - or `@cybozu/eslint-config/flat/presets/kintone-customize-es5-prettier` for Flat Config
   - Preset for kintone customize/plugin-in development in ES5 including `prettier` config
