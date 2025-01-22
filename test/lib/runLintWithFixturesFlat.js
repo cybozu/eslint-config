@@ -17,7 +17,6 @@ const runLintWithFixturesFlat = async (type, configObject) => {
   });
   const targetDir = path.resolve(__dirname, "..", "fixtures", type);
   const lintResult = await eslint.lintFiles([targetDir]);
-  // console.log(JSON.stringify(lintResult, null, 2));
   return lintResult.reduce((results, { filePath, messages }) => {
     // strip path
     const fileName = filePath.replace(`${targetDir}/`, "");
