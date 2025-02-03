@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [24.0.0](https://github.com/cybozu/eslint-config/compare/v24.0.0-beta.2...v24.0.0) (2025-02-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @stylistic/eslint-plugin-ts to v3 ([#855](https://github.com/cybozu/eslint-config/issues/855)) ([98691a3](https://github.com/cybozu/eslint-config/commit/98691a31149ce3cc879d5105afbf1bfbb5f528a8))
+* **deps:** update typescript-eslint monorepo to ^8.22.0 (minor) ([#856](https://github.com/cybozu/eslint-config/issues/856)) ([cd091af](https://github.com/cybozu/eslint-config/commit/cd091afdd450c5c73622bd5c41fbdc13a2c2088e))
+
 ## [24.0.0-beta.2](https://github.com/cybozu/eslint-config/compare/v24.0.0-beta.1...v24.0.0-beta.2) (2025-01-22)
 
 
