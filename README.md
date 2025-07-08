@@ -76,8 +76,6 @@ module.exports = {
 
 ### `eslint.config.js` (Flat Config)
 
-> [!NOTE]
-> Flat Config support is experimental. The applicable rules and scope may have changed.
 
 Put it into your `eslint.config.js`
 
@@ -115,6 +113,8 @@ module.exports = [
   - Including `@cybozu/eslint-config/presets/typescript` and `@cybozu/eslint-config/presets/react`
 - `@cybozu/eslint-config/presets/es5`
   - or `@cybozu/eslint-config/flat/presets/es5` for Flat Config
+- `@cybozu/eslint-config/flat/presets/css-baseline` for Flat Config
+  - CSS baseline rules using `@eslint/css`
 
 ## Prettier Support
 
