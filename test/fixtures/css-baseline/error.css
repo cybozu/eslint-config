@@ -1,0 +1,22 @@
+/* CSS with duplicate imports and non-widely available features */
+
+/* duplicate imports are subject to error */
+@import url("styles.css");
+@import url("styles.css");
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* non-widely available warning */
+  container-type: inline-size;
+  /* non-widely available warning */
+  backdrop-filter: blur(10px);
+  aspect-ratio: 16/9;
+}
+
+.modern-feature {
+  /* non-widely available warning: oklch */
+  color: oklch(0.7 0.2 180);
+  /* non-widely available warning */
+  accent-color: blue;
+}
