@@ -43,8 +43,8 @@
   },
   "dependencies": {
     "@stylistic/eslint-plugin-ts": "^3.0.1",
-    "@typescript-eslint/eslint-plugin": "^8.22.0",
-    "@typescript-eslint/parser": "^8.22.0",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import-x": "^4.6.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -53,6 +53,6 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.1.0",
     "globals": "^15.14.0",
-    "typescript-eslint": "^8.22.0"
+    "typescript-eslint": "^8.38.0"
   }
 }
