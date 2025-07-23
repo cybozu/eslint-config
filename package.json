@@ -28,6 +28,7 @@
   "author": "cybozu",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/css": "^0.9.0",
     "@types/react": "^18.3.23",
     "eslint": "^9.19.0",
     "mocha": "^11.7.1",
