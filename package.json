@@ -6,7 +6,7 @@
   "repository": "cybozu/eslint-config",
   "homepage": "https://github.com/cybozu/eslint-config",
   "bugs": "https://github.com/cybozu/eslint-config/issues",
-  "version": "24.0.0",
+  "version": "24.1.0",
   "description": "ESLint rules for Cybozu",
   "main": "index.js",
   "files": [

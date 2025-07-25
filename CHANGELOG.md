@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [24.1.0](https://github.com/cybozu/eslint-config/compare/v24.0.0...v24.1.0) (2025-07-25)
+
+
+### Features
+
+* add `css-baseline` preset ([#887](https://github.com/cybozu/eslint-config/issues/887)) ([8bca849](https://github.com/cybozu/eslint-config/commit/8bca849c3092442bcf95752d6bd8fe98ebc81658))
+
+
+### Bug Fixes
+
+* **deps:** add @eslint/js to dependencies ([#890](https://github.com/cybozu/eslint-config/issues/890)) ([1049fc3](https://github.com/cybozu/eslint-config/commit/1049fc3089c0aec765439ca36a26e4cc1d9cfba1))
+* **deps:** update dependency @stylistic/eslint-plugin-ts to ^3.1.0 ([#859](https://github.com/cybozu/eslint-config/issues/859)) ([9a65db1](https://github.com/cybozu/eslint-config/commit/9a65db114512e8d097def74b0fbbcf495d89c024))
+* **deps:** update dependency eslint-config-prettier to ^10.0.2 ([#863](https://github.com/cybozu/eslint-config/issues/863)) ([59554e5](https://github.com/cybozu/eslint-config/commit/59554e5b88739ba5347cbdb43fe893706d48c3ca))
+* **deps:** update dependency eslint-config-prettier to ^10.0.3 ([#865](https://github.com/cybozu/eslint-config/issues/865)) ([a3a38bf](https://github.com/cybozu/eslint-config/commit/a3a38bfccfe88a692183dc95213d98fc0f5662f7))
+* **deps:** update dependency eslint-config-prettier to ^10.1.1 ([#866](https://github.com/cybozu/eslint-config/issues/866)) ([5a1942a](https://github.com/cybozu/eslint-config/commit/5a1942a15690463a819ccca340549c7fca6b13fe))
+* **deps:** update dependency eslint-config-prettier to ^10.1.2 ([#873](https://github.com/cybozu/eslint-config/issues/873)) ([d41cccc](https://github.com/cybozu/eslint-config/commit/d41cccc3ffa5902a08900592c1c7cd0324b9dd95))
+* **deps:** update dependency eslint-config-prettier to ^10.1.3 ([#876](https://github.com/cybozu/eslint-config/issues/876)) ([c71054e](https://github.com/cybozu/eslint-config/commit/c71054e80e0bdfb2b0b4279a534dd2d916d82200))
+* **deps:** update dependency eslint-config-prettier to ^10.1.5 ([#877](https://github.com/cybozu/eslint-config/issues/877)) ([c696bce](https://github.com/cybozu/eslint-config/commit/c696bce32ae554034a5ee85533dd2723f5b8f424))
+* **deps:** update dependency eslint-config-prettier to ^10.1.8 ([#889](https://github.com/cybozu/eslint-config/issues/889)) ([8132c13](https://github.com/cybozu/eslint-config/commit/8132c13d694abd4d290f2280cdf11acf37bb0d21))
+* **deps:** update dependency eslint-plugin-prettier to ^5.2.4 ([#869](https://github.com/cybozu/eslint-config/issues/869)) ([6a1abb3](https://github.com/cybozu/eslint-config/commit/6a1abb343325837def35abd51658fe0906d7059c))
+* **deps:** update dependency eslint-plugin-prettier to ^5.2.5 ([#870](https://github.com/cybozu/eslint-config/issues/870)) ([347175e](https://github.com/cybozu/eslint-config/commit/347175e85f174c02ecdd090dba5ba86b6de5f4e1))
+* **deps:** update dependency eslint-plugin-prettier to ^5.2.6 ([#871](https://github.com/cybozu/eslint-config/issues/871)) ([afe0196](https://github.com/cybozu/eslint-config/commit/afe01968b33cf8da4df09a0b78af29f28ebf6033))
+* **deps:** update dependency eslint-plugin-react to ^7.37.5 ([#872](https://github.com/cybozu/eslint-config/issues/872)) ([7736bfa](https://github.com/cybozu/eslint-config/commit/7736bfab6efea0a171aaf83ace22015ff1762822))
+* **deps:** update dependency globals to ^15.15.0 ([#860](https://github.com/cybozu/eslint-config/issues/860)) ([1f0899f](https://github.com/cybozu/eslint-config/commit/1f0899f1ab4329a4d5ca179a3d8e36ef846fb09c))
+* **deps:** update dependency globals to v16 ([#862](https://github.com/cybozu/eslint-config/issues/862)) ([c6a6184](https://github.com/cybozu/eslint-config/commit/c6a618493bd282f58ee6b7adcd19ecdf822f7e6c))
+* **deps:** update eslint and prettier (minor) ([#858](https://github.com/cybozu/eslint-config/issues/858)) ([8eb01a7](https://github.com/cybozu/eslint-config/commit/8eb01a77bc8aaf30e65ec3351335b051f469cf7b))
+* **deps:** update typescript-eslint monorepo to ^8.38.0 (minor) ([#857](https://github.com/cybozu/eslint-config/issues/857)) ([020bc2e](https://github.com/cybozu/eslint-config/commit/020bc2e36298802e77f661f06b0e291614bccda9))
+
 ## [24.0.0](https://github.com/cybozu/eslint-config/compare/v24.0.0-beta.2...v24.0.0) (2025-02-03)
 
 
