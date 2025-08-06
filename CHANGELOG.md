@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [24.2.0](https://github.com/cybozu/eslint-config/compare/v24.1.0...v24.2.0) (2025-08-06)
+
+
+### Bug Fixes
+
+* **deps:** move @eslint/css from devDependencies to dependencies ([#899](https://github.com/cybozu/eslint-config/issues/899)) ([161dc9c](https://github.com/cybozu/eslint-config/commit/161dc9ca5beb6e46b936f7c3f4771c6747c0e3f3))
+* **deps:** update dependency eslint-plugin-n to ^17.21.2 ([#895](https://github.com/cybozu/eslint-config/issues/895)) ([73b478e](https://github.com/cybozu/eslint-config/commit/73b478e91d50762e2b1a3ca9e82b0f66d16dcc9e))
+* **deps:** update dependency eslint-plugin-n to ^17.21.3 ([#896](https://github.com/cybozu/eslint-config/issues/896)) ([aab93cf](https://github.com/cybozu/eslint-config/commit/aab93cfba3e3c8d71641b01faa2adae75d1c9f37))
+
 ## [24.1.0](https://github.com/cybozu/eslint-config/compare/v24.0.0...v24.1.0) (2025-07-25)
 
 
