@@ -1,11 +1,11 @@
 const base = require("../lib/base.js");
 const typescript = require("../lib/typescript.js");
+const attachFilesPropForConfig = require("../utils/attachFilesPropForConfig.js");
 
 /**
  * @type { import("eslint").Linter.Config[] }
  */
-module.exports = [
-  { files: ["**/*.{js,cjs,mjs,ts,cts,mts}"] },
-  ...base(),
-  ...typescript(),
-];
+module.exports = attachFilesPropForConfig(
+  [...base(), ...typescript()],
+  ["**/*.{js,cjs,mjs,ts,cts,mts}"],
+);
