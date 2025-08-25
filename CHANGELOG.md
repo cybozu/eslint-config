@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [24.3.0](https://github.com/cybozu/eslint-config/compare/v24.1.0...v24.3.0) (2025-08-25)
+
+
+### Bug Fixes
+
+* changed to explicitly add the `files` property in every config. ([#904](https://github.com/cybozu/eslint-config/issues/904)) ([bf884ec](https://github.com/cybozu/eslint-config/commit/bf884ec074abc5a45b5b5b61249bbaf4a6b6ea2a))
+* **deps:** move @eslint/css from devDependencies to dependencies ([#899](https://github.com/cybozu/eslint-config/issues/899)) ([161dc9c](https://github.com/cybozu/eslint-config/commit/161dc9ca5beb6e46b936f7c3f4771c6747c0e3f3))
+* **deps:** update dependency @eslint/js to ^9.33.0 ([#905](https://github.com/cybozu/eslint-config/issues/905)) ([3897ed6](https://github.com/cybozu/eslint-config/commit/3897ed6cfe1152acc9c9638af9b7688b7feb7a8e))
+* **deps:** update dependency @eslint/js to ^9.34.0 ([#908](https://github.com/cybozu/eslint-config/issues/908)) ([021640a](https://github.com/cybozu/eslint-config/commit/021640a4d275254e155a7435f013df47649c0599))
+* **deps:** update dependency eslint-plugin-n to ^17.21.2 ([#895](https://github.com/cybozu/eslint-config/issues/895)) ([73b478e](https://github.com/cybozu/eslint-config/commit/73b478e91d50762e2b1a3ca9e82b0f66d16dcc9e))
+* **deps:** update dependency eslint-plugin-n to ^17.21.3 ([#896](https://github.com/cybozu/eslint-config/issues/896)) ([aab93cf](https://github.com/cybozu/eslint-config/commit/aab93cfba3e3c8d71641b01faa2adae75d1c9f37))
+* **deps:** update dependency eslint-plugin-prettier to ^5.5.4 ([#900](https://github.com/cybozu/eslint-config/issues/900)) ([b5c144f](https://github.com/cybozu/eslint-config/commit/b5c144fdb7ded00a69137b4b0a35902e87d6142e))
+* **deps:** update dependency eslint-plugin-prettier to ^5.5.4 ([#903](https://github.com/cybozu/eslint-config/issues/903)) ([a1deb25](https://github.com/cybozu/eslint-config/commit/a1deb258baba445a81362902d9f531546930532f))
+* **deps:** update typescript-eslint monorepo to ^8.40.0 (minor) ([#898](https://github.com/cybozu/eslint-config/issues/898)) ([1a70d95](https://github.com/cybozu/eslint-config/commit/1a70d951c1e425b0fecf6e6f1a4425f35b248ed3))
+
 ## [24.2.0](https://github.com/cybozu/eslint-config/compare/v24.1.0...v24.2.0) (2025-08-06)
 
 
