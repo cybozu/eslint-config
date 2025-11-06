@@ -46,6 +46,7 @@ module.exports = function react() {
         // react/display-name
         "react/no-access-state-in-setstate": "error",
         // react/no-children-prop
+        "react/no-danger": "error",
         // react/no-danger-with-children
         // react/no-deprecated
         "react/no-did-mount-set-state": "error",
@@ -141,7 +142,6 @@ module.exports = function react() {
         // react/forbid-prop-types
         // react/forbid-foreign-prop-types
         // react/no-array-index-key
-        // react/no-danger
         // react/no-set-state
         // react/no-unused-prop-types doesn't track destructuring and assignment props so we are disable this.
         // react/no-unused-prop-types
