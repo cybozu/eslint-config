@@ -9,7 +9,7 @@ describe("flat preset css-baseline", () => {
       "ok.css": {},
       "error.css": {
         errors: ["css/no-duplicate-imports"],
-        warnings: ["css/use-baseline", "css/use-baseline", "css/use-baseline", "css/use-baseline"],
+        warnings: ["css/use-baseline"],
       },
     });
   });
