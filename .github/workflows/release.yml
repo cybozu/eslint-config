@@ -6,7 +6,6 @@ on:
       - main
 
 permissions:
-  id-token: write  # Required for OIDC
   contents: write # Required for release-please
   pull-requests: write # Required for 
   issues: write # Required for release-please
