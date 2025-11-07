@@ -6,8 +6,9 @@ on:
       - main
 
 permissions:
+  actions: write # Required for release-please
   contents: write # Required for release-please
-  pull-requests: write # Required for 
+  pull-requests: write # Required for release-please
   issues: write # Required for release-please
 
 jobs:
