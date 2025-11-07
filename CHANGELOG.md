@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [25.0.0](https://github.com/cybozu/eslint-config/compare/v24.3.0...v25.0.0) (2025-11-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support for Node.js < 20 and add support for Node.js v24 ([#892](https://github.com/cybozu/eslint-config/issues/892))
+
+### Features
+
+* drop support for Node.js &lt; 20 and add support for Node.js v24 ([#892](https://github.com/cybozu/eslint-config/issues/892)) ([c5c04a9](https://github.com/cybozu/eslint-config/commit/c5c04a93016e3952131ec7da86f0da56a6f70644))
+* enable 'react/no-danger' rule ([#923](https://github.com/cybozu/eslint-config/issues/923)) ([b687836](https://github.com/cybozu/eslint-config/commit/b6878360f69c8fbffdff521f84bf3769e44d07ac))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @eslint/css to ^0.13.0 ([#910](https://github.com/cybozu/eslint-config/issues/910)) ([2a26012](https://github.com/cybozu/eslint-config/commit/2a260120c7167c0656670b5784ad46028fdf44aa))
+* **deps:** update dependency @eslint/js to ^9.38.0 ([#914](https://github.com/cybozu/eslint-config/issues/914)) ([91a58b6](https://github.com/cybozu/eslint-config/commit/91a58b6dbab45c6fa39074fe711a2bbb1c3fd9b1))
+* **deps:** update dependency eslint-plugin-react-hooks to v7 ([#922](https://github.com/cybozu/eslint-config/issues/922)) ([3cbd311](https://github.com/cybozu/eslint-config/commit/3cbd3111e5f7816d4713e5f0129feea6ab7e90a1))
+* **deps:** update dependency globals to ^16.4.0 ([#915](https://github.com/cybozu/eslint-config/issues/915)) ([0c8c95c](https://github.com/cybozu/eslint-config/commit/0c8c95c8202cb7355cca1d6722edd0c8d67e96cf))
+* **deps:** update eslint and prettier (minor) ([#913](https://github.com/cybozu/eslint-config/issues/913)) ([5c16c6b](https://github.com/cybozu/eslint-config/commit/5c16c6b4630793155fb17bed308e0e706b199fb3))
+* **deps:** update typescript-eslint monorepo to ^8.46.2 (minor) ([#909](https://github.com/cybozu/eslint-config/issues/909)) ([8c8d953](https://github.com/cybozu/eslint-config/commit/8c8d953e84a3780145099eeee794eb75b7eceed9))
+
 ## [24.3.0](https://github.com/cybozu/eslint-config/compare/v24.1.0...v24.3.0) (2025-08-25)
 
 
