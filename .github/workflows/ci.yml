@@ -3,7 +3,6 @@ name: lint and test
 on:
   push:
     branches:
-      - master # main renamed to master
       - main
       - 'renovate/**'
   pull_request:
