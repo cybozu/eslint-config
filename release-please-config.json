@@ -5,6 +5,7 @@
       "changelog-path": "CHANGELOG.md",
       "release-type": "node",
       "bump-minor-pre-major": false,
+      "initial-version": "24.3.0",
       "bump-patch-for-minor-pre-major": false,
       "draft": false,
       "prerelease": false
