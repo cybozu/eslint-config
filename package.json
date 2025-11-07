@@ -18,8 +18,6 @@
   ],
   "scripts": {
     "lint": "eslint **/*.js",
-    "release": "npm-run-all -p lint test && standard-version",
-    "release:dryrun": "standard-version --dry-run",
     "test": "mocha --timeout 5000 \"test/**/*-test.js\""
   },
   "keywords": [
@@ -34,7 +32,6 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^3.6.2",
     "react": "^19.2.0",
-    "standard-version": "^9.3.2",
     "typescript": "^5.9.2"
   },
   "peerDependencies": {
@@ -63,5 +60,9 @@
       "name": "pnpm",
       "onFail": "error"
     }
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   }
 }
