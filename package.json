@@ -54,7 +54,7 @@
     "globals": "^16.4.0",
     "typescript-eslint": "^8.46.2"
   },
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@10.19.0",
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
