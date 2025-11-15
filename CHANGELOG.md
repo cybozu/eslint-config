@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [25.0.1](https://github.com/cybozu/eslint-config/compare/v25.0.0...v25.0.1) (2025-11-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-react-hooks to ^7.0.1 ([#939](https://github.com/cybozu/eslint-config/issues/939)) ([5e2ebd2](https://github.com/cybozu/eslint-config/commit/5e2ebd2fb61b12974da04003f9b0c1ff337387bd))
+
 ## [25.0.0](https://github.com/cybozu/eslint-config/compare/v24.3.0...v25.0.0) (2025-11-07)
 
 
