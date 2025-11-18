@@ -55,7 +55,7 @@ importers:
         specifier: ^19.2.2
         version: 19.2.2
       eslint:
-        specifier: ^9.39.0
+        specifier: ^9.39.1
         version: 9.39.1
       mocha:
         specifier: ^11.7.2
