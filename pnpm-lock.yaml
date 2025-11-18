@@ -18,10 +18,10 @@ importers:
         specifier: ^3.1.0
         version: 3.1.0(eslint@9.39.1)(typescript@5.9.2)
       '@typescript-eslint/eslint-plugin':
-        specifier: ^8.46.2
+        specifier: ^8.46.3
         version: 8.46.3(@typescript-eslint/parser@8.46.3(eslint@9.39.1)(typescript@5.9.2))(eslint@9.39.1)(typescript@5.9.2)
       '@typescript-eslint/parser':
-        specifier: ^8.46.2
+        specifier: ^8.46.3
         version: 8.46.3(eslint@9.39.1)(typescript@5.9.2)
       eslint-config-prettier:
         specifier: ^10.1.8
@@ -48,7 +48,7 @@ importers:
         specifier: ^16.5.0
         version: 16.5.0
       typescript-eslint:
-        specifier: ^8.46.2
+        specifier: ^8.46.3
         version: 8.46.3(eslint@9.39.1)(typescript@5.9.2)
     devDependencies:
       '@types/react':
@@ -2130,8 +2130,8 @@ snapshots:
 
   '@typescript-eslint/project-service@8.40.0(typescript@5.9.2)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.40.0(typescript@5.9.2)
-      '@typescript-eslint/types': 8.40.0
+      '@typescript-eslint/tsconfig-utils': 8.46.3(typescript@5.9.2)
+      '@typescript-eslint/types': 8.46.3
       debug: 4.4.1(supports-color@8.1.1)
       typescript: 5.9.2
     transitivePeerDependencies:
