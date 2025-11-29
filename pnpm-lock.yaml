@@ -52,7 +52,7 @@ importers:
         version: 8.47.0(eslint@9.39.1)(typescript@5.9.3)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.4
+        specifier: ^19.2.5
         version: 19.2.7
       eslint:
         specifier: ^9.39.1
