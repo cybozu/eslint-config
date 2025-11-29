@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [25.0.1](https://github.com/cybozu/eslint-config/compare/v25.0.0...v25.0.1) (2025-11-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @eslint/css to ^0.14.1 ([#943](https://github.com/cybozu/eslint-config/issues/943)) ([791c528](https://github.com/cybozu/eslint-config/commit/791c52860a7c1f4bd740031e41a9b34355380b28))
+* **deps:** update dependency @eslint/js to ^9.39.0 ([#945](https://github.com/cybozu/eslint-config/issues/945)) ([715a2b0](https://github.com/cybozu/eslint-config/commit/715a2b01c734cb7049d11205797db445dd46ad80))
+* **deps:** update dependency @eslint/js to ^9.39.1 ([#949](https://github.com/cybozu/eslint-config/issues/949)) ([e08c53b](https://github.com/cybozu/eslint-config/commit/e08c53b00b33ee87486ec727ec2be3297e29e8f2))
+* **deps:** update dependency eslint-plugin-react-hooks to ^7.0.1 ([#939](https://github.com/cybozu/eslint-config/issues/939)) ([5e2ebd2](https://github.com/cybozu/eslint-config/commit/5e2ebd2fb61b12974da04003f9b0c1ff337387bd))
+* **deps:** update dependency globals to ^16.5.0 ([#946](https://github.com/cybozu/eslint-config/issues/946)) ([c329b1d](https://github.com/cybozu/eslint-config/commit/c329b1d293a8e9a9b9537721a0a78182ff2156a1))
+* **deps:** update typescript-eslint monorepo to ^8.46.3 (patch) ([#950](https://github.com/cybozu/eslint-config/issues/950)) ([a9899a1](https://github.com/cybozu/eslint-config/commit/a9899a11332aea88f820ff8254d84ddeeadfc19c))
+* **deps:** update typescript-eslint monorepo to ^8.46.4 (patch) ([#952](https://github.com/cybozu/eslint-config/issues/952)) ([ed9d20a](https://github.com/cybozu/eslint-config/commit/ed9d20a2b8b56c5909a20a7e325febffccdee419))
+
 ## [25.0.0](https://github.com/cybozu/eslint-config/compare/v24.3.0...v25.0.0) (2025-11-07)
 
 
