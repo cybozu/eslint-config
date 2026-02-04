@@ -51,7 +51,7 @@
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
-    "globals": "^16.5.0",
+    "globals": "^17.3.0",
     "typescript-eslint": "^8.54.0"
   },
   "packageManager": "pnpm@10.28.2",
