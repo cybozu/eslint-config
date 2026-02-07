@@ -3,17 +3,38 @@
   "engines": {
     "node": ">=20"
   },
+  "type": "module",
   "repository": "cybozu/eslint-config",
   "homepage": "https://github.com/cybozu/eslint-config",
   "bugs": "https://github.com/cybozu/eslint-config/issues",
   "version": "25.0.0",
   "description": "ESLint rules for Cybozu",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./presets/base": "./presets/base.js",
+    "./presets/css-baseline": "./presets/css-baseline.js",
+    "./presets/es5": "./presets/es5.js",
+    "./presets/es5-prettier": "./presets/es5-prettier.js",
+    "./presets/kintone-customize": "./presets/kintone-customize.js",
+    "./presets/kintone-customize-es5": "./presets/kintone-customize-es5.js",
+    "./presets/kintone-customize-es5-prettier": "./presets/kintone-customize-es5-prettier.js",
+    "./presets/kintone-customize-prettier": "./presets/kintone-customize-prettier.js",
+    "./presets/node": "./presets/node.js",
+    "./presets/node-prettier": "./presets/node-prettier.js",
+    "./presets/node-typescript-prettier": "./presets/node-typescript-prettier.js",
+    "./presets/prettier": "./presets/prettier.js",
+    "./presets/react": "./presets/react.js",
+    "./presets/react-prettier": "./presets/react-prettier.js",
+    "./presets/react-typescript": "./presets/react-typescript.js",
+    "./presets/react-typescript-prettier": "./presets/react-typescript-prettier.js",
+    "./presets/typescript": "./presets/typescript.js",
+    "./presets/typescript-prettier": "./presets/typescript-prettier.js"
+  },
   "files": [
     "lib",
     "globals",
     "presets",
-    "flat",
     "index.js"
   ],
   "scripts": {

@@ -1,9 +1,11 @@
-const assert = require("assert");
-const runLintWithFixtures = require("./lib/runLintWithFixtures");
+import assert from "assert";
+import { base } from "../lib/base.js";
+import { runLintWithFixtures } from "./lib/runLintWithFixtures.js";
 
-describe("base", () => {
-  it("should get expected errors and warninigs with base config", async () => {
-    const result = await runLintWithFixtures("base");
+describe("flat base", () => {
+  it("should get expected errors and warnings with base flat config", async () => {
+    const result = await runLintWithFixtures("base", base());
+
     assert.deepStrictEqual(result, {
       "error.js": {
         errors: [

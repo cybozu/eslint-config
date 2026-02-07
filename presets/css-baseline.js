@@ -1,12 +1,9 @@
-import { kintone } from "../lib/kintone.js";
+import { cssBaseline } from "../lib/css-baseline.js";
 import { attachFilesPropForConfig } from "../utils/attachFilesPropForConfig.js";
 
 /**
  * @type { import("eslint").Linter.Config[] }
  */
-const configs = attachFilesPropForConfig(
-  [...kintone()],
-  ["**/*.{js,cjs,mjs,ts,mts,cts,jsx,tsx}"],
-);
+const configs = attachFilesPropForConfig([...cssBaseline()], ["**/*.css"]);
 
 export default configs;
