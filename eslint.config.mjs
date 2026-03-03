@@ -1,10 +1,11 @@
-const presetReactTypeScriptPrettier = require("./flat/presets/react-typescript-prettier.js");
-const globals = require("globals");
+import globals from "globals";
+import { defineConfig } from "eslint/config";
+import presetReactTypeScriptPrettier from "./presets/react-typescript-prettier.js";
 
 /**
  * @type { import("eslint").Linter.Config[] }
  */
-module.exports = [
+export default defineConfig([
   ...presetReactTypeScriptPrettier,
   {
     languageOptions: {
@@ -17,4 +18,4 @@ module.exports = [
   {
     ignores: ["test/fixtures/*"],
   },
-];
+]);
