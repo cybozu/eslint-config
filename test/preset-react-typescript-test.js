@@ -2,7 +2,7 @@ import assert from "assert";
 import reactTypescript from "../presets/react-typescript.js";
 import { runLintWithFixtures } from "./lib/runLintWithFixtures.js";
 
-describe("flat preset react-typescript", () => {
+describe("preset react-typescript", () => {
   it("should get expected errors and warnings", async () => {
     // We use react presets in order to support ES2017 syntax
     const result = await runLintWithFixtures(

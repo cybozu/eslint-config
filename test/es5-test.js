@@ -2,7 +2,7 @@ import assert from "assert";
 import { es5 } from "../lib/es5.js";
 import { runLintWithFixtures } from "./lib/runLintWithFixtures.js";
 
-describe("flat es5", () => {
+describe("es5", () => {
   it("should get expected errors and warnings with es5 config", async () => {
     const result = await runLintWithFixtures("es5", es5());
     assert.deepStrictEqual(result, {

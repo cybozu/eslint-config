@@ -2,7 +2,7 @@ import assert from "assert";
 import { base } from "../lib/base.js";
 import { runLintWithFixtures } from "./lib/runLintWithFixtures.js";
 
-describe("flat base", () => {
+describe("base", () => {
   it("should get expected errors and warnings with base flat config", async () => {
     const result = await runLintWithFixtures("base", base());
 

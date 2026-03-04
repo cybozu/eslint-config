@@ -2,7 +2,7 @@ import assert from "assert";
 import react from "../presets/react.js";
 import { runLintWithFixtures } from "./lib/runLintWithFixtures.js";
 
-describe("flat preset react", () => {
+describe("preset react", () => {
   it("should get expected errors and warnings", async () => {
     // We use react presets in order to support ES2017 syntax
     const result = await runLintWithFixtures("react", react);
