@@ -1,6 +1,5 @@
 import assert from "assert";
 import reactTypescriptPrettier from "../presets/react-typescript-prettier.js";
-import { prettier } from "../lib/prettier.js";
 import { runLintWithFixtures } from "./lib/runLintWithFixtures.js";
 
 describe("preset react-typescript-prettier", () => {
