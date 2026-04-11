@@ -70,7 +70,7 @@ export default [
 
 > **Note:** Currently, we adopt that `indent` rule is 2 spaces and having indentation in `switch case`.
 > You can override the rule if your project adopts 4 spaces or others.
-> We think it's important to have consistency in your entire codebase.\*\*
+> We think it's important to have consistency in your entire codebase.
 
 ## Upgrading from v25 or earlier
 

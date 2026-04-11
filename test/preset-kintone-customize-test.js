@@ -10,7 +10,7 @@ describe("preset kintone-customize", () => {
       await runLintWithFixtures("base", kintoneCustomize),
     );
   });
-  it("should get expected errors and warninigs with kintone globals", async () => {
+  it("should get expected errors and warnings with kintone globals", async () => {
     const result = await runLintWithFixtures(
       "globals-kintone",
       kintoneCustomize,
