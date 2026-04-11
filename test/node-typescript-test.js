@@ -1,11 +1,12 @@
-const assert = require("assert");
-const runLintWithFixtures = require("./lib/runLintWithFixtures");
+import assert from "assert";
+import nodeTypescriptPrettier from "../presets/node-typescript-prettier.js";
+import { runLintWithFixtures } from "./lib/runLintWithFixtures.js";
 
-describe("node-typescript", () => {
-  it("should get expected errors and warninigs", async () => {
+describe("flat node-typescript", () => {
+  it("should get expected errors and warnings", async () => {
     const result = await runLintWithFixtures(
       "node-typescript",
-      "presets/node-typescript-prettier.js",
+      nodeTypescriptPrettier,
     );
     assert.deepStrictEqual(result, {
       "ok.ts": {},

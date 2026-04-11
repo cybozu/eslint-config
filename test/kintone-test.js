@@ -1,14 +1,18 @@
-const assert = require("assert");
-const runLintWithFixtures = require("./lib/runLintWithFixtures");
+import assert from "assert";
+import { kintone } from "../lib/kintone.js";
+import { runLintWithFixtures } from "./lib/runLintWithFixtures.js";
 
-describe("kintone", () => {
-  it("should get expected errors and warninigs with kintone config", async () => {
-    const result = await runLintWithFixtures("kintone");
-    assert.deepStrictEqual(result, {
-      "error.js": {
-        errors: ["strict", "strict"],
+describe("flat kintone", () => {
+  it("should be able to use kintone-customize as well as lib/kintone", async () => {
+    assert.deepStrictEqual(
+      await runLintWithFixtures("globals-kintone", kintone()),
+      {
+        "ok.js": { warnings: ["spaced-comment"] },
+        "error.js": {
+          errors: ["no-undef"],
+          warnings: ["spaced-comment"],
+        },
       },
-      "ok.js": {},
-    });
+    );
   });
 });

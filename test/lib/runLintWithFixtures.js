@@ -1,24 +1,24 @@
-"use strict";
+import { ESLint } from "eslint";
+import path from "path";
+import { fileURLToPath } from "url";
 
-const { loadESLint } = require("eslint");
-const path = require("path");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * Run ESlint and return the result per files
  * @param type lint type, which is in lib directory
+ * @param configObject { import("eslint").Linter.Config[] }
  * @returns {Object} lint results {[fileName]: {errors: [ruleNames], warnings: [ruleNames]}}
  */
-const runLintWithFixtures = async (type, configFile = `lib/${type}.js`) => {
-  const ESLint = await loadESLint({ useFlatConfig: false });
+export const runLintWithFixtures = async (type, configObject) => {
   const eslint = new ESLint({
-    overrideConfigFile: path.resolve(process.cwd(), configFile),
+    overrideConfigFile: true,
+    overrideConfig: configObject,
     ignore: false,
-    useEslintrc: false,
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
   });
   const targetDir = path.resolve(__dirname, "..", "fixtures", type);
   const lintResult = await eslint.lintFiles([targetDir]);
-  // console.log(JSON.stringify(lintResult, null, 2));
   return lintResult.reduce((results, { filePath, messages }) => {
     // strip path
     const fileName = filePath.replace(`${targetDir}/`, "");
@@ -48,5 +48,3 @@ const runLintWithFixtures = async (type, configFile = `lib/${type}.js`) => {
     });
   }, {});
 };
-
-module.exports = runLintWithFixtures;
