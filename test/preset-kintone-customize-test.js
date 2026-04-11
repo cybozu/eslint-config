@@ -3,7 +3,7 @@ import kintoneCustomize from "../presets/kintone-customize.js";
 import base from "../presets/base.js";
 import { runLintWithFixtures } from "./lib/runLintWithFixtures.js";
 
-describe("flat preset kintone-customize", () => {
+describe("preset kintone-customize", () => {
   it("should be able to use kintone-customize as well as preset/base", async () => {
     assert.deepStrictEqual(
       await runLintWithFixtures("base", base),
