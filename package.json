@@ -29,7 +29,8 @@
     "./presets/react-typescript": "./presets/react-typescript.js",
     "./presets/react-typescript-prettier": "./presets/react-typescript-prettier.js",
     "./presets/typescript": "./presets/typescript.js",
-    "./presets/typescript-prettier": "./presets/typescript-prettier.js"
+    "./presets/typescript-prettier": "./presets/typescript-prettier.js",
+    "./globals/kintone": "./globals/kintone.js"
   },
   "files": [
     "lib",
