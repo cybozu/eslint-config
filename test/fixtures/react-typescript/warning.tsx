@@ -1,26 +1,24 @@
 import React from 'react';
 
+class Base {
+  format(s: string): string {
+    return s;
+  }
+}
+
+class Formatter extends Base {
+  constructor() {
+    super();
+  }
+}
+
 interface Props {
-  name: string;
+  name: string | null;
 }
 
-class Foo extends React.Component<Props> {
-  constructor(props) {
-    super(props);
-  }
+const Component: React.FC<Props> = (props) => {
+  const text = new Formatter().format(props.name!);
+  return <p>{text}</p>;
+};
 
-  componentDidMount() {
-    // noop
-  }
-
-  concat(a: string, b: string): string {
-    return a + b!;
-  }
-
-  render() {
-    return <p>Foo{name}</p>;
-  }
-}
-
-const Component = () => <Foo name="bar" />;
 export default Component;
