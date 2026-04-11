@@ -10,7 +10,9 @@ const Component = () => <Foo name={['bar', 'foo']} />;
 export default Component;
 
 const shadow: number = 1;
+String(shadow);
 const shadowingFunc: () => number = () => {
   const shadow: number = 2;
   return shadow;
 };
+shadowingFunc();
