@@ -6,7 +6,7 @@ import { runLintWithFixtures } from "./lib/runLintWithFixtures.js";
 describe("preset react-typescript-prettier", () => {
   it("should be able to use react-typescript-prettier as well as lib/prettier", async () => {
     assert.deepStrictEqual(
-      await runLintWithFixtures("prettier"),
+      await runLintWithFixtures("prettier", prettier()),
       await runLintWithFixtures("prettier", reactTypescriptPrettier),
     );
   });

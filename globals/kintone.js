@@ -1,5 +1,5 @@
 /**
- * @type import("eslint").ESLint.Globals}
+ * @type {import("eslint").ESLint.Globals}
  */
 export const kintoneGlobals = {
   $: false,
