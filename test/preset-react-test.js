@@ -10,7 +10,7 @@ describe("preset react", () => {
     assert.deepStrictEqual(result, {
       "ok.jsx": {},
       "warning.jsx": {
-        warnings: ["react/jsx-no-useless-fragment", "react/jsx-indent"],
+        warnings: ["react/jsx-no-useless-fragment", "react/jsx-boolean-value"],
       },
     });
   });
