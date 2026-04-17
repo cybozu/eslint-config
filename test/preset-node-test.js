@@ -6,10 +6,10 @@ describe("node", () => {
   it("should get expected errors and warnings with node config", async () => {
     const result = await runLintWithFixtures("node", node);
     assert.deepStrictEqual(result, {
-      "error.cjs": {
+      "error.js": {
         errors: ["n/no-missing-require", "n/no-exports-assign"],
       },
-      "ok.cjs": {},
+      "ok.js": {},
     });
   });
 });
