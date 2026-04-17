@@ -1,7 +1,7 @@
 /**
  * @type {import("eslint").ESLint.Globals}
  */
-export const kintoneGlobals = {
+const kintoneGlobals = {
   $: false,
   jQuery: false,
   kintone: false,
@@ -16,3 +16,5 @@ export const kintoneGlobals = {
   Spinner: false,
   UltraDate: false,
 };
+
+export default kintoneGlobals;
