@@ -1,12 +1,4 @@
 // prettier-ignore
-require('./unknown');
+import './unknown.js';
 
-(async () => {
-  try {
-    await new Promise((r) => r);
-  } catch {
-    console.log(1n);
-  }
-})();
-
-exports = {};
+new Buffer(42);

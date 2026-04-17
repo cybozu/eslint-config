@@ -1,3 +1,3 @@
-const path = require("path");
+import path from 'node:path';
 
-console.log(path.resolve(__dirname));
+console.log(path.resolve('.'));
