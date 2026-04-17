@@ -4,20 +4,20 @@
 [![](https://github.com/cybozu/eslint-config/workflows/test/badge.svg)](https://github.com/cybozu/eslint-config/actions?workflow=test)
 [![](https://github.com/cybozu/eslint-config/workflows/lint/badge.svg)](https://github.com/cybozu/eslint-config/actions?workflow=lint)
 
-A ESLint rule set for Cybozu.
+An ESLint rule set for Cybozu.
 
 **This package is intended to use in Cybozu. Currently, this is still in development so the rules might be changed.**
 
 ## What is this?
 
-This is a ESLint rule set for Cybozu.
-The purpose of `@cybozu/eslint-config` are following
+This is an ESLint rule set for Cybozu.
+The purpose of `@cybozu/eslint-config` are the following
 
 - Share best practices for JavaScript
 - Standardize JavaScript coding guideline in Cybozu
 - Installation support for ESLint and continuous support for the rule set
 
-## The benefits to adapt this rule
+## The benefits to adopt this rule
 
 You don't need to care about updates for ESLint and ESLint plugins.
 We'll manage the updates and provide CHANGELOG that you need to know so that you can update it easily.
@@ -49,19 +49,50 @@ Install `eslint` and `@cybozu/eslint-config`
 % npm install --save-dev eslint @cybozu/eslint-config
 ```
 
-### `.eslintrc.js`
+### `eslint.config.mjs`
 
-Put it into your `.eslintrc.js`
+Put it into your `eslint.config.mjs`
+
+```js
+import reactTypeScriptPrettier from "@cybozu/eslint-config/presets/react-typescript-prettier";
+
+export default [
+  ...reactTypeScriptPrettier,
+  // You can add other presets as needed.
+  // ...otherPresets
+  {
+    rules: {
+      // You can also override individual rules.
+    },
+  },
+];
+```
+
+> **Note:** Currently, we adopt that `indent` rule is 2 spaces and having indentation in `switch case`.
+> You can override the rule if your project adopts 4 spaces or others.
+> We think it's important to have consistency in your entire codebase.
+
+## Upgrading from v25 or earlier
+
+Starting from v26, `@cybozu/eslint-config` only supports [Flat Config](https://eslint.org/docs/latest/use/configure/configuration-files) (`eslint.config.mjs`) and has dropped support for the legacy config format (`.eslintrc.js`).
+
+If you are using v25 or earlier, you need to:
+
+- Migrate your ESLint configuration from `.eslintrc.js` to `eslint.config.mjs`
+- Update all config imports from `@cybozu/eslint-config/flat/presets/*` to `@cybozu/eslint-config/presets/*`
+- Update import from `@cybozu/eslint-config/flat/globals/kintone` to `@cybozu/eslint-config/globals/kintone`
+
+See the [ESLint migration guide](https://eslint.org/docs/latest/use/configure/migration-guide) for details on migrating to Flat Config.
+
+### `.eslintrc.js` (v25 and earlier)
+
+> **Note:** This format is no longer supported in v26 and later. Use `eslint.config.mjs` instead.
 
 ```js
 module.exports = {
-  extends: "@cybozu"
+  extends: "@cybozu",
 };
 ```
-
-**Currently, we adopt that `indent` rule is 2 spaces and having indentation in `switch case`.
-You can override the rule if your project adopts 4 spaces or others.
-We think it's important to have consistency in your entire codebase.**
 
 ```js
 module.exports = {
@@ -69,57 +100,31 @@ module.exports = {
   rules: {
     // default
     // 'indent': ['warn', 2, { "SwitchCase": 1 }],
-    indent: ["warn", 4, { SwitchCase: 0 }]
-  }
-};
-```
-
-### `eslint.config.js` (Flat Config)
-
-
-Put it into your `eslint.config.js`
-
-```js
-const config = require("@cybozu/eslint-config/flat/presets/react-typescript-prettier")
-
-module.exports = [
-  ...config,
-  {
-    rules: {
-      // default
-      // 'indent': ['warn', 2, { "SwitchCase": 1 }],
-      indent: ["warn", 4, { SwitchCase: 0 }]
-    }
+    indent: ["warn", 4, { SwitchCase: 0 }],
   },
-]
+};
 ```
 
 ## Support rule set
 
-- `@cybozu`
-  - or `@cybozu/eslint-config/flat/presets/base` for Flat Config
+- `@cybozu/eslint-config/presets/base`
   - This is included in the all following presets
 - `@cybozu/eslint-config/presets/node`
-  - or `@cybozu/eslint-config/flat/presets/node` for Flat Config
   - Including `eslint-plugin-n`
 - `@cybozu/eslint-config/presets/typescript`
-  - or `@cybozu/eslint-config/flat/presets/typescript` for Flat Config
   - Including `@typescript-eslint/eslint-plugin`
 - `@cybozu/eslint-config/presets/react`
-  - or `@cybozu/eslint-config/flat/presets/react` for Flat Config
-  - Including `eslint-plugin-react`, `eslint-plugin-jsx-ally` and `eslint-plugin-react-hooks`
+  - Including `eslint-plugin-react`, `eslint-plugin-jsx-a11y` and `eslint-plugin-react-hooks`
 - `@cybozu/eslint-config/presets/react-typescript`
-  - or `@cybozu/eslint-config/flat/presets/react-typescript` for Flat Config
   - Including `@cybozu/eslint-config/presets/typescript` and `@cybozu/eslint-config/presets/react`
 - `@cybozu/eslint-config/presets/es5`
-  - or `@cybozu/eslint-config/flat/presets/es5` for Flat Config
-- `@cybozu/eslint-config/flat/presets/css-baseline` for Flat Config
+- `@cybozu/eslint-config/presets/css-baseline`
   - CSS baseline rules using `@eslint/css`
 
 ## Prettier Support
 
 Prettier is a code formatter, which supports not only JavaScript but also many languages.
-Prettier is used widely as code formatter for JavaScript.
+Prettier is widely used as a code formatter for JavaScript.
 
 It's opinionated but we don't have to discuss about code styles with Prettier because it's the rule (No more bikeshed).
 
@@ -146,7 +151,7 @@ To use the presets, you have to install `prettier`. We only support Prettier v2 
 
 ### ⚠️ Classic JSX Syntax
 
-`@cybozu/eslint-config` is intented to be used with the [New JSX Transform](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html). If you want to use the Classic JSX Transform (`React.createElement`), please enable the `react/jsx-uses-react` rule on your own.
+`@cybozu/eslint-config` is intended to be used with the [New JSX Transform](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html). If you want to use the Classic JSX Transform (`React.createElement`), please enable the `react/jsx-uses-react` rule on your own.
 
 ```js
 rules: {
@@ -161,23 +166,19 @@ We also provide presets for kintone customize/plug-in developers, which include 
 ### Usage
 
 ```js
-// .eslintrc.js
-module.exports = {
-  extends: "@cybozu/eslint-config/presets/kintone-customize"
-};
+// eslint.config.mjs
+import kintoneCustomize from "@cybozu/eslint-config/presets/kintone-customize";
+
+export default [...kintoneCustomize];
 ```
 
 ### Presets
 
-- `@cybozu/eslint-config/preset/kintone-customize`
-  - or `@cybozu/eslint-config/flat/presets/kintone-customize` for Flat Config
-  - Preset for kintone customize/plugin-in development
-- `@cybozu/eslint-config/preset/kintone-customize-prettier`
-  - or `@cybozu/eslint-config/flat/presets/kintone-customize-prettier` for Flat Config
-  - Preset for kintone customize/plugin-in development including `prettier` config
-- `@cybozu/eslint-config/preset/kintone-customize-es5`
-  - or `@cybozu/eslint-config/flat/presets/kintone-customize-es5` for Flat Config
-  - Preset for kintone customize/plugin-in development in ES5
-- `@cybozu/eslint-config/preset/kintone-customize-es5-prettier`
-  - or `@cybozu/eslint-config/flat/presets/kintone-customize-es5-prettier` for Flat Config
-  - Preset for kintone customize/plugin-in development in ES5 including `prettier` config
+- `@cybozu/eslint-config/presets/kintone-customize`
+  - Preset for kintone customize/plug-in development
+- `@cybozu/eslint-config/presets/kintone-customize-prettier`
+  - Preset for kintone customize/plug-in development including `prettier` config
+- `@cybozu/eslint-config/presets/kintone-customize-es5`
+  - Preset for kintone customize/plug-in development in ES5
+- `@cybozu/eslint-config/presets/kintone-customize-es5-prettier`
+  - Preset for kintone customize/plug-in development in ES5 including `prettier` config
