@@ -1,3 +1,5 @@
-node_modules/
-.vscode/
-.claude
+node_modules
+.rule-inventory
+.migrate-out
+*.log
+.DS_Store
