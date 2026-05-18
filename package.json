@@ -7,74 +7,58 @@
   "repository": "cybozu/eslint-config",
   "homepage": "https://github.com/cybozu/eslint-config",
   "bugs": "https://github.com/cybozu/eslint-config/issues",
-  "version": "25.0.1",
-  "description": "ESLint rules for Cybozu",
-  "main": "index.js",
+  "version": "26.0.0",
+  "description": "Oxlint configuration presets for Cybozu",
   "exports": {
-    ".": "./index.js",
-    "./presets/base": "./presets/base.js",
-    "./presets/css-baseline": "./presets/css-baseline.js",
-    "./presets/es5": "./presets/es5.js",
-    "./presets/es5-prettier": "./presets/es5-prettier.js",
-    "./presets/kintone-customize": "./presets/kintone-customize.js",
-    "./presets/kintone-customize-es5": "./presets/kintone-customize-es5.js",
-    "./presets/kintone-customize-es5-prettier": "./presets/kintone-customize-es5-prettier.js",
-    "./presets/kintone-customize-prettier": "./presets/kintone-customize-prettier.js",
-    "./presets/node": "./presets/node.js",
-    "./presets/node-prettier": "./presets/node-prettier.js",
-    "./presets/node-typescript-prettier": "./presets/node-typescript-prettier.js",
-    "./presets/prettier": "./presets/prettier.js",
-    "./presets/react": "./presets/react.js",
-    "./presets/react-prettier": "./presets/react-prettier.js",
-    "./presets/react-typescript": "./presets/react-typescript.js",
-    "./presets/react-typescript-prettier": "./presets/react-typescript-prettier.js",
-    "./presets/typescript": "./presets/typescript.js",
-    "./presets/typescript-prettier": "./presets/typescript-prettier.js",
-    "./globals/kintone": "./globals/kintone.js"
+    ".": "./presets/base.oxlintrc.json",
+    "./presets/base": "./presets/base.oxlintrc.json",
+    "./presets/es5": "./presets/es5.oxlintrc.json",
+    "./presets/kintone-customize": "./presets/kintone-customize.oxlintrc.json",
+    "./presets/kintone-customize-es5": "./presets/kintone-customize-es5.oxlintrc.json",
+    "./presets/node": "./presets/node.oxlintrc.json",
+    "./presets/react": "./presets/react.oxlintrc.json",
+    "./presets/react-typescript": "./presets/react-typescript.oxlintrc.json",
+    "./presets/typescript": "./presets/typescript.oxlintrc.json"
   },
   "files": [
-    "lib",
-    "globals",
-    "presets",
-    "index.js"
+    "presets"
   ],
   "scripts": {
-    "lint": "eslint **/*.js",
-    "test": "mocha --timeout 5000 \"test/**/*-test.js\""
+    "lint": "oxlint",
+    "format": "oxfmt --check .",
+    "format:write": "oxfmt .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
   },
   "keywords": [
-    "eslint"
+    "oxlint",
+    "oxlint-config",
+    "oxfmt",
+    "linter",
+    "typescript",
+    "cybozu"
   ],
   "author": "cybozu",
   "license": "MIT",
   "devDependencies": {
-    "@types/react": "^19.2.14",
-    "eslint": "^9.39.4",
-    "mocha": "^11.7.5",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^3.8.3",
-    "react": "^19.2.6",
-    "typescript": "^5.9.3"
+    "@types/node": "^22.10.5",
+    "oxlint": "^1.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.8"
   },
   "peerDependencies": {
-    "eslint": ">=8.57.0 || ^9.0.0-0 || ^10.0.0-0",
-    "typescript": ">=4.7.5 || ^5.0.0"
+    "oxlint": ">=1.0.0",
+    "oxlint-tsgolint": ">=0.1.0",
+    "typescript": ">=5.0.0"
   },
-  "dependencies": {
-    "@eslint/css": "^0.14.1",
-    "@eslint/js": "^9.39.4",
-    "@stylistic/eslint-plugin-ts": "^3.1.0",
-    "@typescript-eslint/eslint-plugin": "^8.56.1",
-    "@typescript-eslint/parser": "^8.56.1",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-import-x": "^4.16.2",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-n": "^17.24.0",
-    "eslint-plugin-prettier": "^5.5.5",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "globals": "^17.4.0",
-    "typescript-eslint": "^8.56.1"
+  "peerDependenciesMeta": {
+    "oxlint-tsgolint": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
   },
   "packageManager": "pnpm@10.33.4",
   "devEngines": {
