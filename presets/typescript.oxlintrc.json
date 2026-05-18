@@ -323,15 +323,7 @@
         "typescript/prefer-for-of": "off",
         "typescript/prefer-function-type": "off",
         "no-useless-constructor": "warn",
-        "@stylistic/ts/indent": [
-          "warn",
-          2,
-          {
-            "SwitchCase": 1
-          }
-        ],
         "no-shadow": "error",
-        "@stylistic/ts/no-extra-semi": "error",
         "no-loss-of-precision": "error",
         "no-unused-expressions": "off",
         "no-unused-vars": "off",
@@ -351,9 +343,6 @@
       },
       "plugins": [
         "typescript"
-      ],
-      "jsPlugins": [
-        "@stylistic/eslint-plugin-ts"
       ]
     }
   ]
