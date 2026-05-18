@@ -1,184 +1,158 @@
 # @cybozu/eslint-config
 
 [![npm version](https://badge.fury.io/js/%40cybozu%2Feslint-config.svg)](https://badge.fury.io/js/%40cybozu%2Feslint-config)
-[![](https://github.com/cybozu/eslint-config/workflows/test/badge.svg)](https://github.com/cybozu/eslint-config/actions?workflow=test)
-[![](https://github.com/cybozu/eslint-config/workflows/lint/badge.svg)](https://github.com/cybozu/eslint-config/actions?workflow=lint)
 
-An ESLint rule set for Cybozu.
+A shared **[Oxlint](https://oxc.rs/docs/guide/usage/linter)** configuration for Cybozu.
 
-**This package is intended to use in Cybozu. Currently, this is still in development so the rules might be changed.**
+> **v26.0.0**: This package has migrated from ESLint to Oxlint. See [Migration from v25](#migration-from-v25-eslint--v26-oxlint) for details.
 
 ## What is this?
 
-This is an ESLint rule set for Cybozu.
-The purpose of `@cybozu/eslint-config` are the following
+A set of Oxlint configuration presets that share lint rules for Cybozu projects.
 
-- Share best practices for JavaScript
-- Standardize JavaScript coding guideline in Cybozu
-- Installation support for ESLint and continuous support for the rule set
+- Share best practices for JavaScript / TypeScript
+- Standardize the lint baseline across Cybozu codebases
+- Centralize ongoing maintenance so consumers don't have to track upstream rule changes
 
-## The benefits to adopt this rule
+Code formatting is intentionally **not** included in these presets — use [Oxfmt](https://oxc.rs/docs/guide/usage/formatter) (or Prettier, if you prefer) as a separate tool. CSS linting is also out of scope — use stylelint.
 
-You don't need to care about updates for ESLint and ESLint plugins.
-We'll manage the updates and provide CHANGELOG that you need to know so that you can update it easily.
-In addition, we'll add some useful plugins into `@cybozu/eslint-config` so you can learn about best practices for JavaScript through `@cybozu/eslint-config`.
+## Rule severity policy
 
-## Rule set policies
+- **error**: code likely diverges from our practices; must be fixed.
+- **warn**: code style we discourage; should be addressed.
 
-We provide rules that are Error or Warning.
+## Versioning policy
 
-### Error
+1. Major: changes that can produce new errors.
+1. Minor: changes that can produce new warnings.
+1. Patch: changes that produce neither.
 
-This is a rule you must fix because the code might not follow our practices in JavaScript
+## Installation
 
-### Warning
-
-This is a rule you should fix because the code style might not be preferable.
-
-## Version policy
-
-1.  We update major version if the changes might cause new errors.
-1.  We update minor version if the changes might cause new warnings.
-1.  We update patch version if the changes don't cause any new errors and warnings.
-
-## How to use
-
-Install `eslint` and `@cybozu/eslint-config`
-
-```
-% npm install --save-dev eslint @cybozu/eslint-config
+```bash
+npm install --save-dev oxlint @cybozu/eslint-config
+# For type-aware TypeScript rules (recommended):
+npm install --save-dev oxlint-tsgolint
 ```
 
-### `eslint.config.mjs`
+> Type-aware rules require **TypeScript 7+** and `oxlint-tsgolint`. See [Oxlint Type-aware linting](https://oxc.rs/docs/guide/usage/linter/type-aware).
 
-Put it into your `eslint.config.mjs`
+## Usage
 
-```js
-import reactTypeScriptPrettier from "@cybozu/eslint-config/presets/react-typescript-prettier";
+Pick a preset and reference it from `.oxlintrc.json` via `extends`:
 
-export default [
-  ...reactTypeScriptPrettier,
-  // You can add other presets as needed.
-  // ...otherPresets
-  {
-    rules: {
-      // You can also override individual rules.
-    },
-  },
-];
-```
-
-> **Note:** Currently, we adopt that `indent` rule is 2 spaces and having indentation in `switch case`.
-> You can override the rule if your project adopts 4 spaces or others.
-> We think it's important to have consistency in your entire codebase.
-
-## Upgrading from v25 or earlier
-
-Starting from v26, `@cybozu/eslint-config` only supports [Flat Config](https://eslint.org/docs/latest/use/configure/configuration-files) (`eslint.config.mjs`) and has dropped support for the legacy config format (`.eslintrc.js`).
-
-If you are using v25 or earlier, you need to:
-
-- Migrate your ESLint configuration from `.eslintrc.js` to `eslint.config.mjs`
-- Update all config imports from `@cybozu/eslint-config/flat/presets/*` to `@cybozu/eslint-config/presets/*`
-- Update import from `@cybozu/eslint-config/flat/globals/kintone` to `@cybozu/eslint-config/globals/kintone`
-
-See the [ESLint migration guide](https://eslint.org/docs/latest/use/configure/migration-guide) for details on migrating to Flat Config.
-
-### `.eslintrc.js` (v25 and earlier)
-
-> **Note:** This format is no longer supported in v26 and later. Use `eslint.config.mjs` instead.
-
-```js
-module.exports = {
-  extends: "@cybozu",
-};
-```
-
-```js
-module.exports = {
-  extends: "@cybozu/eslint-config/presets/react-typescript-prettier",
-  rules: {
-    // default
-    // 'indent': ['warn', 2, { "SwitchCase": 1 }],
-    indent: ["warn", 4, { SwitchCase: 0 }],
-  },
-};
-```
-
-## Support rule set
-
-- `@cybozu/eslint-config/presets/base`
-  - This is included in the all following presets
-- `@cybozu/eslint-config/presets/node`
-  - Including `eslint-plugin-n`
-- `@cybozu/eslint-config/presets/typescript`
-  - Including `@typescript-eslint/eslint-plugin`
-- `@cybozu/eslint-config/presets/react`
-  - Including `eslint-plugin-react`, `eslint-plugin-jsx-a11y` and `eslint-plugin-react-hooks`
-- `@cybozu/eslint-config/presets/react-typescript`
-  - Including `@cybozu/eslint-config/presets/typescript` and `@cybozu/eslint-config/presets/react`
-- `@cybozu/eslint-config/presets/es5`
-- `@cybozu/eslint-config/presets/css-baseline`
-  - CSS baseline rules using `@eslint/css`
-
-## Prettier Support
-
-Prettier is a code formatter, which supports not only JavaScript but also many languages.
-Prettier is widely used as a code formatter for JavaScript.
-
-It's opinionated but we don't have to discuss about code styles with Prettier because it's the rule (No more bikeshed).
-
-The following presets disable all rules that conflict with Prettier and treat the differences between Prettier's code format as errors.
-You can fix the errors by `--fix` option so you don't have to fix the errors manually.
-
-To use the presets, you have to install `prettier`. We only support Prettier v2 or later versions.
-
-```
-% npm install --save-dev prettier
-```
-
-- `@cybozu/eslint-config/presets/prettier`
-- `@cybozu/eslint-config/presets/node-prettier`
-- `@cybozu/eslint-config/presets/node-typescript-prettier`
-- `@cybozu/eslint-config/presets/typescript-prettier`
-- `@cybozu/eslint-config/presets/react-typescript-prettier`
-- `@cybozu/eslint-config/presets/react-prettier`
-- `@cybozu/eslint-config/presets/es5-prettier`
-
-**Currently, we don't support customized Prettier config**
-
-## React Support
-
-### ⚠️ Classic JSX Syntax
-
-`@cybozu/eslint-config` is intended to be used with the [New JSX Transform](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html). If you want to use the Classic JSX Transform (`React.createElement`), please enable the `react/jsx-uses-react` rule on your own.
-
-```js
-rules: {
-  "react/jsx-uses-react": "error"
+```json
+{
+  "extends": ["@cybozu/eslint-config/presets/react-typescript"]
 }
 ```
 
-## For kintone customize developers
+Run the linter:
 
-We also provide presets for kintone customize/plug-in developers, which include some `globals` for kintone.
-
-### Usage
-
-```js
-// eslint.config.mjs
-import kintoneCustomize from "@cybozu/eslint-config/presets/kintone-customize";
-
-export default [...kintoneCustomize];
+```bash
+npx oxlint
+# Type-aware:
+npx oxlint --type-aware
 ```
 
-### Presets
+You can override individual rules in your own `.oxlintrc.json`:
 
-- `@cybozu/eslint-config/presets/kintone-customize`
-  - Preset for kintone customize/plug-in development
-- `@cybozu/eslint-config/presets/kintone-customize-prettier`
-  - Preset for kintone customize/plug-in development including `prettier` config
-- `@cybozu/eslint-config/presets/kintone-customize-es5`
-  - Preset for kintone customize/plug-in development in ES5
-- `@cybozu/eslint-config/presets/kintone-customize-es5-prettier`
-  - Preset for kintone customize/plug-in development in ES5 including `prettier` config
+```json
+{
+  "extends": ["@cybozu/eslint-config/presets/react-typescript"],
+  "rules": {
+    "no-console": "error"
+  }
+}
+```
+
+## Available presets
+
+| Preset | Use case | Plugins enabled |
+| --- | --- | --- |
+| `@cybozu/eslint-config/presets/base` | Plain JavaScript baseline (included in all other presets) | import, typescript |
+| `@cybozu/eslint-config/presets/node` | Node.js code | import, node, typescript |
+| `@cybozu/eslint-config/presets/typescript` | TypeScript (type-aware) | import, typescript |
+| `@cybozu/eslint-config/presets/react` | React (JSX) | react, react-hooks, jsx-a11y, import, typescript |
+| `@cybozu/eslint-config/presets/react-typescript` | React + TypeScript (type-aware) | react, react-hooks, jsx-a11y, import, typescript |
+| `@cybozu/eslint-config/presets/es5` | Legacy ES5 code | typescript |
+| `@cybozu/eslint-config/presets/kintone-customize` | kintone customize / plug-in development | import, typescript (+ kintone globals) |
+| `@cybozu/eslint-config/presets/kintone-customize-es5` | kintone customize in ES5 | typescript (+ kintone globals) |
+
+For the full rule list of each preset, run `pnpm run inventory` (this repo) and read `.rule-inventory/inventory.md`.
+
+## Formatting
+
+Use Oxfmt for code formatting:
+
+```bash
+npx oxfmt --check .
+npx oxfmt .  # write
+```
+
+These presets intentionally **do not** include formatting rules so that Oxfmt (or your formatter of choice) is the single source of truth.
+
+## CSS
+
+CSS linting was removed in v26. Use [stylelint](https://stylelint.io/) for CSS.
+
+## React notes
+
+These presets target the [New JSX Transform](https://react.dev/blog/2020/09/22/introducing-the-new-jsx-transform). If you still rely on the classic transform (`React.createElement`), re-enable the relevant rules yourself.
+
+## Migration from v25 (ESLint) → v26 (Oxlint)
+
+v25 distributed ESLint flat-config builders. v26 distributes plain **`.oxlintrc.json`** files instead. Migration steps for consumers:
+
+1. Replace `eslint` (and the various `eslint-plugin-*`) with `oxlint`:
+   ```bash
+   npm uninstall eslint eslint-plugin-* @typescript-eslint/*
+   npm install --save-dev oxlint oxlint-tsgolint
+   ```
+2. Delete `eslint.config.mjs` and add `.oxlintrc.json`:
+   ```json
+   {
+     "extends": ["@cybozu/eslint-config/presets/react-typescript"]
+   }
+   ```
+3. Update your scripts:
+   ```diff
+   - "lint": "eslint ."
+   + "lint": "oxlint"
+   ```
+4. Replace Prettier with Oxfmt (or keep Prettier — these presets no longer touch formatting):
+   ```diff
+   - "format": "prettier --check ."
+   + "format": "oxfmt --check ."
+   ```
+5. Removed presets (no direct replacement — see the policy change in the table above):
+   - `*-prettier` (formatting is handled by Oxfmt now)
+   - `css-baseline` (use stylelint)
+
+### Rule coverage caveat
+
+Oxlint does not implement every ESLint rule. The `@oxlint/migrate` tool we used to generate these presets reports skipped rules per category (Nursery / Not Implemented / Unsupported). The dropped rules in this migration were primarily:
+
+- Stylistic rules (now handled by Oxfmt)
+- Legacy class-component-only React rules
+- A handful of rules superseded by strict mode or TypeScript's `noImplicitThis`
+
+See the per-commit migration output for the full list.
+
+## Contributing
+
+This repo uses **pnpm** as the package manager.
+
+```bash
+pnpm install
+pnpm test           # vitest
+pnpm typecheck      # tsc --noEmit
+pnpm lint           # oxlint
+pnpm format         # oxfmt --check .
+```
+
+Verification scripts:
+
+- `tsx scripts/rule-inventory.ts` — generate `.rule-inventory/{inventory.json,inventory.md}` summarising every preset's enabled rules.
+- `tsx scripts/diff-against-baseline.ts capture` — snapshot current rule sets.
+- `tsx scripts/diff-against-baseline.ts check` — fail if any rule got removed or weakened relative to the captured baseline (useful when bumping `oxlint`).

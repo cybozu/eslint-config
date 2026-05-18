@@ -28,7 +28,10 @@
     "format": "oxfmt --check .",
     "format:write": "oxfmt .",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "inventory": "tsx scripts/rule-inventory.ts",
+    "baseline:capture": "tsx scripts/diff-against-baseline.ts capture",
+    "baseline:check": "tsx scripts/diff-against-baseline.ts check"
   },
   "keywords": [
     "oxlint",
