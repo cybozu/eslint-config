@@ -18,10 +18,10 @@ describe("preset kintone-customize", () => {
     assert.deepStrictEqual(result, {
       "error.js": {
         errors: ["no-undef"],
-        warnings: ["spaced-comment"],
+        warnings: ["@stylistic/spaced-comment"],
       },
       "ok.js": {
-        warnings: ["spaced-comment"],
+        warnings: ["@stylistic/spaced-comment"],
       },
     });
   });
