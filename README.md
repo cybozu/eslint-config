@@ -84,6 +84,13 @@ If you are using v25 or earlier, you need to:
 
 See the [ESLint migration guide](https://eslint.org/docs/latest/use/configure/migration-guide) for details on migrating to Flat Config.
 
+### React rule changes
+
+React lint rules are now provided directly by `@cybozu/eslint-config` instead of `eslint-plugin-react`. This is transparent for most users, but note the following breaking changes:
+
+- **Class component rules removed**: Rules specific to class components (`react/no-deprecated`, `react/prefer-stateless-function`, etc.) are no longer enabled. If your project uses class components, you may need to configure additional rules manually.
+- **`jsx-a11y` plugin replaced**: Accessibility rules now use `eslint-plugin-jsx-a11y-x` internally instead of `eslint-plugin-jsx-a11y`. No action required on your end.
+
 ### `.eslintrc.js` (v25 and earlier)
 
 > **Note:** This format is no longer supported in v26 and later. Use `eslint.config.mjs` instead.
@@ -114,7 +121,8 @@ module.exports = {
 - `@cybozu/eslint-config/presets/typescript`
   - Including `@typescript-eslint/eslint-plugin`
 - `@cybozu/eslint-config/presets/react`
-  - Including `eslint-plugin-react`, `eslint-plugin-jsx-a11y` and `eslint-plugin-react-hooks`
+  - Including built-in React rules, `eslint-plugin-react-hooks` and `eslint-plugin-jsx-a11y-x`
+  - `eslint-plugin-react` is no longer required as a dependency
 - `@cybozu/eslint-config/presets/react-typescript`
   - Including `@cybozu/eslint-config/presets/typescript` and `@cybozu/eslint-config/presets/react`
 - `@cybozu/eslint-config/presets/es5`
@@ -146,18 +154,6 @@ To use the presets, you have to install `prettier`. We only support Prettier v2 
 - `@cybozu/eslint-config/presets/es5-prettier`
 
 **Currently, we don't support customized Prettier config**
-
-## React Support
-
-### ⚠️ Classic JSX Syntax
-
-`@cybozu/eslint-config` is intended to be used with the [New JSX Transform](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html). If you want to use the Classic JSX Transform (`React.createElement`), please enable the `react/jsx-uses-react` rule on your own.
-
-```js
-rules: {
-  "react/jsx-uses-react": "error"
-}
-```
 
 ## For kintone customize developers
 

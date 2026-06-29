@@ -1,7 +1,7 @@
 import { base } from "../lib/base.js";
 import { react } from "../lib/react.js";
-import { typescript } from "../lib/typescript.js";
 import { reactTypescript } from "../lib/react-typescript.js";
+import { typescript } from "../lib/typescript.js";
 import { attachFilesPropForConfig } from "../utils/attachFilesPropForConfig.js";
 
 /**
