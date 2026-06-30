@@ -76,7 +76,9 @@ export default {
       if (!returnsJSX(node)) return;
 
       // Arrow function components are "stateless" in the traditional sense
-      const isStateless = node.type === "ArrowFunctionExpression";
+      const isStateless =
+        node.type === "ArrowFunctionExpression" ||
+        node.type === "FunctionExpression";
       if (ignoreStateless && isStateless) return;
 
       components.push(node);
