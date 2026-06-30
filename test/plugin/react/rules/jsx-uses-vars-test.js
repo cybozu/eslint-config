@@ -1,6 +1,6 @@
 import assert from "assert";
 import { Linter } from "eslint";
-import reactPlugin from "../../../../plugin/react/index.js";
+import reactPlugin from "../../../../plugins/react/index.js";
 
 const config = [
   {

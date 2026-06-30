@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../../../../plugin/react/rules/jsx-first-prop-new-line.js";
+import rule from "../../../../plugins/react/rules/jsx-first-prop-new-line.js";
 
 const ruleTester = new RuleTester({
   languageOptions: {

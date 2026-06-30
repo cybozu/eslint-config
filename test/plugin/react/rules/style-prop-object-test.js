@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../../../../plugin/react/rules/style-prop-object.js";
+import rule from "../../../../plugins/react/rules/style-prop-object.js";
 
 const ruleTester = new RuleTester({
   languageOptions: {

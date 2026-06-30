@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../../../../plugin/react/rules/no-multi-comp.js";
+import rule from "../../../../plugins/react/rules/no-multi-comp.js";
 
 const ruleTester = new RuleTester({
   languageOptions: {

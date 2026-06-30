@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../../../../plugin/react/rules/jsx-boolean-value.js";
+import rule from "../../../../plugins/react/rules/jsx-boolean-value.js";
 
 const ruleTester = new RuleTester({
   languageOptions: {

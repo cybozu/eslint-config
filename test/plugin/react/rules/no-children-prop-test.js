@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../../../../plugin/react/rules/no-children-prop.js";
+import rule from "../../../../plugins/react/rules/no-children-prop.js";
 
 const ruleTester = new RuleTester({
   languageOptions: {

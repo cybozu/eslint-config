@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../../../../plugin/react/rules/jsx-pascal-case.js";
+import rule from "../../../../plugins/react/rules/jsx-pascal-case.js";
 
 const ruleTester = new RuleTester({
   languageOptions: {

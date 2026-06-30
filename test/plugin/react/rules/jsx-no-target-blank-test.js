@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../../../../plugin/react/rules/jsx-no-target-blank.js";
+import rule from "../../../../plugins/react/rules/jsx-no-target-blank.js";
 
 const ruleTester = new RuleTester({
   languageOptions: {

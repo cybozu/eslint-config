@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../../../../plugin/react/rules/void-dom-elements-no-children.js";
+import rule from "../../../../plugins/react/rules/void-dom-elements-no-children.js";
 
 const ruleTester = new RuleTester({
   languageOptions: {

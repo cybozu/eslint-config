@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../../../../plugin/react/rules/no-danger-with-children.js";
+import rule from "../../../../plugins/react/rules/no-danger-with-children.js";
 
 const ruleTester = new RuleTester({
   languageOptions: {

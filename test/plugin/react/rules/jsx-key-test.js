@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../../../../plugin/react/rules/jsx-key.js";
+import rule from "../../../../plugins/react/rules/jsx-key.js";
 
 const ruleTester = new RuleTester({
   languageOptions: {

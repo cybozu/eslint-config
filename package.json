@@ -35,7 +35,9 @@
   "files": [
     "lib",
     "globals",
+    "plugins",
     "presets",
+    "utils",
     "index.js"
   ],
   "scripts": {

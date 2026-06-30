@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../../../../plugin/react/rules/no-unstable-nested-components.js";
+import rule from "../../../../plugins/react/rules/no-unstable-nested-components.js";
 
 const ruleTester = new RuleTester({
   languageOptions: {

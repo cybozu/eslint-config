@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../../../../plugin/react/rules/no-unknown-property.js";
+import rule from "../../../../plugins/react/rules/no-unknown-property.js";
 
 const ruleTester = new RuleTester({
   languageOptions: {
