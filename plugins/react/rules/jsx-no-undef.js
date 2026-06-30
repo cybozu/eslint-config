@@ -11,12 +11,8 @@ export default {
   create(context) {
     function checkIdentifier(node) {
       // Only check user-defined components (PascalCase or containing dot)
-      const name =
-        node.type === "JSXIdentifier"
-          ? node.name
-          : node.type === "JSXMemberExpression"
-            ? null // member expressions check the root object
-            : null;
+      // JSXMemberExpression and other types don't need checking here
+      const name = node.type === "JSXIdentifier" ? node.name : null;
 
       if (!name) return;
       // Lowercase = DOM element, skip

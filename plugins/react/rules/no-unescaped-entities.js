@@ -1,7 +1,7 @@
 const defaultEntities = [
   { char: ">", alternatives: ["&gt;", "{'>'}", "&{'>'};"] },
-  { char: '"', alternatives: ['&quot;', '{"\\\""}'] },
-  { char: "'", alternatives: ["&apos;", "{\"'\"}"] },
+  { char: '"', alternatives: ["&quot;", '{"\\""}'] },
+  { char: "'", alternatives: ["&apos;", '{"\'"}'] },
   { char: "}", alternatives: ["&#125;", "{'}'}"] },
 ];
 
@@ -13,8 +13,7 @@ export default {
       description: "Disallow unescaped HTML entities from appearing in markup",
     },
     messages: {
-      unescapedEntity:
-        "`{{entity}}` can be escaped with {{alternatives}}.",
+      unescapedEntity: "`{{entity}}` can be escaped with {{alternatives}}.",
     },
     schema: [
       {
@@ -47,9 +46,7 @@ export default {
   create(context) {
     const forbid =
       context.options[0]?.forbid?.map((entry) =>
-        typeof entry === "string"
-          ? { char: entry, alternatives: [] }
-          : entry,
+        typeof entry === "string" ? { char: entry, alternatives: [] } : entry,
       ) ?? defaultEntities;
 
     return {

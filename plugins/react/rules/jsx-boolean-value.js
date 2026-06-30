@@ -36,17 +36,15 @@ export default {
               },
             });
           }
-        } else {
+        } else if (node.value === null) {
           // "always": flag shorthand `foo` (no value)
-          if (node.value === null) {
-            context.report({
-              node,
-              messageId: "setBoolean",
-              fix(fixer) {
-                return fixer.insertTextAfter(node, "={true}");
-              },
-            });
-          }
+          context.report({
+            node,
+            messageId: "setBoolean",
+            fix(fixer) {
+              return fixer.insertTextAfter(node, "={true}");
+            },
+          });
         }
       },
     };

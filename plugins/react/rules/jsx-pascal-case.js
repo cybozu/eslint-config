@@ -1,4 +1,4 @@
-import { getElementType, isDOMElement } from "../utils.js";
+import { getElementType } from "../utils.js";
 
 const PASCAL_CASE_REGEX = /^[A-Z][a-zA-Z0-9]*$/;
 const ALL_CAPS_REGEX = /^[A-Z][A-Z0-9_]*$/;
