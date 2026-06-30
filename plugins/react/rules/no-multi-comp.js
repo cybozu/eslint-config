@@ -52,8 +52,7 @@ export default {
       description: "Disallow multiple component definitions per file",
     },
     messages: {
-      onlyOneComponent:
-        "Declare only one React component per file.",
+      onlyOneComponent: "Declare only one React component per file.",
     },
     schema: [
       {
@@ -91,7 +90,10 @@ export default {
         if (components.length <= 1) return;
         // Report all components beyond the first
         for (let i = 1; i < components.length; i++) {
-          context.report({ node: components[i], messageId: "onlyOneComponent" });
+          context.report({
+            node: components[i],
+            messageId: "onlyOneComponent",
+          });
         }
       },
     };

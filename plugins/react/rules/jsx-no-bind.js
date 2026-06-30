@@ -25,7 +25,8 @@ export default {
     ],
   },
   create(context) {
-    const allowArrowFunctions = context.options[0]?.allowArrowFunctions ?? false;
+    const allowArrowFunctions =
+      context.options[0]?.allowArrowFunctions ?? false;
     const allowBind = context.options[0]?.allowBind ?? false;
     const allowFunctions = context.options[0]?.allowFunctions ?? false;
     const ignoreRefs = context.options[0]?.ignoreRefs ?? false;

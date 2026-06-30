@@ -3,8 +3,22 @@ import { isDOMElement, getElementType } from "../utils.js";
 // Void HTML elements must not be self-closed differently, but for components
 // and non-void elements we enforce self-closing when there are no children.
 const voidElements = new Set([
-  "area", "base", "br", "col", "embed", "hr", "img", "input",
-  "keygen", "link", "menuitem", "meta", "param", "source", "track", "wbr",
+  "area",
+  "base",
+  "br",
+  "col",
+  "embed",
+  "hr",
+  "img",
+  "input",
+  "keygen",
+  "link",
+  "menuitem",
+  "meta",
+  "param",
+  "source",
+  "track",
+  "wbr",
 ]);
 
 /** @type {import('eslint').Rule.RuleModule} */
@@ -47,8 +61,7 @@ export default {
         if (!isDOM && !checkComponent) return;
 
         const meaningfulChildren = node.children.filter(
-          (child) =>
-            child.type !== "JSXText" || child.value.trim() !== "",
+          (child) => child.type !== "JSXText" || child.value.trim() !== "",
         );
         if (meaningfulChildren.length > 0) return;
 

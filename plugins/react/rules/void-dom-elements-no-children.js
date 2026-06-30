@@ -24,12 +24,10 @@ export default {
   meta: {
     type: "problem",
     docs: {
-      description:
-        "Disallow passing children to void DOM elements",
+      description: "Disallow passing children to void DOM elements",
     },
     messages: {
-      noChildren:
-        "Void DOM element <{{element}} /> cannot receive children.",
+      noChildren: "Void DOM element <{{element}} /> cannot receive children.",
       noChildrenProp:
         "Void DOM element <{{element}} /> cannot receive a children prop.",
     },
@@ -42,8 +40,7 @@ export default {
         if (!isDOMElement(name) || !voidElements.has(name)) return;
 
         const nonEmptyChildren = node.children.filter(
-          (child) =>
-            child.type !== "JSXText" || child.value.trim() !== "",
+          (child) => child.type !== "JSXText" || child.value.trim() !== "",
         );
         if (nonEmptyChildren.length > 0) {
           context.report({

@@ -17,8 +17,7 @@ function isFragment(node) {
 
 function getMeaningfulChildren(node) {
   return node.children.filter(
-    (child) =>
-      child.type !== "JSXText" || child.value.trim() !== "",
+    (child) => child.type !== "JSXText" || child.value.trim() !== "",
   );
 }
 

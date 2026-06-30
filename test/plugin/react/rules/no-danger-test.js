@@ -10,10 +10,7 @@ const ruleTester = new RuleTester({
 });
 
 ruleTester.run("no-danger", rule, {
-  valid: [
-    { code: `<div className="x" />;` },
-    { code: `<div id="safe" />;` },
-  ],
+  valid: [{ code: `<div className="x" />;` }, { code: `<div id="safe" />;` }],
   invalid: [
     {
       code: `<div dangerouslySetInnerHTML={{ __html: "<p>unsafe</p>" }} />;`,

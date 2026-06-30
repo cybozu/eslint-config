@@ -29,7 +29,10 @@ ruleTester.run("no-unescaped-entities", rule, {
     },
     {
       code: `<div>both "quotes" and apostrophe's</div>;`,
-      errors: [{ messageId: "unescapedEntity" }, { messageId: "unescapedEntity" }],
+      errors: [
+        { messageId: "unescapedEntity" },
+        { messageId: "unescapedEntity" },
+      ],
     },
   ],
 });

@@ -14,7 +14,9 @@ ruleTester.run("no-multi-comp", rule, {
     { code: `function App() { return <div />; }` },
     { code: `const App = () => <div />;` },
     // Helper functions that don't return JSX are ignored
-    { code: `function helper() { return 42; } function App() { return <div />; }` },
+    {
+      code: `function helper() { return 42; } function App() { return <div />; }`,
+    },
     // ignoreStateless: arrow function components are ignored
     {
       code: `const A = () => <div />; const B = () => <span />;`,

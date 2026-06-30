@@ -37,8 +37,7 @@ export default {
   meta: {
     type: "problem",
     docs: {
-      description:
-        "Require `key` prop when returning an array of JSX elements",
+      description: "Require `key` prop when returning an array of JSX elements",
     },
     messages: {
       missingKey: 'Missing "key" prop for element in array.',

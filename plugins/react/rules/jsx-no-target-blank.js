@@ -13,8 +13,7 @@ export default {
   meta: {
     type: "problem",
     docs: {
-      description:
-        'Disallow `target="_blank"` without `rel="noreferrer"`',
+      description: 'Disallow `target="_blank"` without `rel="noreferrer"`',
     },
     messages: {
       noTargetBlank:

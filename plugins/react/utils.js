@@ -66,8 +66,7 @@ export function hasChildren(node) {
   if (
     node.type === "JSXElement" &&
     node.children.some(
-      (child) =>
-        child.type !== "JSXText" || child.value.trim() !== "",
+      (child) => child.type !== "JSXText" || child.value.trim() !== "",
     )
   ) {
     return true;

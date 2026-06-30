@@ -45,6 +45,5 @@ ruleTester.run("jsx-curly-brace-presence", rule, {
     },
     // Note: JSX text children are JSXText nodes (not Literal), so
     // children: "always" only applies to existing JSXExpressionContainer children
-
   ],
 });

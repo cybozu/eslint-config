@@ -18,10 +18,8 @@ export default {
         "Disallow unnecessary JSX expressions when literals could be used directly",
     },
     messages: {
-      unnecessaryCurly:
-        "Curly braces are unnecessary here. Remove them.",
-      missingCurly:
-        "Curly braces are required here.",
+      unnecessaryCurly: "Curly braces are unnecessary here. Remove them.",
+      missingCurly: "Curly braces are required here.",
     },
     schema: [
       {

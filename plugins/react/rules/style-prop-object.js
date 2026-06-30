@@ -5,11 +5,11 @@ export default {
   meta: {
     type: "suggestion",
     docs: {
-      description: "Require that the `style` prop value is an object, not a string",
+      description:
+        "Require that the `style` prop value is an object, not a string",
     },
     messages: {
-      stylePropNotObject:
-        "Style prop value must be an object, not a string.",
+      stylePropNotObject: "Style prop value must be an object, not a string.",
     },
     schema: [],
   },

@@ -3,12 +3,10 @@ export default {
   meta: {
     type: "suggestion",
     docs: {
-      description:
-        "Restrict file extensions that may contain JSX",
+      description: "Restrict file extensions that may contain JSX",
     },
     messages: {
-      noJSXWithExtension:
-        "JSX not allowed in files with extension '{{ext}}'.",
+      noJSXWithExtension: "JSX not allowed in files with extension '{{ext}}'.",
     },
     schema: [
       {
