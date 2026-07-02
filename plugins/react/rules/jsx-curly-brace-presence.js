@@ -83,11 +83,6 @@ export default {
         node.children.forEach((child) => {
           if (child.type === "JSXExpressionContainer") {
             checkCurly(child, childrenRule, "children");
-          } else if (child.type === "Literal") {
-            // String literal child
-            if (typeof child.value === "string" && child.value.trim()) {
-              checkCurly(child, childrenRule, "children");
-            }
           }
         });
       },

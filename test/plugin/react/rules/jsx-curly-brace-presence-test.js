@@ -43,7 +43,5 @@ ruleTester.run("jsx-curly-brace-presence", rule, {
       errors: [{ messageId: "missingCurly" }],
       output: `<div className={"foo"} />;`,
     },
-    // Note: JSX text children are JSXText nodes (not Literal), so
-    // children: "always" only applies to existing JSXExpressionContainer children
   ],
 });
