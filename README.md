@@ -88,6 +88,10 @@ See the [ESLint migration guide](https://eslint.org/docs/latest/use/configure/mi
 
 This version requires ESLint **v10 or later**. ESLint v8 and v9 are no longer supported as peer dependencies. Upgrade ESLint before updating this package.
 
+### Node.js version requirement
+
+This version requires Node.js **v22 or later**.
+
 ### React rule changes
 
 React lint rules are now provided directly by `@cybozu/eslint-config` instead of `eslint-plugin-react`. Note the following breaking changes:

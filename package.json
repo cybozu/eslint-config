@@ -1,7 +1,7 @@
 {
   "name": "@cybozu/eslint-config",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "type": "module",
   "repository": "cybozu/eslint-config",
