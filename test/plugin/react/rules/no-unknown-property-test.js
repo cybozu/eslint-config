@@ -19,6 +19,20 @@ ruleTester.run("no-unknown-property", rule, {
     // Custom components are not checked
     { code: `<MyComp unknownProp="x" />;` },
     { code: `<img src="x.png" alt="x" />;` },
+    // Common element-specific attributes
+    { code: `<meta content="width=device-width" />;` },
+    { code: `<meta property="og:title" content="x" />;` },
+    { code: `<meta charset="utf-8" />;` },
+    { code: `<img loading="lazy" src="x.png" alt="x" />;` },
+    { code: `<td abbr="x" />;` },
+    {
+      code: `<link rel="preload" imageSrcSet="x.png 1x" imageSizes="100vw" />;`,
+    },
+    // Custom elements (web components) accept arbitrary attributes
+    { code: `<my-element class="x" custom-attr="y" />;` },
+    { code: `<button is="fancy-button" fancyprop="x" />;` },
+    // camelCase SVG attributes
+    { code: `<path strokeWidth="2" fillRule="evenodd" d="M0 0" />;` },
   ],
   invalid: [
     {
@@ -36,6 +50,29 @@ ruleTester.run("no-unknown-property", rule, {
     {
       code: `<div fooBarBaz="x" />;`,
       errors: [{ messageId: "unknownPropNoSuggestion" }],
+    },
+    // Kebab-case SVG attributes are reported with camelCase suggestions
+    {
+      code: `<path stroke-width="2" />;`,
+      errors: [
+        {
+          messageId: "unknownProp",
+          data: {
+            name: "stroke-width",
+            tag: "path",
+            suggestion: "strokeWidth",
+          },
+        },
+      ],
+    },
+    {
+      code: `<path fill-rule="evenodd" />;`,
+      errors: [
+        {
+          messageId: "unknownProp",
+          data: { name: "fill-rule", tag: "path", suggestion: "fillRule" },
+        },
+      ],
     },
   ],
 });
