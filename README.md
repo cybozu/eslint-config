@@ -49,6 +49,8 @@ Install `eslint` and `@cybozu/eslint-config`
 % npm install --save-dev eslint @cybozu/eslint-config
 ```
 
+ESLint plugins used by the presets (such as `eslint-plugin-react-hooks` and `eslint-plugin-jsx-a11y-x`) are bundled as dependencies of `@cybozu/eslint-config`, so you don't need to install them individually.
+
 ### `eslint.config.mjs`
 
 Put it into your `eslint.config.mjs`
@@ -83,6 +85,8 @@ If you are using v25 or earlier, you need to:
 - Update import from `@cybozu/eslint-config/flat/globals/kintone` to `@cybozu/eslint-config/globals/kintone`
 
 See the [ESLint migration guide](https://eslint.org/docs/latest/use/configure/migration-guide) for details on migrating to Flat Config.
+
+In addition to the Flat Config migration, v26 includes the following breaking changes.
 
 ### ESLint version requirement
 
