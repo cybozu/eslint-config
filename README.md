@@ -105,6 +105,10 @@ React lint rules are provided directly by `@cybozu/eslint-config` under the `rea
 - **JSX formatting rules**: Provided by [`@stylistic/eslint-plugin`](https://eslint.style/) under the `@stylistic/*` prefix (e.g. `@stylistic/jsx-self-closing-comp`). Formatting rules not enabled by the presets are also available there if you need them.
 - **New JSX Transform required**: The Classic JSX Transform (`react/jsx-uses-react`) is not supported. Projects must use the [New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
 
+### Other rule changes
+
+Various other rules have been added, removed, or renamed (e.g. deprecated core formatting rules are now enabled under the `@stylistic/*` prefix). If you override rules or use `eslint-disable` comments, review the new warnings and errors after upgrading.
+
 ### `.eslintrc.js` (v25 and earlier)
 
 > **Note:** This format is no longer supported in v26 and later. Use `eslint.config.mjs` instead.
