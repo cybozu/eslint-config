@@ -9,22 +9,23 @@ export default {
     schema: [],
   },
   create(context) {
-    function checkIdentifier(node) {
-      // Only check user-defined components (PascalCase or containing dot)
-      // JSXMemberExpression and other types don't need checking here
+    function checkIdentifier(node, isMemberRoot) {
       const name = node.type === "JSXIdentifier" ? node.name : null;
 
       if (!name) return;
-      // Lowercase = DOM element, skip
-      if (name[0] === name[0].toLowerCase()) return;
+      // Lowercase = DOM element, skip (member roots like <foo.bar /> are
+      // always variable references regardless of case)
+      if (!isMemberRoot && name[0] === name[0].toLowerCase()) return;
 
-      const sourceCode = context.sourceCode ?? context.getSourceCode();
-      const scope = sourceCode.getScope(node);
+      const scope = context.sourceCode.getScope(node);
 
       let current = scope;
       while (current) {
         const found = current.variables.find((v) => v.name === name);
-        if (found) return;
+        // Config-provided globals (no actual definitions) don't count
+        if (found && (current.type !== "global" || found.defs.length > 0)) {
+          return;
+        }
         current = current.upper;
       }
 
@@ -41,9 +42,9 @@ export default {
     return {
       JSXOpeningElement(node) {
         if (node.name.type === "JSXMemberExpression") {
-          checkIdentifier(getRootObject(node.name));
+          checkIdentifier(getRootObject(node.name), true);
         } else {
-          checkIdentifier(node.name);
+          checkIdentifier(node.name, false);
         }
       },
     };

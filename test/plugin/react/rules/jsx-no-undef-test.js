@@ -20,6 +20,13 @@ ruleTester.run("jsx-no-undef", rule, {
     {
       code: `function App() { const Foo = () => null; return <Foo />; }`,
     },
+    // Member expression roots resolve to a defined variable
+    {
+      code: `const foo = { bar: () => null }; const el = <foo.bar />;`,
+    },
+    {
+      code: `import Foo from './Foo'; const el = <Foo.Bar />;`,
+    },
   ],
   invalid: [
     {
@@ -29,6 +36,17 @@ ruleTester.run("jsx-no-undef", rule, {
     {
       code: `const el = <MyComp />;`,
       errors: [{ messageId: "undefined", data: { name: "MyComp" } }],
+    },
+    // Config-provided globals don't count as declared (allowGlobals: false)
+    {
+      code: `const el = <SomeGlobal />;`,
+      languageOptions: { globals: { SomeGlobal: "readonly" } },
+      errors: [{ messageId: "undefined", data: { name: "SomeGlobal" } }],
+    },
+    // Undefined member expression roots are reported regardless of case
+    {
+      code: `const el = <foo.bar />;`,
+      errors: [{ messageId: "undefined", data: { name: "foo" } }],
     },
   ],
 });

@@ -34,8 +34,9 @@ export default {
       },
       "Program:exit"(node) {
         if (!hasJSX) return;
-        const filename = context.filename ?? context.getFilename();
-        const ext = filename.slice(filename.lastIndexOf("."));
+        const filename = context.filename;
+        const dotIndex = filename.lastIndexOf(".");
+        const ext = dotIndex === -1 ? "" : filename.slice(dotIndex);
         if (!extensions.includes(ext)) {
           context.report({
             node,

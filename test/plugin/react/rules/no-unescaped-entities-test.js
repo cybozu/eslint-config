@@ -34,5 +34,10 @@ ruleTester.run("no-unescaped-entities", rule, {
         { messageId: "unescapedEntity" },
       ],
     },
+    // Text directly inside a fragment is also checked
+    {
+      code: `<>it's text</>;`,
+      errors: [{ messageId: "unescapedEntity" }],
+    },
   ],
 });

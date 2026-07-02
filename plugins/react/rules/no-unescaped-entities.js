@@ -1,5 +1,5 @@
 const defaultEntities = [
-  { char: ">", alternatives: ["&gt;", "{'>'}", "&{'>'};"] },
+  { char: ">", alternatives: ["&gt;", "{'>'}"] },
   { char: '"', alternatives: ["&quot;", '{"\\""}'] },
   { char: "'", alternatives: ["&apos;", '{"\'"}'] },
   { char: "}", alternatives: ["&#125;", "{'}'}"] },
@@ -49,25 +49,28 @@ export default {
         typeof entry === "string" ? { char: entry, alternatives: [] } : entry,
       ) ?? defaultEntities;
 
-    return {
-      JSXElement(node) {
-        node.children.forEach((child) => {
-          if (child.type !== "JSXText") return;
-          const text = child.value;
-          for (const { char, alternatives } of forbid) {
-            if (text.includes(char)) {
-              context.report({
-                node: child,
-                messageId: "unescapedEntity",
-                data: {
-                  entity: char,
-                  alternatives: alternatives.join(", ") || "HTML entities",
-                },
-              });
-            }
+    function checkChildren(node) {
+      node.children.forEach((child) => {
+        if (child.type !== "JSXText") return;
+        const text = child.value;
+        for (const { char, alternatives } of forbid) {
+          if (text.includes(char)) {
+            context.report({
+              node: child,
+              messageId: "unescapedEntity",
+              data: {
+                entity: char,
+                alternatives: alternatives.join(", ") || "HTML entities",
+              },
+            });
           }
-        });
-      },
+        }
+      });
+    }
+
+    return {
+      JSXElement: checkChildren,
+      JSXFragment: checkChildren,
     };
   },
 };
