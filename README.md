@@ -98,41 +98,12 @@ This version requires Node.js **v22 or later**.
 
 ### React rule changes
 
-React lint rules are now provided directly by `@cybozu/eslint-config` instead of `eslint-plugin-react`. Note the following breaking changes:
+React lint rules are provided directly by `@cybozu/eslint-config` under the `react/*` prefix, instead of `eslint-plugin-react`. Note the following:
 
-- **Class component rules removed**: Rules specific to class components (`react/no-deprecated`, `react/prefer-stateless-function`, etc.) are no longer enabled. If your project uses class components, you may need to configure additional rules manually.
-- **`jsx-a11y` plugin replaced**: Accessibility rules now use `eslint-plugin-jsx-a11y-x` instead of `eslint-plugin-jsx-a11y`, and the rule prefix has changed from `jsx-a11y/*` to `jsx-a11y-x/*`. If you override any `jsx-a11y/*` rules in your config or reference them in `eslint-disable` comments, update them to the `jsx-a11y-x/*` prefix.
-- **JSX formatting rules moved to `@stylistic`**: The following rules are still enabled but renamed. Update your overrides and `eslint-disable` comments accordingly:
-  - `react/self-closing-comp` → `@stylistic/jsx-self-closing-comp`
-  - `react/jsx-curly-brace-presence` → `@stylistic/jsx-curly-brace-presence`
-  - `react/jsx-pascal-case` → `@stylistic/jsx-pascal-case`
-  - `react/jsx-first-prop-new-line` → `@stylistic/jsx-first-prop-new-line`
-  - `react/jsx-max-props-per-line` → `@stylistic/jsx-max-props-per-line`
-  - `jsx-quotes` → `@stylistic/jsx-quotes`
-- **JSX formatting rules removed**: `react/jsx-closing-bracket-location`, `react/jsx-closing-tag-location`, `react/jsx-curly-spacing`, `react/jsx-equals-spacing`, `react/jsx-indent`, `react/jsx-indent-props`, `react/jsx-props-no-multi-spaces`, `react/jsx-tag-spacing` and `react/jsx-wrap-multilines` are no longer enabled. Equivalent rules are available in [`@stylistic/eslint-plugin`](https://eslint.style/) if you need them.
-- **`react/display-name` and `react/jsx-no-comment-textnodes` removed**: These rules (previously enabled via the `eslint-plugin-react` recommended config) are no longer enabled.
-- **`react/no-multi-comp` removed**: With the previously configured `ignoreStateless: true` option, this rule only counted class components, which are no longer supported. It has no effect in a function-component codebase, so it is no longer enabled.
-- **Classic JSX Transform no longer supported**: The `react/jsx-uses-react` rule is not available anymore. Projects must use the [New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
-
-### TypeScript rule changes
-
-The following rules were previously disabled explicitly but are now enabled as **error** via the `typescript-eslint` recommended/stylistic configs:
-
-- [`@typescript-eslint/no-explicit-any`](https://typescript-eslint.io/rules/no-explicit-any/)
-- [`@typescript-eslint/no-duplicate-enum-values`](https://typescript-eslint.io/rules/no-duplicate-enum-values/)
-- [`@typescript-eslint/no-unsafe-declaration-merging`](https://typescript-eslint.io/rules/no-unsafe-declaration-merging/)
-- [`@typescript-eslint/prefer-namespace-keyword`](https://typescript-eslint.io/rules/prefer-namespace-keyword/)
-- [`@typescript-eslint/consistent-type-assertions`](https://typescript-eslint.io/rules/consistent-type-assertions/)
-- [`@typescript-eslint/prefer-function-type`](https://typescript-eslint.io/rules/prefer-function-type/)
-- [`@typescript-eslint/ban-tslint-comment`](https://typescript-eslint.io/rules/ban-tslint-comment/)
-- [`@typescript-eslint/no-confusing-non-null-assertion`](https://typescript-eslint.io/rules/no-confusing-non-null-assertion/)
-
-If these are too strict for your project, turn them off in your own config.
-
-### Other rule changes
-
-- **Core formatting rules moved to `@stylistic`**: Deprecated ESLint core formatting rules (e.g. `indent`, `quotes`, `semi`, `max-len`) are now enabled under the `@stylistic/*` prefix via [`@stylistic/eslint-plugin`](https://eslint.style/). If you override these rules in your config or reference them in `eslint-disable` comments, update them to the `@stylistic/*` prefix (e.g. `indent` → `@stylistic/indent`).
-- **`no-return-await` removed**: This rule is no longer enabled. If your codebase relies on it, consider using [`@typescript-eslint/return-await`](https://typescript-eslint.io/rules/return-await/) in TypeScript projects.
+- **Function components only**: Rules specific to class components are not included. If your project uses class components, you may need to configure additional rules manually.
+- **Accessibility rules**: Provided by `eslint-plugin-jsx-a11y-x` under the `jsx-a11y-x/*` prefix. If you override any `jsx-a11y/*` rules in your config or reference them in `eslint-disable` comments, update them to the `jsx-a11y-x/*` prefix.
+- **JSX formatting rules**: Provided by [`@stylistic/eslint-plugin`](https://eslint.style/) under the `@stylistic/*` prefix (e.g. `@stylistic/jsx-self-closing-comp`). Formatting rules not enabled by the presets are also available there if you need them.
+- **New JSX Transform required**: The Classic JSX Transform (`react/jsx-uses-react`) is not supported. Projects must use the [New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
 
 ### `.eslintrc.js` (v25 and earlier)
 
