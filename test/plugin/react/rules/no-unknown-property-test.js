@@ -33,6 +33,9 @@ ruleTester.run("no-unknown-property", rule, {
     { code: `<button is="fancy-button" fancyprop="x" />;` },
     // camelCase SVG attributes
     { code: `<path strokeWidth="2" fillRule="evenodd" d="M0 0" />;` },
+    // Popover API attributes (camelCase in React)
+    { code: `<button popoverTarget="x" popoverTargetAction="toggle" />;` },
+    { code: `<div popover="auto" />;` },
   ],
   invalid: [
     {
@@ -71,6 +74,33 @@ ruleTester.run("no-unknown-property", rule, {
         {
           messageId: "unknownProp",
           data: { name: "fill-rule", tag: "path", suggestion: "fillRule" },
+        },
+      ],
+    },
+    // Lowercase popover target attributes are reported with camelCase suggestions
+    {
+      code: `<button popovertarget="x" />;`,
+      errors: [
+        {
+          messageId: "unknownProp",
+          data: {
+            name: "popovertarget",
+            tag: "button",
+            suggestion: "popoverTarget",
+          },
+        },
+      ],
+    },
+    {
+      code: `<button popovertargetaction="toggle" />;`,
+      errors: [
+        {
+          messageId: "unknownProp",
+          data: {
+            name: "popovertargetaction",
+            tag: "button",
+            suggestion: "popoverTargetAction",
+          },
         },
       ],
     },

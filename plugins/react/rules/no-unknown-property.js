@@ -368,8 +368,6 @@ const defined = new Set([
   "ping",
   "placeholder",
   "playsInline",
-  "popovertarget",
-  "popovertargetaction",
   "poster",
   "precedence",
   "preload",
@@ -700,6 +698,8 @@ const invalidProps = new Map([
   ["autoplay", "autoPlay"],
   ["autofocus", "autoFocus"],
   ["autocomplete", "autoComplete"],
+  ["popovertarget", "popoverTarget"],
+  ["popovertargetaction", "popoverTargetAction"],
   // Kebab-case SVG attributes (React expects camelCase)
   ["accent-height", "accentHeight"],
   ["alignment-baseline", "alignmentBaseline"],
