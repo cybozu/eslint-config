@@ -109,27 +109,6 @@ React lint rules are provided directly by `@cybozu/eslint-config` under the `rea
 
 Various other rules have been added, removed, or renamed (e.g. deprecated core formatting rules are now enabled under the `@stylistic/*` prefix). If you override rules or use `eslint-disable` comments, review the new warnings and errors after upgrading.
 
-### `.eslintrc.js` (v25 and earlier)
-
-> **Note:** This format is no longer supported in v26 and later. Use `eslint.config.mjs` instead.
-
-```js
-module.exports = {
-  extends: "@cybozu",
-};
-```
-
-```js
-module.exports = {
-  extends: "@cybozu/eslint-config/presets/react-typescript-prettier",
-  rules: {
-    // default
-    // 'indent': ['warn', 2, { "SwitchCase": 1 }],
-    indent: ["warn", 4, { SwitchCase: 0 }],
-  },
-};
-```
-
 ## Support rule set
 
 - `@cybozu/eslint-config/presets/base`
