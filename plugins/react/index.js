@@ -12,7 +12,6 @@ import jsxNoUselessFragment from "./rules/jsx-no-useless-fragment.js";
 import jsxNoBind from "./rules/jsx-no-bind.js";
 import jsxNoUndef from "./rules/jsx-no-undef.js";
 import noUnescapedEntities from "./rules/no-unescaped-entities.js";
-import noMultiComp from "./rules/no-multi-comp.js";
 import noUnstableNestedComponents from "./rules/no-unstable-nested-components.js";
 import noUnknownProperty from "./rules/no-unknown-property.js";
 import stylePropObject from "./rules/style-prop-object.js";
@@ -34,7 +33,6 @@ const reactPlugin = {
     "jsx-no-bind": jsxNoBind,
     "jsx-no-undef": jsxNoUndef,
     "no-unescaped-entities": noUnescapedEntities,
-    "no-multi-comp": noMultiComp,
     "no-unstable-nested-components": noUnstableNestedComponents,
     "no-unknown-property": noUnknownProperty,
     "style-prop-object": stylePropObject,

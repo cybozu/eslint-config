@@ -103,6 +103,7 @@ React lint rules are now provided directly by `@cybozu/eslint-config` instead of
   - `jsx-quotes` → `@stylistic/jsx-quotes`
 - **JSX formatting rules removed**: `react/jsx-closing-bracket-location`, `react/jsx-closing-tag-location`, `react/jsx-curly-spacing`, `react/jsx-equals-spacing`, `react/jsx-indent`, `react/jsx-indent-props`, `react/jsx-props-no-multi-spaces`, `react/jsx-tag-spacing` and `react/jsx-wrap-multilines` are no longer enabled. Equivalent rules are available in [`@stylistic/eslint-plugin`](https://eslint.style/) if you need them.
 - **`react/display-name` and `react/jsx-no-comment-textnodes` removed**: These rules (previously enabled via the `eslint-plugin-react` recommended config) are no longer enabled.
+- **`react/no-multi-comp` removed**: With the previously configured `ignoreStateless: true` option, this rule only counted class components, which are no longer supported. It has no effect in a function-component codebase, so it is no longer enabled.
 - **Classic JSX Transform no longer supported**: The `react/jsx-uses-react` rule is not available anymore. Projects must use the [New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
 
 ### TypeScript rule changes
