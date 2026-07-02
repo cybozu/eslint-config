@@ -75,13 +75,15 @@ function isInsideJSX(node) {
 }
 
 function isInsideRenderContext(node) {
-  // Check if node is inside a component render function or a custom hook
+  // Check if node is inside a component render function, a custom hook,
+  // or a render helper (any function returning JSX, e.g. renderList)
   let current = node.parent;
   while (current) {
     if (isFunctionNode(current)) {
       const name = getFunctionName(current);
       if (isComponentName(name) || isHookName(name)) return true;
       if (isInsideJSX(current)) return true;
+      if (isReturningJSX(current)) return true;
       return false;
     }
     current = current.parent;

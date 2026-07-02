@@ -85,5 +85,10 @@ ruleTester.run("no-unstable-nested-components", rule, {
       code: `function Parent() { return <Foo footer={function Child() { return <span />; }} />; }`,
       errors: [{ messageId: "noNestedComponent" }],
     },
+    // Components declared inside render helpers (lowercase functions returning JSX)
+    {
+      code: `function renderList(items) { const Item = () => <li/>; return <ul>{items.map((i) => <Item key={i}/>)}</ul>; }`,
+      errors: [{ messageId: "noNestedComponent" }],
+    },
   ],
 });
