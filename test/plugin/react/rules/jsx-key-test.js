@@ -16,6 +16,7 @@ ruleTester.run("jsx-key", rule, {
     { code: `items.map(x => { return <div key={x} />; });` },
     { code: `items.flatMap(x => <div key={x} />);` },
     { code: `Array.from(items, x => <div key={x} />);` },
+    { code: `Array.from(items, x => { return <div key={x} />; });` },
     { code: `items.map(x => (x.a ? <div key={x} /> : <span key={x} />));` },
     { code: `items.map(x => x.a && <div key={x} />);` },
     // Return values of these methods are not rendered as element arrays
@@ -52,6 +53,10 @@ ruleTester.run("jsx-key", rule, {
     },
     {
       code: `Array.from(items, x => <div />);`,
+      errors: [{ messageId: "missingIteratorKey" }],
+    },
+    {
+      code: `Array.from(items, x => { return <div />; });`,
       errors: [{ messageId: "missingIteratorKey" }],
     },
     {

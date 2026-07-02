@@ -37,7 +37,8 @@ ruleTester.run("jsx-no-undef", rule, {
       code: `const el = <MyComp />;`,
       errors: [{ messageId: "undefined", data: { name: "MyComp" } }],
     },
-    // Config-provided globals don't count as declared (allowGlobals: false)
+    // Variables that only exist as config-provided globals (no actual
+    // definition in code) don't count as declared
     {
       code: `const el = <SomeGlobal />;`,
       languageOptions: { globals: { SomeGlobal: "readonly" } },
