@@ -17,6 +17,11 @@ ruleTester.run("jsx-no-duplicate-props", rule, {
       code: `<div id="a" ID="b" />;`,
       options: [{ ignoreCase: false }],
     },
+    // Namespaced attributes must not crash with ignoreCase
+    {
+      code: `<svg xlink:href="a" xlink:title="b" />;`,
+      options: [{ ignoreCase: true }],
+    },
   ],
   invalid: [
     {

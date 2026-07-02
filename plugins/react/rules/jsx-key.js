@@ -1,16 +1,7 @@
 import { getProp } from "../utils.js";
 
-const iteratorMethods = new Set([
-  "map",
-  "flatMap",
-  "filter",
-  "find",
-  "findIndex",
-  "some",
-  "every",
-  "reduce",
-  "reduceRight",
-]);
+// Methods whose callback return values are rendered as an element array
+const iteratorMethods = new Set(["map", "flatMap"]);
 
 function hasKeyProp(node) {
   return !!getProp(node.openingElement, "key");
@@ -22,14 +13,29 @@ function isJSXNode(node) {
 
 function isIteratorCallback(node) {
   const parent = node.parent;
+  if (parent.type !== "CallExpression") return false;
+
+  // array.map(x => ...) / array.flatMap(x => ...)
   if (
-    parent.type !== "CallExpression" ||
-    parent.callee.type !== "MemberExpression"
+    parent.callee.type === "MemberExpression" &&
+    iteratorMethods.has(parent.callee.property.name) &&
+    parent.arguments[0] === node
   ) {
-    return false;
+    return true;
   }
-  const methodName = parent.callee.property.name;
-  return iteratorMethods.has(methodName);
+
+  // Array.from(items, x => ...)
+  if (
+    parent.callee.type === "MemberExpression" &&
+    parent.callee.object.type === "Identifier" &&
+    parent.callee.object.name === "Array" &&
+    parent.callee.property.name === "from" &&
+    parent.arguments[1] === node
+  ) {
+    return true;
+  }
+
+  return false;
 }
 
 /** @type {import('eslint').Rule.RuleModule} */
@@ -57,6 +63,24 @@ export default {
       }
     }
 
+    // Check an expression returned from an iterator callback, descending
+    // into conditional/logical branches: x => cond ? <a/> : <b/>
+    function checkReturnedExpression(node, messageId) {
+      if (isJSXNode(node)) {
+        checkKeyProp(node, messageId);
+        return;
+      }
+      if (node.type === "ConditionalExpression") {
+        checkReturnedExpression(node.consequent, messageId);
+        checkReturnedExpression(node.alternate, messageId);
+        return;
+      }
+      if (node.type === "LogicalExpression") {
+        checkReturnedExpression(node.left, messageId);
+        checkReturnedExpression(node.right, messageId);
+      }
+    }
+
     return {
       // [<div/>, <span/>]
       ArrayExpression(node) {
@@ -67,18 +91,16 @@ export default {
         });
       },
 
-      // array.map(x => <div/>)  or  array.map(x => (<div/>))
+      // array.map(x => <div/>)  or  array.map(x => (x.a ? <div/> : <span/>))
       ArrowFunctionExpression(node) {
         if (!isIteratorCallback(node)) return;
-        const body = node.body;
-        if (isJSXNode(body)) {
-          checkKeyProp(body, "missingIteratorKey");
-        }
+        if (node.body.type === "BlockStatement") return; // handled by ReturnStatement
+        checkReturnedExpression(node.body, "missingIteratorKey");
       },
 
       // array.map(x => { return <div/>; })
       ReturnStatement(node) {
-        if (!node.argument || !isJSXNode(node.argument)) return;
+        if (!node.argument) return;
         // Walk up to find enclosing function
         let current = node.parent;
         while (current) {
@@ -87,7 +109,7 @@ export default {
             current.type === "FunctionExpression"
           ) {
             if (isIteratorCallback(current)) {
-              checkKeyProp(node.argument, "missingIteratorKey");
+              checkReturnedExpression(node.argument, "missingIteratorKey");
             }
             break;
           }

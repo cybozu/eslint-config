@@ -10,7 +10,12 @@ const ruleTester = new RuleTester({
 });
 
 ruleTester.run("no-danger", rule, {
-  valid: [{ code: `<div className="x" />;` }, { code: `<div id="safe" />;` }],
+  valid: [
+    { code: `<div className="x" />;` },
+    { code: `<div id="safe" />;` },
+    // On custom components the prop is just an ordinary prop name
+    { code: `<MyComp dangerouslySetInnerHTML={{ __html: "x" }} />;` },
+  ],
   invalid: [
     {
       code: `<div dangerouslySetInnerHTML={{ __html: "<p>unsafe</p>" }} />;`,

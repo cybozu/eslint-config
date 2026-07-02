@@ -34,5 +34,9 @@ ruleTester.run("void-dom-elements-no-children", rule, {
       code: `<input children={<span />} />;`,
       errors: [{ messageId: "noChildrenProp" }],
     },
+    {
+      code: `<br dangerouslySetInnerHTML={{ __html: "x" }} />;`,
+      errors: [{ messageId: "noDangerouslySetInnerHTML" }],
+    },
   ],
 });

@@ -1,4 +1,4 @@
-import { getProp } from "../utils.js";
+import { getProp, getElementType, isDOMElement } from "../utils.js";
 
 /** @type {import('eslint').Rule.RuleModule} */
 export default {
@@ -15,6 +15,8 @@ export default {
   create(context) {
     return {
       JSXOpeningElement(node) {
+        // On custom components the prop is just an ordinary prop name
+        if (!isDOMElement(getElementType(node))) return;
         const dangerous = getProp(node, "dangerouslySetInnerHTML");
         if (dangerous) {
           context.report({ node: dangerous, messageId: "noHtmlProp" });

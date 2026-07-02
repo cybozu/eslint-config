@@ -30,6 +30,8 @@ export default {
       noChildren: "Void DOM element <{{element}} /> cannot receive children.",
       noChildrenProp:
         "Void DOM element <{{element}} /> cannot receive a children prop.",
+      noDangerouslySetInnerHTML:
+        "Void DOM element <{{element}} /> cannot receive dangerouslySetInnerHTML.",
     },
     schema: [],
   },
@@ -54,6 +56,14 @@ export default {
           context.report({
             node,
             messageId: "noChildrenProp",
+            data: { element: name },
+          });
+          return;
+        }
+        if (getProp(node.openingElement, "dangerouslySetInnerHTML")) {
+          context.report({
+            node,
+            messageId: "noDangerouslySetInnerHTML",
             data: { element: name },
           });
         }

@@ -1,3 +1,5 @@
+import { getProp } from "../utils.js";
+
 function isFragment(node) {
   if (node.type === "JSXFragment") return true;
   if (node.type !== "JSXElement") return false;
@@ -52,6 +54,8 @@ export default {
 
       JSXElement(node) {
         if (!isFragment(node)) return;
+        // <Fragment key={...}> is the only way to key without a DOM wrapper
+        if (getProp(node.openingElement, "key")) return;
         const children = getMeaningfulChildren(node);
 
         if (children.length === 0) {

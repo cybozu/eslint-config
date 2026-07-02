@@ -25,6 +25,8 @@ export default {
         for (const attr of node.attributes) {
           if (attr.type !== "JSXAttribute") continue;
           const raw = attr.name.name;
+          // JSXNamespacedName (e.g. xlink:href) has a node object here
+          if (typeof raw !== "string") continue;
           const name = ignoreCase ? raw.toLowerCase() : raw;
           if (seen.has(name)) {
             context.report({

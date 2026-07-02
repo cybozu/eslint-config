@@ -14,6 +14,11 @@ ruleTester.run("jsx-no-useless-fragment", rule, {
     { code: `<><A /><B /></>;` },
     { code: `<React.Fragment><A /><B /></React.Fragment>;` },
     { code: `<><A /><B /><C /></>;` },
+    // Keyed fragments are the only way to key without a DOM wrapper
+    { code: `items.map(x => <Fragment key={x.id}>{x.name}</Fragment>);` },
+    {
+      code: `items.map(x => <React.Fragment key={x.id}>{x.name}</React.Fragment>);`,
+    },
   ],
   invalid: [
     {
