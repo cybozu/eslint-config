@@ -17,9 +17,13 @@ ruleTester.run("no-multi-comp", rule, {
     {
       code: `function helper() { return 42; } function App() { return <div />; }`,
     },
-    // ignoreStateless: arrow function components are ignored
+    // ignoreStateless: arrow function and function expression components are ignored
     {
       code: `const A = () => <div />; const B = () => <span />;`,
+      options: [{ ignoreStateless: true }],
+    },
+    {
+      code: `const A = function() { return <div />; }; const B = function() { return <span />; };`,
       options: [{ ignoreStateless: true }],
     },
   ],
@@ -34,6 +38,10 @@ ruleTester.run("no-multi-comp", rule, {
     },
     {
       code: `const A = () => <div />; const B = () => <span />;`,
+      errors: [{ messageId: "onlyOneComponent" }],
+    },
+    {
+      code: `const A = function() { return <div />; }; const B = function() { return <span />; };`,
       errors: [{ messageId: "onlyOneComponent" }],
     },
   ],

@@ -37,6 +37,10 @@ ruleTester.run("jsx-key", rule, {
       errors: [{ messageId: "missingIteratorKey" }],
     },
     {
+      code: `items.map(function(x) { return <div />; });`,
+      errors: [{ messageId: "missingIteratorKey" }],
+    },
+    {
       code: `items.flatMap(x => <div>{x}</div>);`,
       errors: [{ messageId: "missingIteratorKey" }],
     },

@@ -84,12 +84,20 @@ If you are using v25 or earlier, you need to:
 
 See the [ESLint migration guide](https://eslint.org/docs/latest/use/configure/migration-guide) for details on migrating to Flat Config.
 
+### ESLint version requirement
+
+This version requires ESLint **v10 or later**. ESLint v8 and v9 are no longer supported as peer dependencies. Upgrade ESLint before updating this package.
+
 ### React rule changes
 
 React lint rules are now provided directly by `@cybozu/eslint-config` instead of `eslint-plugin-react`. This is transparent for most users, but note the following breaking changes:
 
 - **Class component rules removed**: Rules specific to class components (`react/no-deprecated`, `react/prefer-stateless-function`, etc.) are no longer enabled. If your project uses class components, you may need to configure additional rules manually.
 - **`jsx-a11y` plugin replaced**: Accessibility rules now use `eslint-plugin-jsx-a11y-x` internally instead of `eslint-plugin-jsx-a11y`. No action required on your end.
+
+### Other rule changes
+
+- **`no-return-await` removed**: This rule is no longer enabled. If your codebase relies on it, consider using [`@typescript-eslint/return-await`](https://typescript-eslint.io/rules/return-await/) in TypeScript projects.
 
 ### `.eslintrc.js` (v25 and earlier)
 
