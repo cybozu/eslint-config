@@ -49,12 +49,15 @@ export function getElementType(openingElement) {
 }
 
 /**
- * Check if a JSX element name represents a DOM element (lowercase) vs component (uppercase).
+ * Check if a JSX element name represents a DOM element (lowercase) vs component.
+ * Member expressions like `<foo.bar />` are always components regardless of case.
  * @param {string} name
  * @returns {boolean}
  */
 export function isDOMElement(name) {
-  return name.length > 0 && name[0] === name[0].toLowerCase();
+  return (
+    name.length > 0 && name[0] === name[0].toLowerCase() && !name.includes(".")
+  );
 }
 
 /**

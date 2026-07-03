@@ -15,6 +15,8 @@ ruleTester.run("no-danger", rule, {
     { code: `<div id="safe" />;` },
     // On custom components the prop is just an ordinary prop name
     { code: `<MyComp dangerouslySetInnerHTML={{ __html: "x" }} />;` },
+    // Member expressions are components even when lowercase
+    { code: `<foo.bar dangerouslySetInnerHTML={{ __html: "x" }} />;` },
   ],
   invalid: [
     {

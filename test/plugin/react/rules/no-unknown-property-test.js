@@ -18,6 +18,8 @@ ruleTester.run("no-unknown-property", rule, {
     { code: `<div onClick={() => {}} />;` },
     // Custom components are not checked
     { code: `<MyComp unknownProp="x" />;` },
+    // Member expressions are components even when lowercase (e.g. framer-motion)
+    { code: `<motion.div animate={{ x: 1 }} />;` },
     { code: `<img src="x.png" alt="x" />;` },
     // Common element-specific attributes
     { code: `<meta content="width=device-width" />;` },

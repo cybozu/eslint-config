@@ -16,6 +16,8 @@ ruleTester.run("style-prop-object", rule, {
     { code: `<div />;` },
     // Custom components are not checked
     { code: `<MyComp style="color: red" />;` },
+    // Member expressions are components even when lowercase
+    { code: `<foo.bar style="color: red" />;` },
   ],
   invalid: [
     {
