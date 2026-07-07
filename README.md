@@ -49,6 +49,8 @@ Install `eslint` and `@cybozu/eslint-config`
 % npm install --save-dev eslint @cybozu/eslint-config
 ```
 
+ESLint plugins used by the presets (such as `eslint-plugin-react-hooks` and `eslint-plugin-jsx-a11y-x`) are bundled as dependencies of `@cybozu/eslint-config`, so you don't need to install them individually.
+
 ### `eslint.config.mjs`
 
 Put it into your `eslint.config.mjs`
@@ -68,7 +70,7 @@ export default [
 ];
 ```
 
-> **Note:** Currently, we adopt that `indent` rule is 2 spaces and having indentation in `switch case`.
+> **Note:** Currently, we adopt that `@stylistic/indent` rule is 2 spaces and having indentation in `switch case`.
 > You can override the rule if your project adopts 4 spaces or others.
 > We think it's important to have consistency in your entire codebase.
 
@@ -84,26 +86,28 @@ If you are using v25 or earlier, you need to:
 
 See the [ESLint migration guide](https://eslint.org/docs/latest/use/configure/migration-guide) for details on migrating to Flat Config.
 
-### `.eslintrc.js` (v25 and earlier)
+In addition to the Flat Config migration, v26 includes the following breaking changes.
 
-> **Note:** This format is no longer supported in v26 and later. Use `eslint.config.mjs` instead.
+### ESLint version requirement
 
-```js
-module.exports = {
-  extends: "@cybozu",
-};
-```
+This version requires ESLint **v10 or later**. ESLint v8 and v9 are no longer supported as peer dependencies. Upgrade ESLint before updating this package.
 
-```js
-module.exports = {
-  extends: "@cybozu/eslint-config/presets/react-typescript-prettier",
-  rules: {
-    // default
-    // 'indent': ['warn', 2, { "SwitchCase": 1 }],
-    indent: ["warn", 4, { SwitchCase: 0 }],
-  },
-};
-```
+### Node.js version requirement
+
+This version requires Node.js **v22 or later**.
+
+### React rule changes
+
+React lint rules are provided directly by `@cybozu/eslint-config` under the `react/*` prefix, instead of `eslint-plugin-react`. Note the following:
+
+- **Function components only**: Rules specific to class components are not included. If your project uses class components, you may need to configure additional rules manually.
+- **Accessibility rules**: Provided by `eslint-plugin-jsx-a11y-x` under the `jsx-a11y-x/*` prefix. If you override any `jsx-a11y/*` rules in your config or reference them in `eslint-disable` comments, update them to the `jsx-a11y-x/*` prefix.
+- **JSX formatting rules**: Provided by [`@stylistic/eslint-plugin`](https://eslint.style/) under the `@stylistic/*` prefix (e.g. `@stylistic/jsx-self-closing-comp`). Formatting rules not enabled by the presets are also available there if you need them.
+- **New JSX Transform required**: The Classic JSX Transform (`react/jsx-uses-react`) is not supported. Projects must use the [New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
+
+### Other rule changes
+
+Various other rules have been added, removed, or renamed (e.g. deprecated core formatting rules are now enabled under the `@stylistic/*` prefix). If you override rules or use `eslint-disable` comments, review the new warnings and errors after upgrading.
 
 ## Support rule set
 
@@ -114,7 +118,8 @@ module.exports = {
 - `@cybozu/eslint-config/presets/typescript`
   - Including `@typescript-eslint/eslint-plugin`
 - `@cybozu/eslint-config/presets/react`
-  - Including `eslint-plugin-react`, `eslint-plugin-jsx-a11y` and `eslint-plugin-react-hooks`
+  - Including built-in React rules, `eslint-plugin-react-hooks` and `eslint-plugin-jsx-a11y-x`
+  - `eslint-plugin-react` is no longer required as a dependency
 - `@cybozu/eslint-config/presets/react-typescript`
   - Including `@cybozu/eslint-config/presets/typescript` and `@cybozu/eslint-config/presets/react`
 - `@cybozu/eslint-config/presets/es5`
@@ -131,7 +136,7 @@ It's opinionated but we don't have to discuss about code styles with Prettier be
 The following presets disable all rules that conflict with Prettier and treat the differences between Prettier's code format as errors.
 You can fix the errors by `--fix` option so you don't have to fix the errors manually.
 
-To use the presets, you have to install `prettier`. We only support Prettier v2 or later versions.
+To use the presets, you have to install `prettier`. We only support Prettier v3 or later versions.
 
 ```
 % npm install --save-dev prettier
@@ -146,18 +151,6 @@ To use the presets, you have to install `prettier`. We only support Prettier v2 
 - `@cybozu/eslint-config/presets/es5-prettier`
 
 **Currently, we don't support customized Prettier config**
-
-## React Support
-
-### ⚠️ Classic JSX Syntax
-
-`@cybozu/eslint-config` is intended to be used with the [New JSX Transform](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html). If you want to use the Classic JSX Transform (`React.createElement`), please enable the `react/jsx-uses-react` rule on your own.
-
-```js
-rules: {
-  "react/jsx-uses-react": "error"
-}
-```
 
 ## For kintone customize developers
 
