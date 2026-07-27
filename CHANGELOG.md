@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [26.0.0](https://github.com/cybozu/eslint-config/compare/v25.0.1...v26.0.0) (2026-07-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* update eslint to v10 and refactor rulesets for presets ([#999](https://github.com/cybozu/eslint-config/issues/999))
+* migrate to ESM and drop legacy ESLint config support ([#996](https://github.com/cybozu/eslint-config/issues/996))
+
+### Features
+
+* migrate to ESM and drop legacy ESLint config support ([#996](https://github.com/cybozu/eslint-config/issues/996)) ([a3fe5b7](https://github.com/cybozu/eslint-config/commit/a3fe5b7b0f3ad61c7a9ffb5ed1497bd0c0662d08))
+* update eslint to v10 and refactor rulesets for presets ([#999](https://github.com/cybozu/eslint-config/issues/999)) ([e109317](https://github.com/cybozu/eslint-config/commit/e10931774b2c67bc871bbfeec0801fdae76e8ffa))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @eslint/css to v1 ([#1017](https://github.com/cybozu/eslint-config/issues/1017)) ([48e2980](https://github.com/cybozu/eslint-config/commit/48e29809e0f11b45f0bca7a6c5f62399b7b666b6))
+* **deps:** update dependency @eslint/js to ^9.39.4 ([#1001](https://github.com/cybozu/eslint-config/issues/1001)) ([0d4d5e5](https://github.com/cybozu/eslint-config/commit/0d4d5e5351765e39ea5ea667cbec100739edb1c0))
+* **deps:** update dependency eslint-plugin-import-x to ^4.16.2 ([#1009](https://github.com/cybozu/eslint-config/issues/1009)) ([d8f3937](https://github.com/cybozu/eslint-config/commit/d8f3937f854366a1c6b914ef6d6bf4c9a892bd5d))
+* **deps:** update dependency eslint-plugin-prettier to ^5.5.6 ([#1035](https://github.com/cybozu/eslint-config/issues/1035)) ([aee4cd2](https://github.com/cybozu/eslint-config/commit/aee4cd28a78bbdea824270ce5b09973495c97107))
+* **deps:** update dependency globals to ^17.4.0 ([#998](https://github.com/cybozu/eslint-config/issues/998)) ([e8b0114](https://github.com/cybozu/eslint-config/commit/e8b01142757840697d5276240b1c0c74d892e0ff))
+* **deps:** update eslint and prettier (major) ([#1020](https://github.com/cybozu/eslint-config/issues/1020)) ([1c53fae](https://github.com/cybozu/eslint-config/commit/1c53faed0d0047df26dee2d2a73a5886debcc265))
+
 ## [25.0.1](https://github.com/cybozu/eslint-config/compare/v25.0.0...v25.0.1) (2026-03-03)
 
 
