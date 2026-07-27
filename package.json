@@ -71,7 +71,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import-x": "^4.16.2",
     "eslint-plugin-jsx-a11y-x": "^0.2.0",
-    "eslint-plugin-n": "^17.24.0",
+    "eslint-plugin-n": "^18.2.2",
     "eslint-plugin-prettier": "^5.5.6",
     "eslint-plugin-react-hooks": "^7.0.1",
     "globals": "^17.4.0",
