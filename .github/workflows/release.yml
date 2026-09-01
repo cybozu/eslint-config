@@ -32,6 +32,10 @@ jobs:
           node-version: 'lts/*'
           registry-url: 'https://registry.npmjs.org'
         if: ${{ steps.release.outputs.release_created }}
+      - uses: flatt-security/setup-takumi-guard-npm@6d4182745c1e474c35a023573c2612c085be45a4 # v1.2.0
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          bot-id: ${{ vars.TAKUMI_GUARD_BOT_ID }}
       - run: pnpm install --frozen-lockfile
         if: ${{ steps.release.outputs.release_created }}
       - run: pnpm test
