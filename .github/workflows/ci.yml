@@ -4,16 +4,20 @@ on:
   push:
     branches:
       - main
-      - 'renovate/**'
   pull_request:
 
 jobs:
   lint:
     name: lint
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # Required for Takumi Guard OIDC authentication
 
     steps:
     - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      with:
+        persist-credentials: false
     - name: Install pnpm
       uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093 # v6.0.8
     - name: Use Node.js
@@ -21,6 +25,9 @@ jobs:
       with:
         node-version: 'lts/*'
         cache: 'pnpm'
+    - uses: flatt-security/setup-takumi-guard-npm@6d4182745c1e474c35a023573c2612c085be45a4 # v1.2.0
+      with:
+        bot-id: ${{ vars.TAKUMI_GUARD_BOT_ID }}
     - name: pnpm install, and pnpm run lint
       run: |
         pnpm install --frozen-lockfile
@@ -29,11 +36,16 @@ jobs:
   test:
     name: test
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # Required for Takumi Guard OIDC authentication
     strategy:
       matrix:
         node-version: [22.x, 24.x, 'lts/*']
     steps:
     - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      with:
+        persist-credentials: false
     - name: Install pnpm
       uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093 # v6.0.8
     - name: Use Node.js ${{ matrix.node-version }}
@@ -41,6 +53,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
+    - uses: flatt-security/setup-takumi-guard-npm@6d4182745c1e474c35a023573c2612c085be45a4 # v1.2.0
+      with:
+        bot-id: ${{ vars.TAKUMI_GUARD_BOT_ID }}
     - name: pnpm install, and pnpm test
       run: |
         pnpm install --frozen-lockfile
