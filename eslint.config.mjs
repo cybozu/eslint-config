@@ -11,6 +11,13 @@ export default defineConfig([
     languageOptions: {
       globals: {
         ...globals.node,
+      },
+    },
+  },
+  {
+    files: ["test/**"],
+    languageOptions: {
+      globals: {
         // Injected by test/setup.mjs (see the `test` npm script)
         describe: "readonly",
         it: "readonly",
