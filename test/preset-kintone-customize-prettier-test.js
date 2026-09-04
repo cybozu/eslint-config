@@ -1,3 +1,4 @@
+import { describe, it } from "node:test";
 import assert from "assert";
 import kintoneCustomizePrettier from "../presets/kintone-customize-prettier.js";
 import prettier from "../presets/prettier.js";

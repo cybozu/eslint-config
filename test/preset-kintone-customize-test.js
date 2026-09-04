@@ -1,3 +1,4 @@
+import { describe, it } from "node:test";
 import assert from "assert";
 import kintoneCustomize from "../presets/kintone-customize.js";
 import base from "../presets/base.js";

@@ -1,15 +1,12 @@
 /**
- * Expose the `node:test` API as globals so that test files and ESLint's
- * `RuleTester` (which looks up global `describe`/`it`) can use them.
+ * Wire ESLint's `RuleTester` to the `node:test` runner.
+ * `RuleTester` resolves `describe`/`it` on its own (from `RuleTester.describe`/
+ * `RuleTester.it`, then globals, then a synchronous fallback), so hand it the
+ * `node:test` functions here via its public API.
  * Loaded via `node --test --import ./test/setup.mjs`.
  */
-import { describe, it, before, after, beforeEach, afterEach } from "node:test";
+import { describe, it } from "node:test";
+import { RuleTester } from "eslint";
 
-Object.assign(globalThis, {
-  describe,
-  it,
-  before,
-  after,
-  beforeEach,
-  afterEach,
-});
+RuleTester.describe = describe;
+RuleTester.it = it;

@@ -1,3 +1,4 @@
+import { describe, it } from "node:test";
 import assert from "assert";
 import reactTypescript from "../presets/react-typescript.js";
 import { runLintWithFixtures } from "./lib/runLintWithFixtures.js";

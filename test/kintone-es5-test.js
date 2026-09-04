@@ -1,3 +1,4 @@
+import { describe, it } from "node:test";
 import assert from "assert";
 import { kintoneEs5 } from "../lib/kintone-es5.js";
 import { runLintWithFixtures } from "./lib/runLintWithFixtures.js";

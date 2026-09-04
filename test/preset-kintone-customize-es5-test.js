@@ -1,3 +1,4 @@
+import { describe, it } from "node:test";
 import assert from "assert";
 import { es5 } from "../lib/es5.js";
 import kintoneEs5 from "../presets/kintone-customize-es5.js";

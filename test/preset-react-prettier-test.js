@@ -1,3 +1,4 @@
+import { describe, it } from "node:test";
 import assert from "assert";
 import reactPrettier from "../presets/react-prettier.js";
 import { prettier } from "../lib/prettier.js";
