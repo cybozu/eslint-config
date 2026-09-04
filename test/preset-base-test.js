@@ -1,3 +1,4 @@
+import { describe, it } from "node:test";
 import assert from "assert";
 import basePreset from "../presets/base.js";
 import { base } from "../lib/base.js";
