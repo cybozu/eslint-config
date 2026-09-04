@@ -87,5 +87,10 @@
     "access": "public",
     "provenance": true,
     "registry": "https://registry.npmjs.org/"
+  },
+  "pnpm": {
+    "overrides": {
+      "brace-expansion": "5.0.9"
+    }
   }
 }
