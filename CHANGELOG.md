@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [26.0.1](https://github.com/cybozu/eslint-config/compare/v26.0.0...v26.0.1) (2026-09-04)
+
+
+### Bug Fixes
+
+* **deps:** resolve audit vulnerabilities and drop unused npm-run-all ([#1043](https://github.com/cybozu/eslint-config/issues/1043)) ([a6ec8ba](https://github.com/cybozu/eslint-config/commit/a6ec8ba39eb1d331fee8d82cafaa33ceeb14f8ae))
+
 ## [26.0.0](https://github.com/cybozu/eslint-config/compare/v25.0.1...v26.0.0) (2026-07-27)
 
 
