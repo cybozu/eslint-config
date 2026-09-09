@@ -42,5 +42,5 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: pnpm test
         if: ${{ steps.release.outputs.release_created }}
-      - run: pnpm publish
+      - run: pnpm publish --no-git-checks
         if: ${{ steps.release.outputs.release_created }}
