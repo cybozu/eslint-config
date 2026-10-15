@@ -10,6 +10,7 @@ export { default as kintoneCustomize } from "./presets/kintone-customize.js";
 export { default as kintoneCustomizeEs5 } from "./presets/kintone-customize-es5.js";
 export { default as kintoneCustomizeEs5Prettier } from "./presets/kintone-customize-es5-prettier.js";
 export { default as kintoneCustomizePrettier } from "./presets/kintone-customize-prettier.js";
+export { default as kintoneDev } from "./presets/kintone-dev.js";
 export { default as node } from "./presets/node.js";
 export { default as nodePrettier } from "./presets/node-prettier.js";
 export { default as nodeTypescriptPrettier } from "./presets/node-typescript-prettier.js";
