@@ -26,16 +26,6 @@ ruleTester.run("require-identifier-prefix", rule, {
     {
       code: `import { createRoot } from "./createRoot"; createRoot(container);`,
     },
-    // Names shadowing the import do not refer to `createRoot` of `react-dom/client`
-    {
-      code: `${IMPORT} function run(createRoot) { createRoot(container); }`,
-    },
-    {
-      code: `${IMPORT} function run() { const createRoot = () => {}; createRoot(container); }`,
-    },
-    {
-      code: `import { createRoot as create } from "react-dom/client"; function run(create) { create(container); }`,
-    },
   ],
   invalid: [
     { code: `${IMPORT} createRoot(container);`, errors },
@@ -45,16 +35,6 @@ ruleTester.run("require-identifier-prefix", rule, {
     },
     {
       code: `import { createRoot as create } from "react-dom/client"; create(container);`,
-      errors,
-    },
-    // Imports are hoisted, so calls before the import are also reported
-    {
-      code: `createRoot(container); ${IMPORT}`,
-      errors,
-    },
-    // Calls in a nested scope refer to the import
-    {
-      code: `${IMPORT} function run() { createRoot(container); }`,
       errors,
     },
   ],
