@@ -1,3 +1,0 @@
-[settings]
-# Read the Node version from .node-version, which CI reads too.
-idiomatic_version_file_enable_tools = ["node"]
