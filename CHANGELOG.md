@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [26.1.0](https://github.com/cybozu/eslint-config/compare/v26.0.1...v26.1.0) (2026-10-23)
+
+
+### Features
+
+* add kintone plugin and kintone-dev preset ([#1047](https://github.com/cybozu/eslint-config/issues/1047)) ([5eeb2c8](https://github.com/cybozu/eslint-config/commit/5eeb2c842ff892a3132155d7544c2ead1709f9bb))
+
 ## [26.0.1](https://github.com/cybozu/eslint-config/compare/v26.0.0...v26.0.1) (2026-09-09)
 
 
