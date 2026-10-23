@@ -20,6 +20,7 @@
     "./presets/kintone-customize-es5": "./presets/kintone-customize-es5.js",
     "./presets/kintone-customize-es5-prettier": "./presets/kintone-customize-es5-prettier.js",
     "./presets/kintone-customize-prettier": "./presets/kintone-customize-prettier.js",
+    "./presets/kintone-dev": "./presets/kintone-dev.js",
     "./presets/node": "./presets/node.js",
     "./presets/node-prettier": "./presets/node-prettier.js",
     "./presets/node-typescript-prettier": "./presets/node-typescript-prettier.js",

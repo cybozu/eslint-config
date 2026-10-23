@@ -175,3 +175,18 @@ export default [...kintoneCustomize];
   - Preset for kintone customize/plug-in development in ES5
 - `@cybozu/eslint-config/presets/kintone-customize-es5-prettier`
   - Preset for kintone customize/plug-in development in ES5 including `prettier` config
+
+## For kintone developers
+
+`@cybozu/eslint-config/presets/kintone-dev` is an add-on preset that enables custom rules for developing kintone.
+It does not include `base`, so use it together with another preset.
+
+```js
+// eslint.config.mjs
+import reactTypeScript from "@cybozu/eslint-config/presets/react-typescript";
+import kintoneDev from "@cybozu/eslint-config/presets/kintone-dev";
+
+export default [...reactTypeScript, ...kintoneDev];
+```
+
+See [plugins/kintone/README.md](plugins/kintone/README.md) for the rules.
