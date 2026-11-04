@@ -51,11 +51,11 @@
   "author": "cybozu",
   "license": "MIT",
   "devDependencies": {
-    "@types/react": "^19.2.18",
-    "eslint": "^10.9.1",
-    "prettier": "^3.9.6",
-    "react": "^19.2.8",
-    "typescript": "^5.9.3"
+    "@types/react": "^19.3.0",
+    "eslint": "^10.14.0",
+    "prettier": "^3.9.10",
+    "react": "^19.3.1",
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "eslint": "^10.0.0",
