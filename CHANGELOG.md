@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [26.2.0](https://github.com/cybozu/eslint-config/compare/v26.1.0...v26.2.0) (2026-11-05)
+
+
+### Features
+
+* disable react/style-prop-object in react-typescript preset ([#1053](https://github.com/cybozu/eslint-config/issues/1053)) ([67b44ff](https://github.com/cybozu/eslint-config/commit/67b44ff40abc1cc400e3d67730c7a948907669ce))
+
+
+### Bug Fixes
+
+* **deps:** update dependencies ([#1050](https://github.com/cybozu/eslint-config/issues/1050)) ([7c942bf](https://github.com/cybozu/eslint-config/commit/7c942bfe171f961d822e8510c021cc912d5da374))
+
 ## [26.1.0](https://github.com/cybozu/eslint-config/compare/v26.0.1...v26.1.0) (2026-10-23)
 
 
