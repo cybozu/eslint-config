@@ -75,6 +75,7 @@
     "eslint-plugin-prettier": "^5.5.7",
     "eslint-plugin-react-hooks": "^7.1.1",
     "globals": "^17.13.0",
+    "is-glob": "^4.0.3",
     "micromatch": "^4.0.8",
     "typescript-eslint": "^8.72.1"
   },

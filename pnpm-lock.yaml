@@ -44,6 +44,9 @@ importers:
       globals:
         specifier: ^17.13.0
         version: 17.13.0
+      is-glob:
+        specifier: ^4.0.3
+        version: 4.0.3
       micromatch:
         specifier: ^4.0.8
         version: 4.0.8

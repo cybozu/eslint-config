@@ -29,6 +29,7 @@
 // SOFTWARE.
 
 import path from "node:path";
+import isGlob from "is-glob";
 import micromatch from "micromatch";
 import ts from "typescript";
 
@@ -44,14 +45,14 @@ const normalizePath = (filePath) => {
 
 /**
  * Matches a glob pattern, or a prefix if the pattern is not a glob.
+ * `is-glob` is used as in the original rule, since `micromatch.scan().isGlob`
+ * differs from it for patterns such as `!src/foo.ts`, `src/a{b}` and `src/a?`.
  * @param {string} str
  * @param {string} pattern
  * @returns {boolean}
  */
 const isMatch = (str, pattern) =>
-  micromatch.scan(pattern).isGlob
-    ? micromatch.isMatch(str, pattern)
-    : str.startsWith(pattern);
+  isGlob(pattern) ? micromatch.isMatch(str, pattern) : str.startsWith(pattern);
 
 /**
  * Reads `compilerOptions.paths` of `tsconfig.json` in `cwd` and returns a map
@@ -65,19 +66,26 @@ const isMatch = (str, pattern) =>
 const readImportAliasMap = (cwd, pathIndexMap) => {
   /** @type {Record<string, string>} */
   const importAliasMap = {};
-  const { config } = ts.readConfigFile(
-    path.join(cwd, "tsconfig.json"),
-    ts.sys.readFile,
-  );
-  const compilerOptions = config?.compilerOptions;
-  if (!compilerOptions?.paths) return importAliasMap;
-  for (const [alias, paths] of Object.entries(compilerOptions.paths)) {
-    if (!Array.isArray(paths) || paths.length === 0) continue;
-    // Use the first path unless `pathIndexMap` specifies an existing index
-    const pathValue = paths[pathIndexMap[alias] ?? 0] ?? paths[0];
-    importAliasMap[alias] = compilerOptions.baseUrl
-      ? path.join(compilerOptions.baseUrl, pathValue)
-      : pathValue;
+  // `readConfigFile` does not validate the values, so invalid values such as
+  // `"paths": { "@/*": [null] }` can throw. Like the original rule, ignore them
+  // instead of aborting the lint.
+  try {
+    const { config } = ts.readConfigFile(
+      path.join(cwd, "tsconfig.json"),
+      ts.sys.readFile,
+    );
+    const compilerOptions = config?.compilerOptions;
+    if (!compilerOptions?.paths) return importAliasMap;
+    for (const [alias, paths] of Object.entries(compilerOptions.paths)) {
+      if (!Array.isArray(paths) || paths.length === 0) continue;
+      // Use the first path unless `pathIndexMap` specifies an existing index
+      const pathValue = paths[pathIndexMap[alias] ?? 0] ?? paths[0];
+      importAliasMap[alias] = compilerOptions.baseUrl
+        ? path.join(compilerOptions.baseUrl, pathValue)
+        : pathValue;
+    }
+  } catch {
+    return {};
   }
   return importAliasMap;
 };

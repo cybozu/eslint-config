@@ -69,8 +69,34 @@ ruleTester.run("strict-dependencies", rule, {
       filename: file("src/models/app.js"),
       options: [[{ ...repositories, targetMembers: ["fetchApp"] }]],
     },
+    // Negated patterns are matched as globs, like the original rule
+    {
+      code: `import { fetchApp } from "src/repositories/app";`,
+      filename: file("src/models/app.js"),
+      options: [
+        [
+          {
+            module: "src/repositories",
+            allowReferenceFrom: ["!src/legacy.js"],
+          },
+        ],
+      ],
+    },
   ],
   invalid: [
+    {
+      code: `import { fetchApp } from "src/repositories/app";`,
+      filename: file("src/legacy.js"),
+      options: [
+        [
+          {
+            module: "src/repositories",
+            allowReferenceFrom: ["!src/legacy.js"],
+          },
+        ],
+      ],
+      errors: [{ messageId: "notAllowed" }],
+    },
     {
       code: `import { fetchApp } from "src/repositories/app";`,
       filename: file("src/models/app.js"),
@@ -142,40 +168,64 @@ ruleTester.run("strict-dependencies", rule, {
 });
 
 describe("strict-dependencies with tsconfig.json", () => {
-  it("should replace aliases of compilerOptions.paths", () => {
+  /**
+   * Lints `code` as `src/models/app.js` in a directory with `tsconfig`.
+   * @param {string} tsconfig
+   * @param {string} code
+   */
+  const lintWithTsconfig = (tsconfig, code) => {
     const cwd = fs.mkdtempSync(path.join(os.tmpdir(), "strict-dependencies-"));
     try {
-      fs.writeFileSync(
-        path.join(cwd, "tsconfig.json"),
-        `{
-          // Comments and trailing commas are allowed
-          "compilerOptions": {
-            "baseUrl": ".",
-            "paths": { "@/*": ["src/*"], },
-          },
-        }`,
-      );
+      fs.writeFileSync(path.join(cwd, "tsconfig.json"), tsconfig);
       const linter = new Linter({ cwd });
-      const messages = linter.verify(
-        `import { fetchApp } from "@/repositories/app";`,
-        {
-          plugins: { kintone: { rules: { "strict-dependencies": rule } } },
-          rules: { "kintone/strict-dependencies": ["error", [repositories]] },
-        },
-        path.join(cwd, "src/models/app.js"),
-      );
-      assert.deepStrictEqual(
-        messages.map(({ ruleId, message }) => ({ ruleId, message })),
-        [
+      return linter
+        .verify(
+          code,
           {
-            ruleId: "kintone/strict-dependencies",
-            message:
-              "import 'src/repositories/app' is not allowed from src/models/app.js.",
+            plugins: { kintone: { rules: { "strict-dependencies": rule } } },
+            rules: {
+              "kintone/strict-dependencies": ["error", [repositories]],
+            },
           },
-        ],
-      );
+          path.join(cwd, "src/models/app.js"),
+        )
+        .map(({ ruleId, message }) => ({ ruleId, message }));
     } finally {
       fs.rmSync(cwd, { recursive: true, force: true });
     }
+  };
+
+  it("should replace aliases of compilerOptions.paths", () => {
+    const messages = lintWithTsconfig(
+      `{
+        // Comments and trailing commas are allowed
+        "compilerOptions": {
+          "baseUrl": ".",
+          "paths": { "@/*": ["src/*"], },
+        },
+      }`,
+      `import { fetchApp } from "@/repositories/app";`,
+    );
+    assert.deepStrictEqual(messages, [
+      {
+        ruleId: "kintone/strict-dependencies",
+        message:
+          "import 'src/repositories/app' is not allowed from src/models/app.js.",
+      },
+    ]);
+  });
+
+  it("should ignore invalid compilerOptions.paths instead of crashing", () => {
+    const messages = lintWithTsconfig(
+      `{ "compilerOptions": { "baseUrl": ".", "paths": { "@/*": [null] } } }`,
+      `import { fetchApp } from "src/repositories/app";`,
+    );
+    assert.deepStrictEqual(messages, [
+      {
+        ruleId: "kintone/strict-dependencies",
+        message:
+          "import 'src/repositories/app' is not allowed from src/models/app.js.",
+      },
+    ]);
   });
 });
