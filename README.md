@@ -190,3 +190,23 @@ export default [...reactTypeScript, ...kintoneDev];
 ```
 
 See [plugins/kintone/README.md](plugins/kintone/README.md) for the rules.
+
+Rules that need project-specific options, such as `kintone/strict-dependencies`, are not enabled by the preset.
+Import the plugin and configure them yourself:
+
+```js
+// eslint.config.mjs
+import kintone from "@cybozu/eslint-config/plugins/kintone";
+
+export default [
+  {
+    plugins: { kintone },
+    rules: {
+      "kintone/strict-dependencies": [
+        "error",
+        [{ module: "src/repositories", allowReferenceFrom: ["src/pages"] }],
+      ],
+    },
+  },
+];
+```
