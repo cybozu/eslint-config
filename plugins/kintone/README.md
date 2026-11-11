@@ -66,3 +66,9 @@ The import paths are not looked up in the file system, so a missing extension or
 For example, `import "./features/foo"` does not match `src/features/foo/**/*`.
 
 All restrictions whose `module` matches the import path are checked, and the import is reported unless every one of them allows it.
+
+#### Acknowledgements
+
+`kintone/strict-dependencies` is based on [eslint-plugin-strict-dependencies](https://github.com/knowledge-work/eslint-plugin-strict-dependencies) by [Knowledge Work](https://github.com/knowledge-work).
+We have used it for a long time to keep the dependencies between modules in order, and ported it here so that we can keep using it with ESLint 10.
+Many thanks to the authors and contributors for creating and maintaining it.
