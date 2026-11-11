@@ -215,6 +215,20 @@ describe("strict-dependencies with tsconfig.json", () => {
     ]);
   });
 
+  it("should resolve compilerOptions.paths starting with ./ without baseUrl", () => {
+    const messages = lintWithTsconfig(
+      `{ "compilerOptions": { "paths": { "@/*": ["./src/*"] } } }`,
+      `import { fetchApp } from "@/repositories/app";`,
+    );
+    assert.deepStrictEqual(messages, [
+      {
+        ruleId: "kintone/strict-dependencies",
+        message:
+          "import 'src/repositories/app' is not allowed from src/models/app.js.",
+      },
+    ]);
+  });
+
   it("should ignore invalid compilerOptions.paths instead of crashing", () => {
     const messages = lintWithTsconfig(
       `{ "compilerOptions": { "baseUrl": ".", "paths": { "@/*": [null] } } }`,

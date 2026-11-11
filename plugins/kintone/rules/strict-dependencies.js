@@ -3,6 +3,8 @@
 // Ported from eslint-plugin-strict-dependencies 1.3.35
 // (https://github.com/knowledge-work/eslint-plugin-strict-dependencies),
 // which calls `context.getFilename()` removed in ESLint 10.
+// It also includes an unreleased upstream fix for `paths` without `baseUrl`
+// (https://github.com/knowledge-work/eslint-plugin-strict-dependencies/pull/198).
 // The options and the behavior are kept compatible so that the rule can replace
 // the original one by only changing the plugin and the rule name.
 //
@@ -80,9 +82,13 @@ const readImportAliasMap = (cwd, pathIndexMap) => {
       if (!Array.isArray(paths) || paths.length === 0) continue;
       // Use the first path unless `pathIndexMap` specifies an existing index
       const pathValue = paths[pathIndexMap[alias] ?? 0] ?? paths[0];
-      importAliasMap[alias] = compilerOptions.baseUrl
-        ? path.join(compilerOptions.baseUrl, pathValue)
-        : pathValue;
+      // Without `baseUrl`, `paths` are relative to `tsconfig.json` and start with `./`
+      // (TypeScript 7 removed `baseUrl`). `path.join` drops the leading `./` so that
+      // the resolved path matches `module` written without it.
+      importAliasMap[alias] = path.join(
+        compilerOptions.baseUrl || ".",
+        pathValue,
+      );
     }
   } catch {
     return {};

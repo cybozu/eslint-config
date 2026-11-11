@@ -210,8 +210,3 @@ export default [
   },
 ];
 ```
-
-## Acknowledgements
-
-`kintone/strict-dependencies` is based on [eslint-plugin-strict-dependencies](https://github.com/knowledge-work/eslint-plugin-strict-dependencies) by [Knowledge Work](https://github.com/knowledge-work) (MIT License).
-Thank you for creating and maintaining the plugin.

@@ -21,6 +21,7 @@ Not enabled by the preset.
 
 Restricts which files can import a module.
 This rule is ported from [eslint-plugin-strict-dependencies](https://github.com/knowledge-work/eslint-plugin-strict-dependencies) 1.3.35 (MIT License, Copyright (c) 2021 Knowledge Work) to work with ESLint 10, and accepts the same options.
+It also includes an unreleased upstream fix for `compilerOptions.paths` without `baseUrl` ([knowledge-work/eslint-plugin-strict-dependencies#198](https://github.com/knowledge-work/eslint-plugin-strict-dependencies/pull/198)).
 
 ```js
 // eslint.config.mjs
