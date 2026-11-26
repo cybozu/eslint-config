@@ -31,7 +31,8 @@
     "./presets/react-typescript-prettier": "./presets/react-typescript-prettier.js",
     "./presets/typescript": "./presets/typescript.js",
     "./presets/typescript-prettier": "./presets/typescript-prettier.js",
-    "./globals/kintone": "./globals/kintone.js"
+    "./globals/kintone": "./globals/kintone.js",
+    "./plugins/kintone": "./plugins/kintone/index.js"
   },
   "files": [
     "lib",
@@ -74,6 +75,8 @@
     "eslint-plugin-prettier": "^5.5.7",
     "eslint-plugin-react-hooks": "^7.1.1",
     "globals": "^17.13.0",
+    "is-glob": "^4.0.3",
+    "micromatch": "^4.0.8",
     "typescript-eslint": "^8.72.1"
   },
   "packageManager": "pnpm@12.17.0",
