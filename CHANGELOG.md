@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [26.3.0](https://github.com/cybozu/eslint-config/compare/v26.2.0...v26.3.0) (2026-11-26)
+
+
+### Features
+
+* add kintone/strict-dependencies rule and export the kintone plugin ([#1056](https://github.com/cybozu/eslint-config/issues/1056)) ([9061122](https://github.com/cybozu/eslint-config/commit/9061122d0cbfc84ca5cdcc976d4bc8ccdc17107d))
+
 ## [26.2.0](https://github.com/cybozu/eslint-config/compare/v26.1.0...v26.2.0) (2026-11-05)
 
 
